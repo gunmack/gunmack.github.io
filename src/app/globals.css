@@ -34,6 +34,23 @@ body {
   background-color:rgb(7, 73, 158);
 }
 
+.wrap {
+  display: grid;
+  grid-row: auto;
+  align-items: center;
+  justify-items:center ;
+  gap: 16px;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  grid-row-start: 1;
+  align-items: center;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

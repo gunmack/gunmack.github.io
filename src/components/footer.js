@@ -1,11 +1,10 @@
 import Image from "next/image";
+import "@/app/globals.css";
 
 export default function Footer(){
-    const footer = "row-start-3 flex pb-6 gap-6 flex-wrap items-center justify-center"
-    const element = "flex items-center gap-2 hover:underline hover:underline-offset-4"
     return(
-        <div className={footer}>
-            <a className={element} href="https://www.linkedin.com/in/jreedoy/" target="_blank">
+        <div className="footer">
+            <a className="f_items" href="https://www.linkedin.com/in/jreedoy/" target="_blank">
             <Image
                 src="/images/LinkedIn.png"
                 alt="LinkedIn logo"
@@ -15,7 +14,7 @@ export default function Footer(){
             LinkedIn
             </a>
             <a
-            className={element}
+            className="f_items"
             href="https://github.com/gunmack" target="_blank">
             <Image
                 className="bg-white rounded-lg"
@@ -27,7 +26,7 @@ export default function Footer(){
             GitHub
             </a>
             <a
-            className={element}
+            className="f_items"
             href="mailto:julkar-reedoy@sfu.ca?subject=Feedback on your GitHub page" target="_blank">
             <Image
                 aria-hidden

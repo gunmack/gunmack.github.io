@@ -34,6 +34,46 @@ body {
   background-color:rgb(7, 73, 158);
 }
 
+.wrap {
+  display: grid;
+  grid-row: auto;
+  align-items: center;
+  justify-items:center ;
+  gap: 16px;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  grid-row-start: 1;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  grid-row-start: 3;
+  align-items:center;
+  justify-self: center;
+  gap: 32px;
+  padding-bottom: 6px;
+
+}
+
+.f_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.f_items:hover{
+  text-decoration: underline;
+  text-underline-offset: - 4px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

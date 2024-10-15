@@ -34,13 +34,24 @@ body {
   background-color:rgb(7, 73, 158);
 }
 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
 .navbar {
   display: flex;
   background-color: black;
-  padding: 16px;
-  gap: 32px;
+  padding: 2%;
+  gap: 2%;
   min-width: 100vh;
-  justify-content: center;
+  justify-content:end;
+  position: sticky;
+  top:0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nbar_items:hover {
@@ -50,29 +61,26 @@ body {
 
 .wrap {
   display: grid;
-  grid-row: auto;
-  align-items: center;
   justify-items:center ;
-  gap: 16px;
+  gap:2%;
+  padding:15%;
   min-height: 100vh;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  grid-row-start: 1;
+  gap: 2%;
   align-items: center;
 }
 
 .footer {
   display: flex;
   flex-wrap: wrap;
-  grid-row-start: 3;
-  align-items:center;
-  justify-self: center;
-  gap: 32px;
-  padding-bottom: 6px;
+  margin-bottom: 2%;
+  justify-content: start;
+  padding: 2%;
+  gap: 2%;
 
 }
 
@@ -80,17 +88,54 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 8px;
+  gap: 8%;
 }
 
 .f_items:hover{
-  text-decoration: underline;
-  text-underline-offset: - 4px;
+  color: #ef4444; /* Equivalent to Tailwind's text-red-500 */
+  font-size: 1.125rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Stack navbar items vertically */
+    padding: 4%; /* Increase padding for touch devices */
+    justify-content: center; /* Center the navbar items */
+    gap: 8%; /* Increase the gap between items */
+    min-width: 100%; /* Make sure the navbar spans the full width */
+  }
+
+  .nbar_items {
+    font-size: 1rem; /* Adjust font size for readability */
+    padding: 2%; /* Add more padding for touch interaction */
+  }
+
+  .wrap {
+    padding: 10%; /* Reduce padding for smaller screens */
+    gap: 4%; /* Adjust gap for smaller layout */
+  }
+
+  .main {
+    flex-direction: column;
+    gap: 4%;
+  }
+
+  .footer {
+    flex-direction: column; /* Stack footer items vertically */
+    justify-content: center;
+    gap: 4%; /* Increase the gap for better layout on mobile */
+    padding: 5%; /* Add padding for touch interaction */
+  }
+
+  .f_items {
+    gap: 10px; /* Adjust gap between footer items */
+  }
+
+  .f_items:hover {
+    font-size: 1rem; /* Prevent text from getting too big on hover */
   }
 }
-

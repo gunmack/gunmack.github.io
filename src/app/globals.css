@@ -34,6 +34,20 @@ body {
   background-color:rgb(7, 73, 158);
 }
 
+.navbar {
+  display: flex;
+  background-color: black;
+  padding: 16px;
+  gap: 32px;
+  min-width: 100vh;
+  justify-content: center;
+}
+
+.nbar_items:hover {
+  color: #ef4444; /* Equivalent to Tailwind's text-red-500 */
+  font-size: 1.125rem;
+}
+
 .wrap {
   display: grid;
   grid-row: auto;

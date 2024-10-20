@@ -9,16 +9,22 @@ from https://fonts.google.com/selection/embed
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
-
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+  } */
+}
+
+
+@layer utilities {
+  .text-balance {
+    overflow-wrap: break-word;
   }
 }
 
@@ -31,7 +37,12 @@ body {
     )
     rgb(var(--background-start-rgb));
   font-family: "Space Mono", monospace;
-  background-color:rgb(7, 73, 158);
+  background-color: rgb(70, 130, 180);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
@@ -61,10 +72,17 @@ body {
 
 .wrap {
   display: grid;
+  align-items: center;
   justify-items:center ;
   gap:2%;
   padding:15%;
   min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  font-size: 2.25rem;
+  padding: 4%;
 }
 
 .main {
@@ -72,6 +90,8 @@ body {
   flex-direction: column;
   gap: 2%;
   align-items: center;
+  gap: 2%;
+  text-align: center;
 }
 
 .footer {
@@ -139,3 +159,24 @@ body {
     font-size: 1rem; /* Prevent text from getting too big on hover */
   }
 }
+.text { 
+  text-align: left; 
+  font-size: 1rem;
+}
+
+.button {
+  background-color: darkred;
+  border-radius: 5%;
+  padding: 2%;
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.button:hover {
+  background-color: #a52a2a; 
+}
+
+
+

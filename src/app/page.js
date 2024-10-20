@@ -1,3 +1,15 @@
+function Nav({name}){
+    return(
+      <div>
+        <button className="button">
+          <a href="/about">{name}</a>
+        </button>
+      </div>
+    )
+  }
+  
+
+
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -5,6 +17,7 @@ import Footer from "@/components/footer";
 export default function Landing(){
     return(
         <div>
+            <Nav name="About"/>
             <Navbar/>
             <div className="wrap">
                 <main className="main">

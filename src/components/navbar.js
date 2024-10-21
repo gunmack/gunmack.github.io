@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const links = [
-    { name: '🏠 Home ', href: '/', key: 'home' },
+    { name: '🏠 Home ', href: 'https://gunmack.github.io/276_website/', key: 'home' },
     { name: '🧑🏾 About me ', href: 'about', key: 'about' },
     { name: '🖥️ Projects ', href: 'projects', key: 'projects' },
     { name: '📃 Resume ', href: '#', key: 'resume' },

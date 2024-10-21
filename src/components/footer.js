@@ -6,7 +6,7 @@ export default function Footer(){
         <div className="footer">
             <a className="f_items" href="https://www.linkedin.com/in/jreedoy/" target="_blank">
             <Image
-                src="/images/LinkedIn.png"
+                src="https://github.com/gunmack/276_website/images/LinkedIn.png"
                 alt="LinkedIn logo"
                 width={16}
                 height={16}
@@ -18,7 +18,7 @@ export default function Footer(){
             href="https://github.com/gunmack" target="_blank">
             <Image
                 className="bg-white rounded-lg"
-                src="/images/gitHub.png"
+                src="https://github.com/gunmack/276_website/images/gitHub.png"
                 alt="GitHub"
                 width={16}
                 height={16}
@@ -30,7 +30,7 @@ export default function Footer(){
             href="mailto:julkar-reedoy@sfu.ca?subject=Feedback on your GitHub page" target="_blank">
             <Image
                 aria-hidden
-                src="/images/mail.png"
+                src="https://github.com/gunmack/276_website/images/mail.png"
                 alt="Mail icon"
                 width={20}
                 height={20}

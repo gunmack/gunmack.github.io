@@ -12,8 +12,18 @@ const links = [
 ];
 
 function darkmode() {
-    if (typeof window !== 'undefined') {
-        document.body.classList.toggle('dark-mode');
+    if (typeof window !== 'undefined'){
+        if (document.body.classList.contains('dark-mode')) {
+            // If currently in dark mode, switch to light mode
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode');
+            localStorage.setItem('theme', 'light'); // Save the preference
+        } else {
+            // If currently in light mode, switch to dark mode
+            document.body.classList.remove('light-mode');
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark'); // Save the preference
+        }
     }
 }
 
@@ -38,10 +48,24 @@ function Dropdown({isOpen}){
     )
 }
 
+function LightDark(){
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.add('light-mode'); // Default to light mode
+            }
+        }
+    }, []);
+}
+
 export default function Navbar({ page }){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return(
         <div>
+            <LightDark />
             <div className="navbar">
                 <div className="hidden sm:flex">
                     {links.map(({ name, href, key }) => (

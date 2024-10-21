@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -11,20 +12,18 @@ const links = [
     { name: '☾☀︎', href: '#', key: 'dark-mode'},
 ];
 
+
+// use local storage to save the theme preference
 function darkmode() {
-    if (typeof window !== 'undefined'){
         if (document.body.classList.contains('dark-mode')) {
-            // If currently in dark mode, switch to light mode
+            localStorage.setItem('theme', 'light'); 
             document.body.classList.remove('dark-mode');
             document.body.classList.add('light-mode');
-            localStorage.setItem('theme', 'light'); // Save the preference
         } else {
-            // If currently in light mode, switch to dark mode
+            localStorage.setItem('theme', 'dark'); 
             document.body.classList.remove('light-mode');
             document.body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark'); // Save the preference
         }
-    }
 }
 
 function Dropdown({isOpen}){
@@ -38,7 +37,7 @@ function Dropdown({isOpen}){
                         className="dropdown_list"
                         href={href}
                         target={key === 'other_work' ? '_blank' : '_self'}
-                        onClick={key === 'dark-mode' ? darkmode : null}                        
+                        onClick={key === 'dark-mode' ? darkmode : null} rel="noreferrer"                        
                     >
                         {name}
                     </a>
@@ -49,23 +48,26 @@ function Dropdown({isOpen}){
 }
 
 function LightDark(){
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-            } else {
-                document.body.classList.add('light-mode'); // Default to light mode
-            }
-        }
-    }, []);
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+    }  
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode') // Default to light mode
+        localStorage.setItem('theme', 'light');
+    }
+
+    document.body.classList.add('show');
 }
 
 export default function Navbar({ page }){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    useEffect(() => {LightDark()}, []);
     return(
         <div>
-            <LightDark />
             <div className="navbar">
                 <div className="hidden sm:flex">
                     {links.map(({ name, href, key }) => (
@@ -74,7 +76,7 @@ export default function Navbar({ page }){
                             className={`nbar_items ${page === key ? 'active' : ''}`}
                             href={href}
                             target={key === 'other_work' ? '_blank' : '_self'}
-                            onClick={key === 'dark-mode' ? darkmode : null}
+                            onClick={key === 'dark-mode' ? darkmode : null} rel="noreferrer"
                         >
                             {name}
                         </a>

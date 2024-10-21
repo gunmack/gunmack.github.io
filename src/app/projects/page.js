@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import "@/app/globals.css";
 import Navbar from "@/components/navbar";

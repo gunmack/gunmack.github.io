@@ -9,14 +9,9 @@ from https://fonts.google.com/selection/embed
 
 :root {
   min-height: 100vh;
-}
-
-@media (prefers-color-scheme: light){  
-  :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 255, 255, 255;
-    --background-end-rgb: 255, 255, 255;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,17 +22,6 @@ from https://fonts.google.com/selection/embed
   }
 }
 
-.dark-mode {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-}
-
-.light-mode {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
-}
 
 @layer utilities {
   .text-balance {
@@ -61,6 +45,26 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.dark-mode {
+  --foreground-rgb: 255,255,255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+.light-mode {
+  --foreground-rgb: 0,0,0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  display: none;
+}
+
+body.show {
+  display: block;
 }
 
 .wrap {
@@ -168,7 +172,6 @@ body {
     width: 100%;
     
   }
-
  
   .nbar_items {
     font-size: 1rem; 

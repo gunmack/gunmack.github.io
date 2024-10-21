@@ -19,6 +19,7 @@ export default function Footer(){
             <Image
                 className="bg-white rounded-lg"
                 src="https://github.com/gunmack/276_website/images/gitHub.png"
+
                 alt="GitHub"
                 width={16}
                 height={16}

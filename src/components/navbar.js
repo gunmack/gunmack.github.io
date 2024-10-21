@@ -5,7 +5,7 @@ import Image from 'next/image';
 const links = [
     { name: '🏠 Home ', href: '/', key: 'home' },
     { name: '🧑🏾 About me ', href: 'about', key: 'about' },
-    { name: '🖥️ Projects ', href: '#', key: 'projects' },
+    { name: '🖥️ Projects ', href: 'projects', key: 'projects' },
     { name: '📃 Resume ', href: '#', key: 'resume' },
     { name: '📁 Other work ', href: 'https://www.gunmack.dev/', key: 'other_work'},
     { name: '☾☀︎', href: '#', key: 'dark-mode'},

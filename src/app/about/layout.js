@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Julkar Naine Reedoy", 
+  title: "About me", 
   image: "favicon.ico"
 };
 

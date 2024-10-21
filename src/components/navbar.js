@@ -1,14 +1,21 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const links = [
     { name: '🏠 Home ', href: '/', key: 'home' },
     { name: '🧑🏾 About me ', href: 'about', key: 'about' },
     { name: '🖥️ Projects ', href: '#', key: 'projects' },
-    { name: '📄 Resume ', href: '#', key: 'resume' },
+    { name: '📃 Resume ', href: '#', key: 'resume' },
     { name: '📁 Other work ', href: 'https://www.gunmack.dev/', key: 'other_work'},
+    { name: '☾☀︎', href: '#', key: 'dark-mode'},
 ];
+
+function darkmode() {
+    if (typeof window !== 'undefined') {
+        document.body.classList.toggle('dark-mode');
+    }
+}
 
 function Dropdown({isOpen}){
     return(
@@ -19,7 +26,9 @@ function Dropdown({isOpen}){
                     <a
                         key={key}
                         className="dropdown_list"
-                        href={href}                        
+                        href={href}
+                        target={key === 'other_work' ? '_blank' : '_self'}
+                        onClick={key === 'dark-mode' ? darkmode : null}                        
                     >
                         {name}
                     </a>
@@ -41,6 +50,7 @@ export default function Navbar({ page }){
                             className={`nbar_items ${page === key ? 'active' : ''}`}
                             href={href}
                             target={key === 'other_work' ? '_blank' : '_self'}
+                            onClick={key === 'dark-mode' ? darkmode : null}
                         >
                             {name}
                         </a>

@@ -21,7 +21,7 @@ function Text(){
         <div>
           <p>
             While I work on this page,<br></br> 
-            feel free to take a look at 
+            feel free to take a look at<br/> 
             👉 <Link href={link} className='link' target='_blank'>my GitHub</Link>
           </p>
           <br/><br/>  <br/><br/>   

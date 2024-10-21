@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
@@ -11,10 +12,17 @@ const links = [
     { name: '☾☀︎', href: '#', key: 'dark-mode'},
 ];
 
+// use local storage to save the theme preference
 function darkmode() {
-    if (typeof window !== 'undefined') {
-        document.body.classList.toggle('dark-mode');
-    }
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'light'); 
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode');
+        } else {
+            localStorage.setItem('theme', 'dark'); 
+            document.body.classList.remove('light-mode');
+            document.body.classList.add('dark-mode');
+        }
 }
 
 function Dropdown({isOpen}){
@@ -28,7 +36,7 @@ function Dropdown({isOpen}){
                         className="dropdown_list"
                         href={href}
                         target={key === 'other_work' ? '_blank' : '_self'}
-                        onClick={key === 'dark-mode' ? darkmode : null}                        
+                        onClick={key === 'dark-mode' ? darkmode : null} rel="noreferrer"                       
                     >
                         {name}
                     </a>
@@ -38,8 +46,25 @@ function Dropdown({isOpen}){
     )
 }
 
+function LightDark(){
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+    }  
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode') // Default to light mode
+        localStorage.setItem('theme', 'light');
+    }
+
+    document.body.classList.add('show');
+}
+
 export default function Navbar({ page }){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    useEffect(() => {LightDark()}, []);
     return(
         <div>
             <div className="navbar">
@@ -50,7 +75,7 @@ export default function Navbar({ page }){
                             className={`nbar_items ${page === key ? 'active' : ''}`}
                             href={href}
                             target={key === 'other_work' ? '_blank' : '_self'}
-                            onClick={key === 'dark-mode' ? darkmode : null}
+                            onClick={key === 'dark-mode' ? darkmode : null} rel="noreferrer"
                         >
                             {name}
                         </a>

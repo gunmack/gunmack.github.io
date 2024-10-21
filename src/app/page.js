@@ -1,3 +1,4 @@
+import React from "react";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -23,7 +24,8 @@ function Text(){
                 <Link className="link" href={link} target="_blank">CMPT 276 Fall 2024 D200</Link>
                 <br/><br/> 
                 Feel free to explore using the navbar on top. Although this site is<br/> 
-                not yet complete. If you would like to see my other work:<br/><br/>
+                not yet complete, If you would like to see my other work:<br/><br/>
+
                 <Link className="link" href={curr_site} target="_blank">👉 Click here</Link> 
             </p>
         </div>

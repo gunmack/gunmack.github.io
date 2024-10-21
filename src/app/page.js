@@ -1,35 +1,44 @@
-function Nav({name}){
-    return(
-      <div>
-        <button className="button">
-          <a href="/about">{name}</a>
-        </button>
-      </div>
-    )
-  }
-  
-
-
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Link from "next/link";
+
+function Header(){
+    return(
+      <div className="header">
+        <h1>Hello there!</h1>
+      </div>
+    )
+  }
+
+function Text(){
+    const link = "https://www.sfu.ca/outlines.html?2024/fall/cmpt/276/d200";
+    const curr_site = "https://www.gunmack.dev/";
+    return(
+        <div className="text">
+            <p>
+                My name is Julkar and welcome to my page :)<br/>
+                This page was made as part of a lab submission for:
+                <br/><br/> 
+                <Link className="link" href={link} target="_blank">CMPT 276 Fall 2024 D200</Link>
+                <br/><br/> 
+                Feel free to explore using the navbar on top. Although this site is<br/> 
+                not yet complete. If you would like to see my other work:<br/><br/>
+                <Link className="link" href={curr_site} target="_blank">👉 Click here</Link> 
+            </p>
+        </div>
+    )
+}
 
 export default function Landing(){
+  const currentPage = "home";
     return(
         <div>
-            <Nav name="About"/>
-            <Navbar/>
+            <Navbar page={currentPage}/>
             <div className="wrap">
                 <main className="main">
-                    Hello World!
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                    culpa qui officia deserunt mollit anim id est laborum.
-
+                    <Header/>
+                    <Text/> 
                 </main>
             </div>
             <Footer/>

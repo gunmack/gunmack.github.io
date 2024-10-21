@@ -1,25 +1,18 @@
-import React from "react";
-import Link from "next/link";
+import Link from 'next/link';
+import "../globals.css";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
-
-function Nav({ name }) { 
-  return (
-    <div>
-      <button className="button">
-        <a href="../">{name}</a>
-      </button>
-    </div>
-  );
-}
 function Header(){
   return(
     <div className="header">
-      <h1>Julkar Naine Reedoy</h1>
+      <h1>What I do</h1>
     </div>
   )
 }
 
 function Intro(){
+  const resume = "/files/Julkar_Reedoy_resume.pdf";
   return(
     <div className="text">
       <div>
@@ -41,23 +34,26 @@ function Intro(){
           I mostly work on front-end applications with React and Python.<br></br>
           I have experience working with abstract data structures in C and C++.<br></br>
           Currently, I am learning Object Oriented Programming with Java.
-          <br></br><br></br>Take a look at my resume <Link href="/files/Julkar_Reedoy_resume.pdf" target="_blank">📄</Link>
+          <br></br><br></br>Take a look at my resume by clicking on this little icon 👉 <Link href={resume} target="_blank">📄</Link>
         </p>
+
       </div>
     </div>
   )
 }
 
 export default function Home() {
+  const currentPage = 'about';
   return (
     <div>
-      <Nav name="Home"/>
+      <Navbar page={currentPage}/>
       <div className="wrap">
         <main className="main">
           <Header/>
           <Intro/>
         </main>
       </div>
+      <Footer/>
     </div>
   );
 }

@@ -3,28 +3,29 @@ from https://fonts.google.com/selection/embed
 */
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {
-  /* :root {
+  :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-  } */
+  }
 }
-
 
 @layer utilities {
   .text-balance {
     overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 }
 
@@ -45,63 +46,81 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-
-.navbar {
-  display: flex;
-  background-color: black;
-  padding: 2%;
-  gap: 2%;
-  min-width: 100vh;
-  justify-content:end;
-  position: sticky;
-  top:0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.nbar_items:hover {
-  color: #ef4444; /* Equivalent to Tailwind's text-red-500 */
-  font-size: 1.125rem;
-}
-
 .wrap {
   display: grid;
   align-items: center;
   justify-items:center ;
   gap:2%;
-  padding:15%;
-  min-height: 100vh;
-}
-
-.header {
-  text-align: center;
-  font-size: 2.25rem;
-  padding: 4%;
+  padding:10%;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 2%;
+  padding: 5%;
   align-items: center;
   gap: 2%;
   text-align: center;
 }
 
+.header {
+  text-align: center;
+  font-size: 2.25rem;
+  padding-bottom: 4%;
+}
+
+.text {
+  text-align: left;
+}
+
+.link{
+  font-style: italic;
+}
+.link:hover {
+  font-weight: bolder;
+}
+
+/* Navbar styles */
+.navbar_home {
+  justify-content: left;
+}
+.navbar {
+  display: flex;
+  background-color: rgb(var(--background-start-rgb));
+  padding: 1.5%;
+  gap: 1%;
+  width: 100%;
+  justify-content:center;
+  position: fixed;
+  margin-bottom: 2%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nbar_items{
+  padding-left: 45px;
+  font-size: 1.25rem;
+}
+
+.nbar_items:hover {
+  border-radius: 10%;
+  font-weight: bolder;
+}
+
+.nbar_items.active {
+  border-radius: 10%;
+  font-weight: bolder;
+}
+
+
+/* Footer styles */
 .footer {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2%;
+  margin-top: 2%;
   justify-content: start;
-  padding: 2%;
+  padding: 1%;
   gap: 2%;
-
+  position: sticky;
 }
 
 .f_items {
@@ -112,31 +131,35 @@ body {
 }
 
 .f_items:hover{
-  color: #ef4444; /* Equivalent to Tailwind's text-red-500 */
-  font-size: 1.125rem;
+  font-weight: bolder; 
 }
 
-
+/* Dropdown styles */
+.dropdown_list {
+  display: block;
+  padding: 0.5rem 1rem; 
+}
 
 
 /* Mobile styles */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row; /* Stack navbar items vertically */
-    padding: 4%; /* Increase padding for touch devices */
-    justify-content: center; /* Center the navbar items */
-    gap: 8%; /* Increase the gap between items */
-    min-width: 100%; /* Make sure the navbar spans the full width */
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 1%;
+    width: 100%;
+    
   }
 
+ 
   .nbar_items {
-    font-size: 1rem; /* Adjust font size for readability */
-    padding: 2%; /* Add more padding for touch interaction */
+    font-size: 1rem; 
+    padding: 10px; 
   }
-
   .wrap {
-    padding: 10%; /* Reduce padding for smaller screens */
-    gap: 4%; /* Adjust gap for smaller layout */
+    padding: 10%; 
+    gap: 4%; 
   }
 
   .main {
@@ -145,38 +168,33 @@ body {
   }
 
   .footer {
-    flex-direction: column; /* Stack footer items vertically */
-    justify-content: center;
-    gap: 4%; /* Increase the gap for better layout on mobile */
-    padding: 5%; /* Add padding for touch interaction */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 4%; 
+    padding: 2%;
+    margin-top: 10%; 
+    position: sticky;
   }
 
   .f_items {
-    gap: 10px; /* Adjust gap between footer items */
+    gap: 10px; 
   }
 
   .f_items:hover {
-    font-size: 1rem; /* Prevent text from getting too big on hover */
+    font-size: 1rem; 
+  }
+  .text { 
+    font-size: 0.75rem;
+  }
+  .header{
+    font-size: 1.5rem;
+    padding-top: 20%;
   }
 }
-.text { 
-  text-align: left; 
-  font-size: 1rem;
-}
 
-.button {
-  background-color: darkred;
-  border-radius: 5%;
-  padding: 2%;
-  color: white; 
-  border: none; 
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
-}
 
-.button:hover {
-  background-color: #a52a2a; 
-}
+
 
 
 

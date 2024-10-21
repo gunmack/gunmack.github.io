@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Julkar Naine Reedoy", 
+  title: "Hello there!", 
   image: "favicon.ico"
 };
 

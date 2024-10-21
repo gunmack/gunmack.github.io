@@ -3,14 +3,13 @@
 import React, { useState, useEffect } from 'react';
 
 const links = [
-    { name: '🏠 Home ', href: '/', key: 'home' },
+    { name: '🏠 Home ', href: 'https://gunmack.github.io/276_website/', key: 'home' },
     { name: '🧑🏾 About me ', href: 'about', key: 'about' },
     { name: '🖥️ Projects ', href: 'projects', key: 'projects' },
     { name: '📃 Resume ', href: '#', key: 'resume' },
     { name: '📁 Other work ', href: 'https://www.gunmack.dev/', key: 'other_work'},
     { name: '☾☀︎', href: '#', key: 'dark-mode'},
 ];
-
 
 // use local storage to save the theme preference
 function darkmode() {
@@ -36,7 +35,7 @@ function Dropdown({isOpen}){
                         className="dropdown_list"
                         href={href}
                         target={key === 'other_work' ? '_blank' : '_self'}
-                        onClick={key === 'dark-mode' ? darkmode : null} rel="noreferrer"                        
+                        onClick={key === 'dark-mode' ? darkmode : null} rel="noreferrer"                       
                     >
                         {name}
                     </a>

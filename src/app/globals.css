@@ -20,8 +20,7 @@ from https://fonts.google.com/selection/embed
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
-
+} 
 
 @layer utilities {
   .text-balance {
@@ -173,7 +172,7 @@ body.show {
     width: 100%;
     
   }
- 
+  
   .nbar_items {
     font-size: 1rem; 
     margin: 10px; 

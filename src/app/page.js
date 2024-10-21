@@ -25,12 +25,12 @@ function Text(){
                 <br/><br/> 
                 Feel free to explore using the navbar on top. Although this site is<br/> 
                 not yet complete, If you would like to see my other work:<br/><br/>
+
                 <Link className="link" href={curr_site} target="_blank">👉 Click here</Link> 
             </p>
         </div>
     )
 }
-
 
 export default function Landing(){
   const currentPage = "home";

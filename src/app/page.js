@@ -1,7 +1,5 @@
 import React from "react";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
 import Link from "next/link";
 
 function Header(){
@@ -33,17 +31,10 @@ function Text(){
 }
 
 export default function Landing(){
-  const currentPage = "home";
     return(
         <div>
-            <Navbar page={currentPage}/>
-            <div className="wrap">
-                <main className="main">
-                    <Header/>
-                    <Text/> 
-                </main>
-            </div>
-            <Footer/>
+            <Header/>
+            <Text/>    
         </div>
     ) 
 }

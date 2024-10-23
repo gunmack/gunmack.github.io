@@ -113,22 +113,20 @@ body.show {
   width: 100%;
   justify-content:center;
   position: fixed;
-  margin-bottom: 2%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nbar_items{
   font-size: 1.25rem;
-  margin-left: 100px;
+  margin-left: 20px;
 }
 
 .nbar_items:hover {
-  border-radius: 10%;
-  font-weight: bolder;
+  font-weight:bolder;
 }
 
 .nbar_items.active {
-  border-radius: 10%;
+  color:rgb(196, 31, 10);
   font-weight: bolder;
 }
 
@@ -137,11 +135,13 @@ body.show {
 .footer {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2%;
+  margin-top: auto;
   justify-content: start;
   padding: 1%;
   gap: 2%;
   position: sticky;
+  bottom: 0;
+  width: 100%;
 }
 
 .f_items {
@@ -170,7 +170,7 @@ body.show {
     padding: 1%;
     gap: 1%;
     width: 100%;
-    
+    align-items: center;
   }
   
   .nbar_items {
@@ -178,11 +178,11 @@ body.show {
     margin: 10px; 
   }
   .wrap {
-    padding: 10%; 
-    gap: 4%; 
+    gap: 10%; 
   }
 
   .main {
+    padding: 4%;
     flex-direction: column;
     gap: 4%;
   }
@@ -197,8 +197,9 @@ body.show {
     justify-content: start;
     gap: 4%; 
     padding: 2%;
-    margin-top: 10%; 
     position: sticky;
+    bottom: 0;
+    width: 100%;
   }
 
   .f_items {

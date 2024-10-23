@@ -1,8 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import "@/app/globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+
 
 function Header(){
   return(
@@ -18,7 +17,6 @@ function Intro(){
     <div className="text">
       <div>
         <p>
-          Hi, my name is Julkar and welcome to my page :)<br></br> 
           I am a 2nd year Computing Science Student at Simon Fraser University. <br></br>
           My preferred languages are:<br></br><br></br> 
         </p>
@@ -44,17 +42,10 @@ function Intro(){
 }
 
 export default function Home() {
-  const currentPage = 'about';
   return (
     <div>
-      <Navbar page={currentPage}/>
-      <div className="wrap">
-        <main className="main">
-          <Header/>
-          <Intro/>
-        </main>
-      </div>
-      <Footer/>
+      <Header/>
+      <Intro/>
     </div>
   );
 }

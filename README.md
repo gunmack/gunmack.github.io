@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome
+
+Welcome to my redesigned website for [CMPT 276 Fall 2024 D200](https://www.sfu.ca/outlines.html?2024/fall/cmpt/276/d200) Lab #4. This was built with React using [Next.js](https://nextjs.org/). Please note it is still a work in progress.
+
+## Purpose
+
+I used this an opportunity to design a website to replace my current [website](https://www.gunmack.dev/) while also meeting the requirements for the lab submission. I plan on replacing the current website with this after I complete it.
+
+<!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -33,4 +41,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. -->

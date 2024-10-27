@@ -10,7 +10,6 @@ export function darkmode() {
     document.body.classList.add("dark-mode");
   }
 }
-
 export function LightDark() {
   const savedTheme = localStorage.getItem("theme");
 

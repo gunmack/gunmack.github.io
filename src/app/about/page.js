@@ -12,8 +12,10 @@ function Text() {
     <div>
       <text data-testid="text">
         <p>
-          I am a 2nd year Computing Science Student at Simon Fraser University. <br></br>
-          My preferred languages are:<br></br><br></br> 
+          I am a 2nd year Computing Science Student at Simon Fraser University.{" "}
+          <br></br>
+          My preferred languages are:<br></br>
+          <br></br>
         </p>
 
         <ul>

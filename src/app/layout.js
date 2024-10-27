@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata = {
-  title: "Julkar' Website", 
+  title: "Julkar' Website",
   image: "favicon.ico",
   description: "My name is Julkar and welcome to my page :)",
 };
@@ -16,8 +16,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar page={currentPage} />
-        <div className="wrap">
-          <main className="main">{children}</main>
+        <div>
+          <wrap>
+            <main>{children}</main>
+          </wrap>
         </div>
         <Footer />
       </body>

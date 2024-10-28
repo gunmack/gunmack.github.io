@@ -1,6 +1,7 @@
 {
   "plugins": ["prettier"],
   "extends": [
+    "next",
     "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
@@ -14,5 +15,10 @@
     "next-env.d.ts",
     "public",
     "package-lock.json"
-  ]
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 "use client";
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -9,12 +8,12 @@ import "@/app/globals.css";
 export const links = [
   {
     name: "🏠Home ",
-    href: "https://gunmack.github.io/276_website/",
+    href: "https://gunmack.github.io/",
     key: "home",
   },
   { name: "🧑🏾About me ", href: "about", key: "about" },
   { name: "🖥️Projects ", href: "projects", key: "projects" },
-  { name: "📃Resume ", href: "#", key: "resume" },
+  { name: "📃Resume ", href: "resume", key: "resume" },
   {
     name: "📁Other work ",
     href: "https://www.gunmack.dev/",

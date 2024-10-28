@@ -56,6 +56,16 @@ body {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
+  pdf {
+    background-color: #2f4f4f;
+    color: white;
+  }
+  pdf_title {
+    color: rgb(255, 30, 0);
+  }
+  pdf_header {
+    color: rgb(255, 30, 0);
+  }
 }
 
 body {
@@ -115,20 +125,20 @@ navbar {
   justify-content: center;
   position: fixed;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-.nbar_items {
-  font-size: 1.25rem;
-  margin-left: 20px;
-}
+  .nbar_items {
+    font-size: 1.25rem;
+    margin-left: 20px;
+  }
 
-.nbar_items:hover {
-  font-weight: bolder;
-}
+  .nbar_items:hover {
+    font-weight: bolder;
+  }
 
-.nbar_items.active {
-  color: rgb(196, 31, 10);
-  font-weight: bolder;
+  .nbar_items.active {
+    color: rgb(196, 31, 10);
+    font-weight: bolder;
+  }
 }
 
 /* Footer styles */
@@ -142,19 +152,67 @@ footer {
   position: sticky;
   bottom: 0;
   width: 100%;
+
+  .f_items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8%;
+  }
+
+  .f_items:hover {
+    font-weight: bolder;
+  }
 }
 
-.f_items {
+/* Resume page styles */
+pdf {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8%;
-}
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8%;
+  background-color: white;
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  color: black;
 
-.f_items:hover {
-  font-weight: bolder;
-}
+  pdf_title {
+    font-size: 2rem;
+    padding-bottom: 2%;
+    color: #2596be;
+  }
 
+  pdf_header {
+    font-size: 1.5rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: #2596be;
+    text-align: start;
+    text-decoration: underline;
+  }
+
+  pdf_div {
+    padding-bottom: 4%;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: start;
+    padding-bottom: 2%;
+    font-weight: bold;
+  }
+  pdf_text {
+    text-align: left;
+    font-size: 0.85rem;
+    padding-bottom: 8%;
+  }
+  li {
+    padding-bottom: 2%;
+  }
+}
 /* Dropdown styles */
 .dropdown_list {
   display: block;
@@ -167,15 +225,16 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 1%;
-    gap: 1%;
+    gap: 5%;
     width: 100%;
     align-items: center;
+
+    .nbar_items {
+      font-size: 1rem;
+      margin: 10px;
+    }
   }
 
-  .nbar_items {
-    font-size: 1rem;
-    margin: 10px;
-  }
   .wrap {
     gap: 10%;
   }
@@ -185,7 +244,7 @@ footer {
     flex-direction: column;
     gap: 4%;
   }
-  
+
   .link {
     font-size: 0.75rem;
   }
@@ -226,11 +285,17 @@ footer {
   .f_items:hover {
     font-weight: bolder;
   }
+
   .text {
     font-size: 0.75rem;
   }
   .header {
     font-size: 1.5rem;
     padding-top: 20%;
+  }
+
+  pdf {
+    padding: 4%;
+    max-width: 100%;
   }
 }

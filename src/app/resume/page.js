@@ -14,26 +14,24 @@ function Resume_PDF() {
         <pdf_title>Julkar Naine Reedoy</pdf_title>
         <div>
           <p>
-            Phone: 506-625-4737 <br />
-            Email:{" "}
+            Phone: 506<code>hyphen</code>625<code>hyphen</code>4737 <br />
+            Email:{""}
             <a
               className="link"
               href="mailto:julkar_reedoy@sfu.ca"
               target="_blank"
               rel="noreferrer"
             >
-              julkar_reedoy@sfu.ca
+              julkar_reedoy[at]{""}
+              <code>DELETEthisTEXT</code>
+              {""}
+              sfu.ca
             </a>{" "}
-            <br /> GitHub:{" "}
-            <a
-              className="link"
-              href="https://github.com/gunmack"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <br /> GitHub:{""}
+            <a className="link" href="#" target="_blank" rel="noreferrer">
               github.com/gunmack
             </a>{" "}
-            <br /> LinkedIn:{" "}
+            <br /> LinkedIn:{""}
             <a
               className="link"
               href="https://www.linkedin.com/in/jreedoy/"
@@ -76,7 +74,7 @@ function Resume_PDF() {
               >
                 link
               </a>
-              ) - August 2024
+              ) <br /> August 2024
             </h3>
 
             <ul>
@@ -112,7 +110,7 @@ function Resume_PDF() {
               >
                 link
               </a>
-              ) - Spring - 2023
+              ) <br /> Spring 2023
             </h3>
 
             <ul>
@@ -153,7 +151,8 @@ function Resume_PDF() {
               >
                 link
               </a>
-              ) - November 2021
+              ) <br />
+              November 2021
             </h3>
 
             <ul>
@@ -192,7 +191,8 @@ function Resume_PDF() {
               >
                 link
               </a>
-              ) - August 2024
+              ) <br />
+              August 2024
             </h3>
 
             <ul>
@@ -226,7 +226,8 @@ function Resume_PDF() {
               >
                 link
               </a>
-              ) - August 2024
+              ) <br />
+              August 2024
             </h3>
 
             <ul>

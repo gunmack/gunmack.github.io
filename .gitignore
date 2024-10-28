@@ -8,7 +8,8 @@
 .pnp.js
 
 # testing
-/coverage
+/coverage/
+/coverage/lcove-report/
 /__tests__/__snapshots__
 # next.js
 /.next/

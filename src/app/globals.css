@@ -202,6 +202,10 @@ footer {
     font-size: 0.75rem;
   }
 
+  .link {
+    font-size: 0.75rem;
+  }
+
   .footer {
     display: flex;
     flex-direction: column;

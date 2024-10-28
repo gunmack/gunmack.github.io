@@ -1,21 +1,15 @@
 {
   "plugins": ["prettier"],
   "extends": [
-    "next",
     "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "prettier" // Integrates Prettier with ESLint
   ],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "ignorePatterns": [
-    "/node_modules/",
-    "/.next/",
-    "/build",
+    "node_modules",
+    ".next",
+    "build",
     ".next",
     "next-env.d.ts",
     "public",

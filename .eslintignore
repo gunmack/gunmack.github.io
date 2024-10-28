@@ -1,7 +1,0 @@
-node_modules
-/.next/
-/build
-.next
-next-env.d.ts
-public
-package-lock.json

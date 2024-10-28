@@ -32,7 +32,8 @@ function Text() {
           and C++.<br></br>
           Currently, I am learning Object Oriented Programming with Java.
           <br></br>
-          <br></br>Take a look at my resume by clicking on this little icon 👉{" "}
+          <br></br>Take a look at my resume by clicking on this little icon 👉
+          {""}
           <Link href={resume} className="link" target="_blank">
             📃
           </Link>

@@ -12,23 +12,23 @@ function Resume_PDF() {
     <div>
       <pdf data-testid="pdf">
         <pdf_title>Julkar Naine Reedoy</pdf_title>
-        <div>
+        <pdf_sub>
           <p>
             Phone: 506<code>hyphen</code>625<code>hyphen</code>4737 <br />
             Email:{""}
-            <a
-              className="link"
-              href="mailto:julkar_reedoy@sfu.ca"
-              target="_blank"
-              rel="noreferrer"
-            >
-              julkar_reedoy[at]{""}
-              <code>DELETEthisTEXT</code>
+            <a className="link" href="#">
+              julkar<code>_</code>reedoy
+              <code>[at]</code>
               {""}
               sfu.ca
             </a>{" "}
             <br /> GitHub:{""}
-            <a className="link" href="#" target="_blank" rel="noreferrer">
+            <a
+              className="link"
+              href="https://github.com/gunmack"
+              target="_blank"
+              rel="noreferrer"
+            >
               github.com/gunmack
             </a>{" "}
             <br /> LinkedIn:{""}
@@ -43,7 +43,7 @@ function Resume_PDF() {
             <br />
             <br />
           </p>
-        </div>
+        </pdf_sub>
 
         <pdf_header>Skills</pdf_header>
         <div>
@@ -61,23 +61,21 @@ function Resume_PDF() {
           </pdf_text>
         </div>
 
-        <div data-testid="pdf-projects">
-          <pdf_header>Projects</pdf_header>
-          <pdf_div>
-            <pdf_text>
-              <h3>
-                Calculator Web Application (
-                <a
-                  className="link"
-                  href="https://github.com/gunmack/calculator"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  link
-                </a>
-                ) <br /> August 2024
-              </h3>
-
+        <pdf_header>Projects</pdf_header>
+        <pdf_div>
+          <pdf_text>
+            <h3>
+              Calculator Web Application (
+              <a
+                className="link"
+                href="https://github.com/gunmack/calculator"
+                target="_blank"
+                rel="noreferrer"
+              >
+                link
+              </a>
+              ) <br /> August 2024
+            </h3>
               <ul>
                 <li>
                   👉 Built a fully functional calculator web application using
@@ -99,20 +97,20 @@ function Resume_PDF() {
             </pdf_text>
           </pdf_div>
 
-          <pdf_div>
-            <pdf_text>
-              <h3>
-                SFU Campus Timeline (
-                <a
-                  className="link"
-                  href="https://www.gunmack.dev/SFU"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  link
-                </a>
-                ) <br /> Spring 2023
-              </h3>
+        <pdf_div>
+          <pdf_text>
+            <h3>
+              SFU Campus Timeline (
+              <a
+                className="link"
+                href="https://www.gunmack.dev/SFU"
+                target="_blank"
+                rel="noreferrer"
+              >
+                link
+              </a>
+              ) <br /> Spring 2023
+            </h3>
 
               <ul>
                 <li>
@@ -140,21 +138,21 @@ function Resume_PDF() {
             </pdf_text>
           </pdf_div>
 
-          <pdf_div>
-            <pdf_text>
-              <h3>
-                Python Image Processor (
-                <a
-                  className="link"
-                  href="https://github.com/gunmack/Python-Image-Processor"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  link
-                </a>
-                ) <br />
-                November 2021
-              </h3>
+        <pdf_div>
+          <pdf_text>
+            <h3>
+              Python Image Processor (
+              <a
+                className="link"
+                href="https://github.com/gunmack/Python-Image-Processor"
+                target="_blank"
+                rel="noreferrer"
+              >
+                link
+              </a>
+              ) <br />
+              November 2021
+            </h3>
 
               <ul>
                 <li>
@@ -179,57 +177,57 @@ function Resume_PDF() {
             </pdf_text>
           </pdf_div>
 
-          <pdf_header>Contributions</pdf_header>
-          <pdf_div>
-            <pdf_text>
-              <h3>
-                csss-site-frontend (
-                <a
-                  className="link"
-                  href="https://github.com/CSSS/csss-site-frontend"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  link
-                </a>
-                ) <br />
-                August 2024
-              </h3>
+        <pdf_header>Contributions</pdf_header>
+        <pdf_div>
+          <pdf_text>
+            <h3>
+              csss-site-frontend (
+              <a
+                className="link"
+                href="https://github.com/CSSS/csss-site-frontend"
+                target="_blank"
+                rel="noreferrer"
+              >
+                link
+              </a>
+              ) <br />
+              August 2024
+            </h3>
 
-              <ul>
-                <li>
-                  👉 Became proficient with the existing React frontend
-                  architecture, gaining a deep understanding of its file
-                  structure and components.
-                </li>
-                <li>
-                  👉 Developed a dedicated page for the CSSS common rooms,
-                  embedding images, SVG maps along with clear and organized
-                  tables for various refreshments available.
-                </li>
-                <li>
-                  👉 Integrated the page into the existing directory of pages to
-                  ensure seamless navigation and functionality of the broader
-                  website.
-                </li>
-              </ul>
-            </pdf_text>
-          </pdf_div>
-          <pdf_div>
-            <pdf_text>
-              <h3>
-                csss-site-backend (
-                <a
-                  className="link"
-                  href="https://github.com/CSSS/csss-site-backend"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  link
-                </a>
-                ) <br />
-                August 2024
-              </h3>
+            <ul>
+              <li>
+                👉 Became proficient with the existing React frontend
+                architecture, gaining a deep understanding of its file structure
+                and components.
+              </li>
+              <li>
+                👉 Developed a dedicated page for the CSSS common rooms,
+                embedding images, SVG maps along with clear and organized tables
+                for various refreshments available.
+              </li>
+              <li>
+                👉 Integrated the page into the existing directory of pages to
+                ensure seamless navigation and functionality of the broader
+                website.
+              </li>
+            </ul>
+          </pdf_text>
+        </pdf_div>
+        <pdf_div>
+          <pdf_text>
+            <h3>
+              csss-site-backend (
+              <a
+                className="link"
+                href="https://github.com/CSSS/csss-site-backend"
+                target="_blank"
+                rel="noreferrer"
+              >
+                link
+              </a>
+              ) <br />
+              August 2024
+            </h3>
 
               <ul>
                 <li>

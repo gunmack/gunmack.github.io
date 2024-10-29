@@ -99,6 +99,12 @@ header {
   padding-bottom: 4%;
 }
 
+row_col {
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+}
+
 text {
   text-align: left;
 }

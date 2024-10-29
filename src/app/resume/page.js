@@ -10,7 +10,7 @@ function Resume_PDF() {
   const resume = "/files/Julkar_Reedoy_resume.pdf";
   return (
     <div>
-      <pdf>
+      <pdf data-testid="pdf">
         <pdf_title>Julkar Naine Reedoy</pdf_title>
         <div>
           <p>
@@ -61,192 +61,195 @@ function Resume_PDF() {
           </pdf_text>
         </div>
 
-        <pdf_header>Projects</pdf_header>
-        <pdf_div>
-          <pdf_text>
-            <h3>
-              Calculator Web Application (
-              <a
-                className="link"
-                href="https://github.com/gunmack/calculator"
-                target="_blank"
-                rel="noreferrer"
-              >
-                link
-              </a>
-              ) <br /> August 2024
-            </h3>
+        <div data-testid="pdf-projects">
+          <pdf_header>Projects</pdf_header>
+          <pdf_div>
+            <pdf_text>
+              <h3>
+                Calculator Web Application (
+                <a
+                  className="link"
+                  href="https://github.com/gunmack/calculator"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  link
+                </a>
+                ) <br /> August 2024
+              </h3>
 
-            <ul>
-              <li>
-                👉 Built a fully functional calculator web application using the
-                Flask framework.
-              </li>
-              <li>
-                👉 Developed a dynamic user interface with HTML embedded within
-                Flask components for seamless interaction.
-              </li>
-              <li>
-                👉 Used regex functions to tokenize user input for efficient
-                parsing and processing of mathematical expressions.
-              </li>
-              <li>
-                👉 Implemented calculator functionalities like clearing inputs
-                and deleting recent characters.
-              </li>
-            </ul>
-          </pdf_text>
-        </pdf_div>
+              <ul>
+                <li>
+                  👉 Built a fully functional calculator web application using
+                  the Flask framework.
+                </li>
+                <li>
+                  👉 Developed a dynamic user interface with HTML embedded
+                  within Flask components for seamless interaction.
+                </li>
+                <li>
+                  👉 Used regex functions to tokenize user input for efficient
+                  parsing and processing of mathematical expressions.
+                </li>
+                <li>
+                  👉 Implemented calculator functionalities like clearing inputs
+                  and deleting recent characters.
+                </li>
+              </ul>
+            </pdf_text>
+          </pdf_div>
 
-        <pdf_div>
-          <pdf_text>
-            <h3>
-              SFU Campus Timeline (
-              <a
-                className="link"
-                href="https://www.gunmack.dev/SFU"
-                target="_blank"
-                rel="noreferrer"
-              >
-                link
-              </a>
-              ) <br /> Spring 2023
-            </h3>
+          <pdf_div>
+            <pdf_text>
+              <h3>
+                SFU Campus Timeline (
+                <a
+                  className="link"
+                  href="https://www.gunmack.dev/SFU"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  link
+                </a>
+                ) <br /> Spring 2023
+              </h3>
 
-            <ul>
-              <li>
-                👉 Designed a landing page with Next.js and Tailwind to present
-                background information about the SFU campuses.
-              </li>
-              <li>
-                👉 Developed a comprehensive directory of HTML pages using
-                Bootstrap CSS framework to categorize buildings with their
-                respective campuses and opening dates.
-              </li>
-              <li>
-                👉 Integrated the Leaflet interactive map library to display
-                approximate building locations on a pop-up map.
-              </li>
-              <li>
-                👉 Used Bootstrap elements to create interactive slideshows that
-                let users view images of the buildings.
-              </li>
-              <li>
-                👉 Implemented a sticky navigation bar to let users navigate the
-                website.
-              </li>
-            </ul>
-          </pdf_text>
-        </pdf_div>
+              <ul>
+                <li>
+                  👉 Designed a landing page with Next.js and Tailwind to
+                  present background information about the SFU campuses.
+                </li>
+                <li>
+                  👉 Developed a comprehensive directory of HTML pages using
+                  Bootstrap CSS framework to categorize buildings with their
+                  respective campuses and opening dates.
+                </li>
+                <li>
+                  👉 Integrated the Leaflet interactive map library to display
+                  approximate building locations on a pop-up map.
+                </li>
+                <li>
+                  👉 Used Bootstrap elements to create interactive slideshows
+                  that let users view images of the buildings.
+                </li>
+                <li>
+                  👉 Implemented a sticky navigation bar to let users navigate
+                  the website.
+                </li>
+              </ul>
+            </pdf_text>
+          </pdf_div>
 
-        <pdf_div>
-          <pdf_text>
-            <h3>
-              Python Image Processor (
-              <a
-                className="link"
-                href="https://github.com/gunmack/Python-Image-Processor"
-                target="_blank"
-                rel="noreferrer"
-              >
-                link
-              </a>
-              ) <br />
-              November 2021
-            </h3>
+          <pdf_div>
+            <pdf_text>
+              <h3>
+                Python Image Processor (
+                <a
+                  className="link"
+                  href="https://github.com/gunmack/Python-Image-Processor"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  link
+                </a>
+                ) <br />
+                November 2021
+              </h3>
 
-            <ul>
-              <li>
-                👉 Utilized Numpy and Pygame libraries to develop a
-                user-friendly interface that allows users to perform advanced
-                image processing.
-              </li>
-              <li>
-                👉 Created and integrated image filters like sepia, warm, cold,
-                etc. that use pixel manipulation to let users process images as
-                required.
-              </li>
-              <li>
-                👉 Used pixel manipulation to Implement image resizing
-                capabilities for user uploaded images.
-              </li>
-              <li>
-                👉 Enabled functionality to let users save processed images to
-                local storage using Pygame’s built-in features.
-              </li>
-            </ul>
-          </pdf_text>
-        </pdf_div>
+              <ul>
+                <li>
+                  👉 Utilized Numpy and Pygame libraries to develop a
+                  user-friendly interface that allows users to perform advanced
+                  image processing.
+                </li>
+                <li>
+                  👉 Created and integrated image filters like sepia, warm,
+                  cold, etc. that use pixel manipulation to let users process
+                  images as required.
+                </li>
+                <li>
+                  👉 Used pixel manipulation to Implement image resizing
+                  capabilities for user uploaded images.
+                </li>
+                <li>
+                  👉 Enabled functionality to let users save processed images to
+                  local storage using Pygame’s built-in features.
+                </li>
+              </ul>
+            </pdf_text>
+          </pdf_div>
 
-        <pdf_header>Contributions</pdf_header>
-        <pdf_div>
-          <pdf_text>
-            <h3>
-              csss-site-frontend (
-              <a
-                className="link"
-                href="https://github.com/CSSS/csss-site-frontend"
-                target="_blank"
-                rel="noreferrer"
-              >
-                link
-              </a>
-              ) <br />
-              August 2024
-            </h3>
+          <pdf_header>Contributions</pdf_header>
+          <pdf_div>
+            <pdf_text>
+              <h3>
+                csss-site-frontend (
+                <a
+                  className="link"
+                  href="https://github.com/CSSS/csss-site-frontend"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  link
+                </a>
+                ) <br />
+                August 2024
+              </h3>
 
-            <ul>
-              <li>
-                👉 Became proficient with the existing React frontend
-                architecture, gaining a deep understanding of its file structure
-                and components.
-              </li>
-              <li>
-                👉 Developed a dedicated page for the CSSS common rooms,
-                embedding images, SVG maps along with clear and organized tables
-                for various refreshments available.
-              </li>
-              <li>
-                👉 Integrated the page into the existing directory of pages to
-                ensure seamless navigation and functionality of the broader
-                website.
-              </li>
-            </ul>
-          </pdf_text>
-        </pdf_div>
-        <pdf_div>
-          <pdf_text>
-            <h3>
-              csss-site-backend (
-              <a
-                className="link"
-                href="https://github.com/CSSS/csss-site-backend"
-                target="_blank"
-                rel="noreferrer"
-              >
-                link
-              </a>
-              ) <br />
-              August 2024
-            </h3>
+              <ul>
+                <li>
+                  👉 Became proficient with the existing React frontend
+                  architecture, gaining a deep understanding of its file
+                  structure and components.
+                </li>
+                <li>
+                  👉 Developed a dedicated page for the CSSS common rooms,
+                  embedding images, SVG maps along with clear and organized
+                  tables for various refreshments available.
+                </li>
+                <li>
+                  👉 Integrated the page into the existing directory of pages to
+                  ensure seamless navigation and functionality of the broader
+                  website.
+                </li>
+              </ul>
+            </pdf_text>
+          </pdf_div>
+          <pdf_div>
+            <pdf_text>
+              <h3>
+                csss-site-backend (
+                <a
+                  className="link"
+                  href="https://github.com/CSSS/csss-site-backend"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  link
+                </a>
+                ) <br />
+                August 2024
+              </h3>
 
-            <ul>
-              <li>
-                👉 Familiarized with the existing backend API codebase, learning
-                about its complex architecture and functionalities
-              </li>
-              <li>
-                👉 Implemented a new database table using SQLAlchemy, ensuring a
-                seamless integration of the table into the existing database
-                schema.
-              </li>
-              <li>
-                👉 Performed database migration with new revisions using Alembic
-                as well as modifying Alembic scripts to reflect changes.
-              </li>
-            </ul>
-          </pdf_text>
-        </pdf_div>
+              <ul>
+                <li>
+                  👉 Familiarized with the existing backend API codebase,
+                  learning about its complex architecture and functionalities
+                </li>
+                <li>
+                  👉 Implemented a new database table using SQLAlchemy, ensuring
+                  a seamless integration of the table into the existing database
+                  schema.
+                </li>
+                <li>
+                  👉 Performed database migration with new revisions using
+                  Alembic as well as modifying Alembic scripts to reflect
+                  changes.
+                </li>
+              </ul>
+            </pdf_text>
+          </pdf_div>
+        </div>
 
         <pdf_header>Work Experience</pdf_header>
         <div>

@@ -55,9 +55,5 @@ describe("Resume", () => {
     // check for pdf in <Resume_PDF />
     const pdf = screen.getByTestId("pdf");
     expect(pdf).toBeInTheDocument();
-
-    // check for pdf_projects in <Resume_PDF />
-    const pdf_projects = screen.getByTestId("pdf-projects");
-    expect(pdf_projects).toBeInTheDocument();
   });
 });

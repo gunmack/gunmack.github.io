@@ -12,23 +12,23 @@ function Resume_PDF() {
     <div>
       <pdf>
         <pdf_title>Julkar Naine Reedoy</pdf_title>
-        <div>
+        <pdf_sub>
           <p>
             Phone: 506<code>hyphen</code>625<code>hyphen</code>4737 <br />
             Email:{""}
-            <a
-              className="link"
-              href="mailto:julkar_reedoy@sfu.ca"
-              target="_blank"
-              rel="noreferrer"
-            >
-              julkar_reedoy[at]{""}
-              <code>DELETEthisTEXT</code>
+            <a className="link" href="#">
+              julkar<code>_</code>reedoy
+              <code>[at]</code>
               {""}
               sfu.ca
             </a>{" "}
             <br /> GitHub:{""}
-            <a className="link" href="#" target="_blank" rel="noreferrer">
+            <a
+              className="link"
+              href="https://github.com/gunmack"
+              target="_blank"
+              rel="noreferrer"
+            >
               github.com/gunmack
             </a>{" "}
             <br /> LinkedIn:{""}
@@ -43,7 +43,7 @@ function Resume_PDF() {
             <br />
             <br />
           </p>
-        </div>
+        </pdf_sub>
 
         <pdf_header>Skills</pdf_header>
         <div>

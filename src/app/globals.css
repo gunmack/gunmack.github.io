@@ -103,6 +103,8 @@ row_col {
   display: flex;
   flex-direction: row;
   gap: 8%;
+  align-items: center;
+  justify-content: center;
 }
 
 text {

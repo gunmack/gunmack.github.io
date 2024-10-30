@@ -47,7 +47,7 @@ function project2() {
       >
         <Image
           className="rounded-lg"
-          src={"/images/SFU.png"}
+          src={"/images/sfu.png"}
           alt="project_2"
           width={150}
           height={0}

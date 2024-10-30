@@ -94,7 +94,7 @@ function project3() {
           <ul>
             <li>👉 Plain python</li>
             <li>👉 Regular Expressions</li>
-            <li>👉 HTML embedded into LALA Flask for user view and input</li>
+            <li>👉 HTML embedded into Flask for client side view</li>
             <li>👉 Flask development server</li>
           </ul>
         </text>

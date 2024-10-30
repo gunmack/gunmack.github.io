@@ -38,11 +38,11 @@ describe("Projects", () => {
   it("renders all components", () => {
     render(<Projects />);
 
-    // check for <header> in <Header />
-    const header = screen.getByTestId("header");
-    expect(header).toBeInTheDocument();
+    // check for <Content> in Projects()
+    const content = screen.getByTestId("content");
+    expect(content).toBeInTheDocument();
 
-    // check for text in <Text />
+    // check for <Text> in Projects()
     const text = screen.getByTestId("text");
     expect(text).toBeInTheDocument();
   });
@@ -52,7 +52,7 @@ describe("Resume", () => {
   it("renders all components", () => {
     render(<Resume />);
 
-    // check for pdf in <Resume_PDF />
+    // check for all in Resume()
     const pdf = screen.getByTestId("pdf");
     expect(pdf).toBeInTheDocument();
   });

@@ -4,7 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 function Header() {
-  return <header data-testid="header">Hello there!</header>;
+  return (
+    <header data-testid="header">
+      Hello{" "}
+      <span role="img" aria-label="wave">
+        👋
+      </span>
+    </header>
+  );
 }
 
 function Text() {
@@ -15,7 +22,7 @@ function Text() {
       <div>
         <text data-testid="text">
           <p>
-            My name is Julkar and welcome to my page :)
+            Hi, I&apos;m Julkar and welcome to my page :)
             <br />
             This page was made as part of a lab submission for:
             <br />
@@ -42,7 +49,7 @@ function Text() {
           alt="Julkar"
           height={250}
           width={250}
-          className="rounded-lg"
+          className="portrait"
         />
       </div>
     </row_col>

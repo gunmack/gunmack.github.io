@@ -8,7 +8,7 @@ import "@/app/globals.css";
 export const links = [
   {
     name: "🏠Home ",
-    href: "https://gunmack.github.io/",
+    href: "/",
     key: "home",
   },
   { name: "🧑🏾About me ", href: "about", key: "about" },

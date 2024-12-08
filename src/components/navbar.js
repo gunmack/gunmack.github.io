@@ -19,7 +19,7 @@ export const links = [
     href: "https://www.gunmack.dev/",
     key: "other_work",
   },
-  { name: "☾☀︎", href: "#", key: "dark-mode" },
+  { name: "☾☀︎", key: "dark-mode" },
 ];
 
 function PagePath() {
@@ -54,18 +54,28 @@ export default function Navbar() {
     <div>
       <navbar>
         <div className="hidden sm:flex">
-          {links.map(({ name, href, key }) => (
-            <a
-              key={key}
-              className={`nbar_items ${page === key ? "active" : ""}`}
-              href={href}
-              target={key === "other_work" ? "_blank" : "_self"}
-              onClick={key === "dark-mode" ? darkmode : null}
-              rel="noreferrer"
-            >
-              {name}
-            </a>
-          ))}
+          {links.map(({ name, href, key }) =>
+            key !== "dark-mode" ? (
+              <a
+                key={key}
+                className={`nbar_items ${page === key ? "active" : ""}`}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+              >
+                {name}
+              </a>
+            ) : (
+              <button
+                key={key} // Keep the 'key' prop for the button
+                className="nbar_items"
+                onClick={darkmode} // Dark mode toggle directly without checking key here
+                aria-label="Toggle dark mode"
+              >
+                {name}
+              </button>
+            ),
+          )}
         </div>
 
         {/* Hamburger menu for small screens */}

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div>
       <footer>
-        <a
+        <button
           className="f_items"
           href="https://www.linkedin.com/in/jreedoy/"
           target="_blank"
@@ -19,8 +19,8 @@ export default function Footer() {
             height={20}
           ></Image>
           LinkedIn
-        </a>
-        <a
+        </button>
+        <button
           className="f_items"
           href="https://github.com/gunmack"
           target="_blank"
@@ -34,19 +34,13 @@ export default function Footer() {
             height={20}
           ></Image>
           GitHub
-        </a>
+        </button>
         <a
-          className="f_items"
+          className="link"
           href="mailto:julkar_reedoy@sfu.ca?subject=Feedback on your GitHub page"
           target="_blank"
           rel="noreferrer"
         >
-          <Image
-            src={"/images/mail.png"}
-            alt="Email logo"
-            width={20}
-            height={20}
-          ></Image>
           Give Feedback
         </a>
         <a

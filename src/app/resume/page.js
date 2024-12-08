@@ -9,14 +9,14 @@ function linkToCopy() {
     <div>
       <br />
       <br />
-      <text>
+      <div className="text">
         <p>
           Looking to download a copy? Click 👉{""}
           <Link href={resume} className="link" target="_blank">
             📃
           </Link>
         </p>
-      </text>
+      </div>
     </div>
   );
 }

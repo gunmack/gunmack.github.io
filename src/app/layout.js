@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata = {
-  title: "Julkar's Website",
+  title: "Julkar Naine Reedoy",
   image: "favicon.ico",
   description: "My name is Julkar and welcome to my page :)",
 };

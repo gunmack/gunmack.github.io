@@ -8,7 +8,11 @@ function Resume_PDF() {
         <div>
           <p>
             Email:{""}
-            <a className="link" href="#">
+            <a
+              className="link"
+              href="#"
+              style={{ wordWrap: "break-word", wordBreak: "break-word" }}
+            >
               julkar<code>[dash]</code>reedoy{""}
               <code>[at]</code>
               {""}
@@ -20,6 +24,7 @@ function Resume_PDF() {
               href="https://github.com/gunmack"
               target="_blank"
               rel="noreferrer"
+              style={{ wordWrap: "break-word", wordBreak: "break-word" }}
             >
               github.com/gunmack
             </a>{" "}
@@ -29,6 +34,7 @@ function Resume_PDF() {
               href="https://www.linkedin.com/in/jreedoy/"
               target="_blank"
               rel="noreferrer"
+              style={{ wordWrap: "break-word", wordBreak: "break-word" }}
             >
               linkedin.com/in/jreedoy
             </a>

@@ -3,6 +3,10 @@ import Link from "next/link";
 import "@/app/globals.css";
 import Content from "./content";
 
+function Header() {
+  return <header data-testid="header">My Projects</header>;
+}
+
 function Text() {
   const link = "https://github.com/gunmack";
   return (
@@ -23,9 +27,10 @@ function Text() {
 export default function Projects() {
   return (
     <div>
-      <div>
-        <Content />
-      </div>
+      <Header />
+      <Content />
+      <br />
+      <br />
       <Text />
     </div>
   );

@@ -57,16 +57,15 @@ function Resume_PDF() {
         <pdf_div>
           <pdf_text>
             <h3>
-              Calculator Web Application (
               <a
-                className="link"
+                className="link hover:text-blue-400"
                 href="https://github.com/gunmack/calculator"
                 target="_blank"
                 rel="noreferrer"
               >
-                link
+                Calculator Web Application
               </a>
-              ) <br /> August 2024
+              <p className="text-right"> August 2024</p>
             </h3>
 
             <ul>
@@ -93,16 +92,15 @@ function Resume_PDF() {
         <pdf_div>
           <pdf_text>
             <h3>
-              SFU Campus Timeline (
               <a
-                className="link"
+                className="link hover:text-blue-400"
                 href="https://www.gunmack.dev/SFU"
                 target="_blank"
                 rel="noreferrer"
               >
-                link
+                SFU Campus Timeline
               </a>
-              ) <br /> Spring 2023
+              <p className="text-right">Spring 2023</p>
             </h3>
 
             <ul>
@@ -134,17 +132,15 @@ function Resume_PDF() {
         <pdf_div>
           <pdf_text>
             <h3>
-              Python Image Processor (
               <a
-                className="link"
+                className="link hover:text-blue-400"
                 href="https://github.com/gunmack/Python-Image-Processor"
                 target="_blank"
                 rel="noreferrer"
               >
-                link
+                Python Image Processor
               </a>
-              ) <br />
-              November 2021
+              <p className="text-right">November 2021</p>
             </h3>
 
             <ul>
@@ -174,17 +170,15 @@ function Resume_PDF() {
         <pdf_div>
           <pdf_text>
             <h3>
-              csss-site-frontend (
               <a
-                className="link"
+                className="link hover:text-blue-400"
                 href="https://github.com/CSSS/csss-site-frontend"
                 target="_blank"
                 rel="noreferrer"
               >
-                link
+                csss-site-frontend
               </a>
-              ) <br />
-              August 2024
+              <p className="text-right">August 2024</p>
             </h3>
 
             <ul>
@@ -209,17 +203,15 @@ function Resume_PDF() {
         <pdf_div>
           <pdf_text>
             <h3>
-              csss-site-backend (
               <a
-                className="link"
+                className="link hover:text-blue-400"
                 href="https://github.com/CSSS/csss-site-backend"
                 target="_blank"
                 rel="noreferrer"
               >
-                link
+                csss-site-backend
               </a>
-              ) <br />
-              August 2024
+              <p className="text-right">August 2024</p>
             </h3>
 
             <ul>

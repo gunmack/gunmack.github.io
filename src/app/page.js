@@ -15,7 +15,7 @@ function Header() {
 }
 
 function Text() {
-  const link = "https://www.sfu.ca/outlines.html?2024/fall/cmpt/276/d200";
+  // const link = "https://www.sfu.ca/outlines.html?2024/fall/cmpt/276/d200";
   const curr_site = "https://www.gunmack.dev/";
   return (
     <row_col>
@@ -24,25 +24,46 @@ function Text() {
           <p>
             Hi, I&apos;m Julkar and welcome to my page :)
             <br />
-            This page was made as part of a lab submission for:
+            This website is currently a work in progress.
             <br />
             <br />
-            <Link className="link" href={link} target="_blank">
-              CMPT 276 Fall 2024 D200
-            </Link>
+          </p>
+          <p>
+            This website was created using Next.js and Tailwind CSS.
+            <br /> It currently contains:
+          </p>
+          <br />
+          <ul>
+            <li>
+              {" "}
+              <Link className="link" href="about" target="_blank">
+                🧑🏾 About me
+              </Link>
+            </li>
+            <li>
+              {" "}
+              <Link className="link" href="projects" target="_blank">
+                🖥️ Projects
+              </Link>
+            </li>
+            <li>
+              {" "}
+              <Link className="link" href="resume" target="_blank">
+                📃 Resume
+              </Link>
+            </li>
+          </ul>
+          <p>
+            <br /> If you would like to see my other work:
             <br />
-            <br />
-            Feel free to explore using the navbar on top. Although this site is
-            <br />
-            not yet complete, If you would like to see my other work:
-            <br />
-            <br />
+            Click here 👉
             <Link className="link" href={curr_site} target="_blank">
-              👉 Click here
+              📁Other work
             </Link>
           </p>
         </text>
       </div>
+      <br />
       <div>
         <Image
           src="/images/grad_pic.png"

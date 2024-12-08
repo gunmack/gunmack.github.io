@@ -20,7 +20,7 @@ function Text() {
   return (
     <div className="row_col">
       <div>
-        <text data-testid="text">
+        <div data-testid="text" className="text">
           <p>
             Hi, I&apos;m Julkar and welcome to my page :)
             <br />
@@ -61,7 +61,7 @@ function Text() {
               📁Other work
             </Link>
           </p>
-        </text>
+        </div>
       </div>
       <br />
       <div>

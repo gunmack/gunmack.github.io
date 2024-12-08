@@ -18,7 +18,7 @@ function project1() {
           height={0}
         />
         <br />
-        <text>
+        <div className="text">
           <h3>Python Image Processor</h3>
           <p>
             <em>
@@ -31,7 +31,7 @@ function project1() {
             <li>👉 Pygame</li>
             <li>👉 Tkinter</li>
           </ul>
-        </text>
+        </div>
       </a>
     </div>
   );
@@ -53,7 +53,7 @@ function project2() {
           height={0}
         />
         <br />
-        <text>
+        <div className="text">
           <h3>SFU Campus Timeline</h3>
           <p>
             <em>Comprehensive HTML directory of SFU campus buildings</em>
@@ -63,7 +63,7 @@ function project2() {
             <li>👉 HTML</li>
             <li>👉 Bootstrap CSS</li>
           </ul>
-        </text>
+        </div>
       </a>
     </div>
   );
@@ -85,7 +85,7 @@ function project3() {
           height={0}
         />
         <br />
-        <text>
+        <div className="text">
           <h3>Single Expression Calculator</h3>
           <p>
             <em>Calculator app built with Python 3.12 and Flask 3.0.3.</em>
@@ -97,7 +97,7 @@ function project3() {
             <li>👉 HTML embedded into Flask for client side view</li>
             <li>👉 Flask development server</li>
           </ul>
-        </text>
+        </div>
       </a>
     </div>
   );

@@ -60,6 +60,8 @@ export default function Navbar() {
                 key={key}
                 className={`nbar_items ${page === key ? "active" : ""}`}
                 href={href}
+                target={href.startsWith("http") ? "_blank" : "_self"}
+                rel="noopener noreferrer"
               >
                 {name}
               </a>

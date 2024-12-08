@@ -7,7 +7,7 @@ function Header() {
 }
 
 function Text() {
-  const resume = "/files/Julkar_Reedoy_resume.pdf";
+  // const resume = "/files/Julkar_Reedoy_resume.pdf";
   return (
     <div>
       <text data-testid="text">
@@ -34,7 +34,7 @@ function Text() {
           <br></br>
           <br></br>Take a look at my resume by clicking on this little icon 👉
           {""}
-          <Link href={resume} className="link" target="_blank">
+          <Link href="resume" className="link">
             📃
           </Link>
         </p>

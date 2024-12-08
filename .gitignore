@@ -44,9 +44,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.husky/
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs
-.husky/
+
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs

@@ -23,9 +23,9 @@ function Text() {
 export default function Projects() {
   return (
     <div>
-      <div>
-        <Content />
-      </div>
+      <Content />
+      <br />
+      <br />
       <Text />
     </div>
   );

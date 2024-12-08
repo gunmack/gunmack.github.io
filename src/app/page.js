@@ -18,7 +18,7 @@ function Text() {
   // const link = "https://www.sfu.ca/outlines.html?2024/fall/cmpt/276/d200";
   const curr_site = "https://www.gunmack.dev/";
   return (
-    <row_col>
+    <div className="row_col">
       <div>
         <text data-testid="text">
           <p>
@@ -73,7 +73,7 @@ function Text() {
           className="portrait"
         />
       </div>
-    </row_col>
+    </div>
   );
 }
 

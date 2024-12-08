@@ -51,7 +51,7 @@ body {
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
 
-  click_div {
+  .click_div {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
   }
@@ -79,8 +79,8 @@ body {
   pdf {
     background-color: white;
     color: black;
-    border: 20px solid black;
-    border-radius: 20px;
+    border: 10px solid black;
+    border-radius: 10px;
   }
 }
 
@@ -115,13 +115,12 @@ header {
   padding-bottom: 4%;
 }
 
-row_col {
+.row_col {
   display: flex;
   flex-direction: row;
-  gap: 8%;
-  align-items: center;
+  gap: 8%; /* Space between items */
+  align-items: center; /* Vertically align the items */
   justify-content: center;
-  padding-bottom: 8%;
 }
 
 text {
@@ -184,7 +183,8 @@ footer {
   flex-wrap: wrap;
   margin-top: auto;
   justify-content: start;
-  padding: 1%;
+  margin-bottom: 2%;
+
   gap: 2%;
   position: sticky;
   bottom: 0;
@@ -195,7 +195,6 @@ footer {
     flex-direction: row;
     align-items: center;
     gap: 8%;
-    margin: 0;
   }
 
   .f_items:hover {
@@ -223,6 +222,8 @@ pdf {
   background-color: white;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
   color: black;
+  border: 10px solid rgb(70, 130, 180);
+  border-radius: 10px;
 
   pdf_title {
     font-size: 2rem;
@@ -274,15 +275,17 @@ pdf {
   padding: 0.5rem 1rem;
 }
 
-click_div {
-  padding: 2%;
+.click_div {
+  padding: 4%;
+  margin: 2%;
   border-radius: 2%;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  justify-content: center;
 }
 
-click_div:hover {
+.click_div:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
@@ -333,26 +336,6 @@ click_div:hover {
     font-size: 0.75rem;
   }
 
-  .link {
-    font-size: 0.75rem;
-  }
-
-  .link {
-    font-size: 0.75rem;
-  }
-
-  .link {
-    font-size: 0.75rem;
-  }
-
-  .link {
-    font-size: 0.75rem;
-  }
-
-  .link {
-    font-size: 0.75rem;
-  }
-
   .footer {
     display: flex;
     flex-direction: column;
@@ -365,7 +348,7 @@ click_div:hover {
   }
 
   .f_items {
-    gap: 10px;
+    gap: 2%;
     padding: 2%;
     font-size: 0.75rem;
   }

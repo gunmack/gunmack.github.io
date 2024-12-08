@@ -4,14 +4,14 @@ import Image from "next/image";
 
 function project1() {
   return (
-    <click_div>
+    <div className="click_div">
       <a
         href="https://github.com/gunmack/Python-Image-Processor"
         target="_blank"
         rel="noreferrer"
       >
         <Image
-          className="click_div rounded-lg"
+          className="div rounded-lg"
           src={"/images/project_1.png"}
           alt="project_1"
           width={150}
@@ -33,13 +33,13 @@ function project1() {
           </ul>
         </text>
       </a>
-    </click_div>
+    </div>
   );
 }
 
 function project2() {
   return (
-    <click_div>
+    <div className="click_div">
       <a
         href="https://github.com/gunmack/SFU1"
         target="_blank"
@@ -65,13 +65,13 @@ function project2() {
           </ul>
         </text>
       </a>
-    </click_div>
+    </div>
   );
 }
 
 function project3() {
   return (
-    <click_div>
+    <div className="click_div">
       <a
         href="https://github.com/gunmack/Flask-Calculator"
         target="_blank"
@@ -99,18 +99,19 @@ function project3() {
           </ul>
         </text>
       </a>
-    </click_div>
+    </div>
   );
 }
 
 export default function Content() {
   return (
     <div data-testid="content">
-      <row_col>
+      <div className="row_col">
+        {" "}
         {project1()}
         {project2()}
-      </row_col>
-      <row_col>{project3()}</row_col>
+      </div>
+      <div className="row_col"> {project3()}</div>
     </div>
   );
 }

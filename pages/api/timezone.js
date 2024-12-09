@@ -10,11 +10,13 @@ export default async function handler(req, res) {
 
     // Call the GeoNames API to fetch the timezone using the coordinates
     const username = `gunmack`;
-    const geoNamesUrl = `https://api.geonames.org/timezoneJSON?lat=${latitude}&lng=${longitude}&username=${username}`;
-
+    const geoNamesUrl = `http://api.geonames.org/timezoneJSON?lat=${latitude}&lng=${longitude}&username=${username}`;
 
     try {
       const response = await fetch(geoNamesUrl);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
       const data = await response.json();
 
       if (data.status) {
@@ -31,6 +33,7 @@ export default async function handler(req, res) {
         .json({ error: "Error fetching timezone", details: error.message });
     }
   } else {
-    return res.status(405).json({ error: "Method not allowed" });
+    res.setHeader("Allow", ["POST"]);
+    res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }

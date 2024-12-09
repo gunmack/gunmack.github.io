@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { darkmode, LightDark } from "@/components/light_dark";
 import Dropdown from "@/components/dropdown";
 import "@/app/globals.css";
+import TimeUpdater from "./time/fetchTime";
 
 export const links = [
   {
@@ -52,8 +53,11 @@ export default function Navbar() {
 
   return (
     <div>
-      <navbar>
-        <div className="hidden sm:flex">
+      <div className="navbar">
+        <div className="fixed left-10  hidden lg:flex">
+          <TimeUpdater />
+        </div>
+        <div className="hidden sm:flex ">
           {links.map(({ name, href, key }) =>
             key !== "dark-mode" ? (
               <a
@@ -88,10 +92,16 @@ export default function Navbar() {
             alt="Hamburger icon"
           ></img>
         </nbar_items>
-
         {/* Dropdown visible only when `isMenuOpen` is true on small screens */}
         <Dropdown isOpen={isMenuOpen} />
-      </navbar>
+      </div>
+      {/* Overlay and Dropdown visible only when `isMenuOpen` is true on small screens */}
+      {isMenuOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
+          onClick={setIsMenuOpen(false)}
+        ></div>
+      )}
     </div>
   );
 }

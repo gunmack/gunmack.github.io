@@ -1,9 +1,10 @@
 import React from "react";
+import "@/app/globals.css";
 
 function Resume_PDF() {
   return (
     <div>
-      <pdf data-testid="pdf">
+      <div data-testid="pdf" className="pdf">
         <pdf_title>Julkar Naine Reedoy</pdf_title>
         <div>
           <p>
@@ -272,7 +273,7 @@ function Resume_PDF() {
             </ul>
           </pdf_text>
         </div>
-      </pdf>
+      </div>
     </div>
   );
 }

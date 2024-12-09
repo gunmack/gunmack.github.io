@@ -36,19 +36,19 @@ function Text() {
           <ul>
             <li>
               {" "}
-              <Link className="link" href="about" target="_blank">
+              <Link className="link" href="about">
                 🧑🏾 About me
               </Link>
             </li>
             <li>
               {" "}
-              <Link className="link" href="projects" target="_blank">
+              <Link className="link" href="projects">
                 🖥️ Projects
               </Link>
             </li>
             <li>
               {" "}
-              <Link className="link" href="resume" target="_blank">
+              <Link className="link" href="resume">
                 📃 Resume
               </Link>
             </li>

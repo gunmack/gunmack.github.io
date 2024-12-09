@@ -49,6 +49,11 @@ function TimeUpdater() {
       //   const location = "America/Vancouver";
 
       const locArray = await getUserLocation();
+      if (locArray === null) {
+        setError("Could not fetch location");
+        return;
+      }
+
       const loc = locArray.replace("[", "").replace("]", "");
       const loc2 = loc.replace("[", "").replace("]", "");
 

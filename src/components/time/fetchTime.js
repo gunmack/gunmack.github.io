@@ -46,20 +46,15 @@ function TimeUpdater() {
     // Function to fetch time and update state
     const fetchTime = async () => {
       //   const location2 = "Europe/London";
-      const location = "America/Vancouver";
+      // const location = "America/Vancouver";
 
       const locArray = await getUserLocation();
-      console.log(locArray);
-      if (locArray === null) {
-        setError("Could not fetch location");
-        return;
-      }
 
       const loc = locArray.replace("[", "").replace("]", "");
       const loc2 = loc.replace("[", "").replace("]", "");
-      console.log(loc2);
+      console.log("location: ", loc2);
 
-      const result = await getCurrentTime(location);
+      const result = await getCurrentTime(loc2);
       if (result.error) {
         setError("Could not fetch time");
       } else {

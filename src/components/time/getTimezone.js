@@ -33,6 +33,10 @@ const getTimezone = async (latitude, longitude) => {
       },
       body: JSON.stringify({ latitude, longitude }),
     });
+    if (!response.ok) {
+      throw new Error("Failed to fetch timezone");
+    }
+
     const data = await response.json();
     return data.timezone;
   } catch (error) {

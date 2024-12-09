@@ -95,13 +95,6 @@ export default function Navbar() {
         {/* Dropdown visible only when `isMenuOpen` is true on small screens */}
         <Dropdown isOpen={isMenuOpen} />
       </div>
-      {/* Overlay and Dropdown visible only when `isMenuOpen` is true on small screens */}
-      {isMenuOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50"
-          onClick={setIsMenuOpen(false)}
-        ></div>
-      )}
     </div>
   );
 }

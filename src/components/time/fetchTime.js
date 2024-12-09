@@ -7,13 +7,13 @@ const getCurrentTime = async (location) => {
     console.error("Location parameter is required");
     return { error: "Location parameter is required" };
   }
+  const url = `https://worldtimeapi.org/api/timezone/${location}`;
 
-  const url = `http://worldtimeapi.org/api/timezone/${location}`;
   try {
     const response = await fetch(url);
 
     if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+      throw new Error(`HTTPS error! Status: ${response.status}`);
     }
 
     const data = await response.json();

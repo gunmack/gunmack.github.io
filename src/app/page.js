@@ -16,7 +16,7 @@ function Header() {
 
 function Text() {
   // const link = "https://www.sfu.ca/outlines.html?2024/fall/cmpt/276/d200";
-  const curr_site = "https://www.gunmack.dev/";
+  const old_site = "https://github.com/gunmack/archived";
   return (
     <div className="row_col">
       <div>
@@ -57,7 +57,7 @@ function Text() {
             <br /> If you would like to see my other work:
             <br />
             Click here 👉
-            <Link className="link" href={curr_site} target="_blank">
+            <Link className="link" href={old_site} target="_blank">
               📁Other work
             </Link>
           </p>

@@ -47,12 +47,15 @@ function TimeUpdater() {
     const fetchTime = async () => {
       const location = "America/Vancouver";
 
-      const locArray = await getUserLocation();
-
-      const loc = locArray.replace("[", "").replace("]", "");
-      const loc2 = loc.replace("[", "").replace("]", "");
-
-      const result = await getCurrentTime(loc2 || location);
+      var locArray = await getUserLocation();
+      var loc2;
+      if (locArray && typeof locArray === "string") {
+        var loc = locArray.replace("[", "").replace("]", "");
+        loc2 = loc.replace("[", "").replace("]", "");
+      } else {
+        loc2 = location;
+      }
+      const result = await getCurrentTime(loc2);
       if (result.error) {
         setError("Could not fetch time");
       } else {
@@ -64,7 +67,7 @@ function TimeUpdater() {
     fetchTime();
 
     // Set interval to fetch time every 60 seconds
-    const interval = setInterval(fetchTime, 20000);
+    const interval = setInterval(fetchTime, 30000);
 
     // Cleanup interval on component unmount
     return () => clearInterval(interval);

@@ -29,6 +29,17 @@ from https://fonts.google.com/selection/embed
   }
 }
 
+.blink {
+  animation: blink 1s steps(1, start) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 0;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -140,13 +151,13 @@ header {
   justify-content: left;
 }
 
-navbar {
+.navbar {
   display: flex;
   background-color: rgb(var(--background-start-rgb));
   padding: 1.5%;
   gap: 1%;
   width: 100%;
-  justify-content: center;
+  justify-content: right;
   position: fixed;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
@@ -162,7 +173,7 @@ navbar {
     font-weight: bolder;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    border-radius: 30px;
+    border-radius: 8%;
     padding-left: 4px;
     padding-right: 4px;
   }
@@ -170,7 +181,7 @@ navbar {
   .nbar_items.active {
     color: rgb(70, 130, 180);
     background-color: white;
-    border-radius: 30px;
+    border-radius: 8%;
     padding-left: 4px;
     padding-right: 4px;
     font-weight: bolder;
@@ -211,7 +222,7 @@ footer {
 }
 
 /* Resume page styles */
-pdf {
+.pdf {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -273,6 +284,7 @@ pdf {
 .dropdown_list {
   display: block;
   padding: 0.5rem 1rem;
+  z-index: 100;
 }
 
 .click_div {
@@ -297,7 +309,7 @@ pdf {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  navbar {
+  .navbar {
     display: flex;
     flex-direction: column;
     padding: 1%;
@@ -366,7 +378,7 @@ pdf {
 
   .pdf {
     max-width: 100%;
-    padding: 2%;
+
     font-size: 0.7rem;
   }
 

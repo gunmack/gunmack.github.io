@@ -6,7 +6,7 @@ import { links } from "./navbar";
 export default function Dropdown({ isOpen }) {
   return (
     <div
-      className={`dropdown ${isOpen ? "block" : "hidden"} 
+      className={` dropdown ${isOpen ? "block" : "hidden"} 
         sm:`}
     >
       <div>

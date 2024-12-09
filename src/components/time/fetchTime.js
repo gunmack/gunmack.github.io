@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import getUserLocation from "./getTimezone";
+import getUserLocation from "./getTimezone";
 
 // Utility function to fetch the current time for a given location
 const getCurrentTime = async (location) => {
@@ -48,16 +48,16 @@ function TimeUpdater() {
       //   const location2 = "Europe/London";
       const location = "America/Vancouver";
 
-      // const locArray = await getUserLocation();
-      // console.log(locArray);
-      // if (locArray === null) {
-      //   setError("Could not fetch location");
-      //   return;
-      // }
+      const locArray = await getUserLocation();
+      console.log(locArray);
+      if (locArray === null) {
+        setError("Could not fetch location");
+        return;
+      }
 
-      // const loc = locArray.replace("[", "").replace("]", "");
-      // const loc2 = loc.replace("[", "").replace("]", "");
-      // console.log(loc2);
+      const loc = locArray.replace("[", "").replace("]", "");
+      const loc2 = loc.replace("[", "").replace("]", "");
+      console.log(loc2);
 
       const result = await getCurrentTime(location);
       if (result.error) {
@@ -71,7 +71,7 @@ function TimeUpdater() {
     fetchTime();
 
     // Set interval to fetch time every 60 seconds
-    const interval = setInterval(fetchTime, 60000);
+    const interval = setInterval(fetchTime, 20000);
 
     // Cleanup interval on component unmount
     return () => clearInterval(interval);

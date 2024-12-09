@@ -1,4 +1,3 @@
-import process from "process";
 export default async function handler(req, res) {
   // Ensure the request method is POST
   if (req.method === "POST") {
@@ -10,7 +9,7 @@ export default async function handler(req, res) {
     }
 
     // Call the GeoNames API to fetch the timezone using the coordinates
-    const username = process.env.GEONAMES_USERNAME;
+    const username = `gunmack`;
     const geoNamesUrl = `http://api.geonames.org/timezoneJSON?lat=${latitude}&lng=${longitude}&username=${username}`;
 
     try {

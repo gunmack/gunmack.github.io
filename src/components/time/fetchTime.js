@@ -45,16 +45,14 @@ function TimeUpdater() {
   useEffect(() => {
     // Function to fetch time and update state
     const fetchTime = async () => {
-      //   const location2 = "Europe/London";
-      // const location = "America/Vancouver";
+      const location = "America/Vancouver";
 
       const locArray = await getUserLocation();
 
       const loc = locArray.replace("[", "").replace("]", "");
       const loc2 = loc.replace("[", "").replace("]", "");
-      console.log("location: ", loc2);
 
-      const result = await getCurrentTime(loc2);
+      const result = await getCurrentTime(loc2 || location);
       if (result.error) {
         setError("Could not fetch time");
       } else {

@@ -17,7 +17,7 @@ export const links = [
   { name: "📃Resume ", href: "resume", key: "resume" },
   {
     name: "📁Other work ",
-    href: "https://www.gunmack.dev/",
+    href: "https://github.com/gunmack/archived",
     key: "other_work",
   },
   { name: "☾☀︎", key: "dark-mode" },

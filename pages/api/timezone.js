@@ -10,7 +10,7 @@ export default async function handler(req, res) {
 
     // Call the GeoNames API to fetch the timezone using the coordinates
     const username = `gunmack`;
-    const geoNamesUrl = `http://api.geonames.org/timezoneJSON?lat=${latitude}&lng=${longitude}&username=${username}`;
+    const geoNamesUrl = `https://api.geonames.org/timezoneJSON?lat=${latitude}&lng=${longitude}&username=${username}`;
 
     try {
       const response = await fetch(geoNamesUrl);

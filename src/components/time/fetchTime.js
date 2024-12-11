@@ -10,8 +10,10 @@ function TimeUpdater() {
 
     const fetchTime = async () => {
       try {
-        const locArray =
-          Intl.DateTimeFormat().resolvedOptions().timeZone || location;
+        var locArray = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (!locArray) {
+          locArray = location;
+        }
         const result = new Intl.DateTimeFormat("en-US", {
           timeZone: locArray,
           hour: "2-digit",
@@ -22,7 +24,10 @@ function TimeUpdater() {
 
         if (!result) throw new Error("Could not fetch time");
 
-        const timeData = { city: locArray.split("/")[1], time: result };
+        const timeData = {
+          city: locArray.split("/")[1].replace("_", " "),
+          time: result,
+        };
         setTimeData(timeData);
 
         localStorage.setItem("lastTimeData", JSON.stringify(timeData));

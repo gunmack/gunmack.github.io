@@ -1,10 +1,10 @@
 # Welcome
 
-Welcome to my redesigned website for [CMPT 276 Fall 2024 D200](https://www.sfu.ca/outlines.html?2024/fall/cmpt/276/d200) Lab #4. This was built with React using [Next.js](https://nextjs.org/). Please note it is still a work in progress.
+Welcome to [gunmack.dev](https://www.gunmack.dev/). This was built with React using [Next.js](https://nextjs.org/) and Tailwind CSS. Please note it is still a work in progress.
 
 ## Purpose
 
-I used this an opportunity to design a website to replace my current [website](https://www.gunmack.dev/) while also meeting the requirements for the lab submission. I plan on replacing the current website with this after I complete it.
+This website contains links to all my projects and contributions, my resume and as well my social media accounts.
 
 <!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

@@ -161,56 +161,59 @@ header {
   position: fixed;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
+}
 
-  .nbar_items {
-    font-size: 1.25rem;
-    margin-left: 20px;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
+.nbar_items {
+  font-size: 1.25rem;
+  margin-left: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 
-  .nbar_items:hover {
-    font-weight: bolder;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border-radius: 8%;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
+.nbar_items:hover {
+  font-weight: bolder;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 8%;
+  padding-left: 4px;
+  padding-right: 4px;
+}
 
-  .nbar_items.active {
-    color: rgb(70, 130, 180);
-    background-color: white;
-    border-radius: 8%;
-    padding-left: 4px;
-    padding-right: 4px;
-    font-weight: bolder;
-  }
+.nbar_items.active {
+  color: rgb(70, 130, 180);
+  background-color: white;
+  border-radius: 8%;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-weight: bolder;
 }
 
 /* Footer styles */
-footer {
+.footer_section {
+  background-color: rgb(var(--background-start-rgb));
+  font-size: small;
+}
+
+.footer {
   display: flex;
   flex-wrap: wrap;
   margin-top: auto;
   justify-content: start;
-  margin-bottom: 2%;
-
+  padding: 1%;
   gap: 2%;
   position: sticky;
   bottom: 0;
   width: 100%;
+}
 
-  .f_items {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8%;
-  }
-
-  .f_items:hover {
-    font-weight: bolder;
-  }
+.f_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2%;
+}
+.f_items:hover {
+  font-weight: bolder;
 }
 
 .Image {
@@ -346,21 +349,23 @@ footer {
   .link {
     font-size: 0.75rem;
   }
+  .footer_section {
+    font-size: xx-small;
+  }
 
   .footer {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 4%;
-    padding: 2%;
+    padding: 1%;
     position: sticky;
     bottom: 0;
     width: 100%;
   }
 
   .f_items {
-    gap: 2%;
-    padding: 2%;
+    gap: 1%;
+    padding: 1%;
     font-size: 0.75rem;
   }
 

@@ -1,41 +1,4 @@
 import React, { useState, useEffect } from "react";
-import getUserLocation from "./getTimezone";
-
-// Utility function to fetch the current time for a given location
-const getCurrentTime = async (location) => {
-  if (!location) {
-    console.error("Location parameter is required");
-    return { error: "Location parameter is required" };
-  }
-  const url = `https://worldtimeapi.org/api/timezone/${location}`;
-
-  try {
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error(`HTTPS error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    const currentTime = data.datetime;
-
-    // Extract HH:MM and determine AM/PM
-    const hour = parseInt(currentTime.slice(11, 13), 10); // Extract hour as an integer
-    const minute = currentTime.slice(14, 16); // Extract minutes
-
-    const period = hour >= 12 ? "PM" : "AM";
-    const formattedHour = (hour % 12 === 0 ? 12 : hour % 12).toString(); // Convert to 12-hour format
-    const formattedMinute = minute.padStart(2, "0"); // Ensure two-digit minutes
-
-    const city = location.split("/")[1].replace("_", " "); // Extract city name
-
-    const formattedTime = `${formattedHour}:${formattedMinute} ${period}`;
-    return { city, time: formattedTime };
-  } catch (error) {
-    console.error(`Error fetching world time: ${error}`);
-    return { error: `Error fetching world time: ${error}` };
-  }
-};
 
 // React Component Example
 function TimeUpdater() {
@@ -43,33 +6,44 @@ function TimeUpdater() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Function to fetch time and update state
-    const fetchTime = async () => {
-      const location = "America/Vancouver";
+    const location = "America/Vancouver";
 
-      var locArray = await getUserLocation();
-      var loc2;
-      if (locArray && typeof locArray === "string") {
-        var loc = locArray.replace("[", "").replace("]", "");
-        loc2 = loc.replace("[", "").replace("]", "");
-      } else {
-        loc2 = location;
-      }
-      const result = await getCurrentTime(loc2);
-      if (result.error) {
-        setError("Could not fetch time");
-      } else {
-        setTimeData(result);
+    const fetchTime = async () => {
+      try {
+        const locArray =
+          Intl.DateTimeFormat().resolvedOptions().timeZone || location;
+        const result = new Intl.DateTimeFormat("en-US", {
+          timeZone: locArray,
+          hour: "2-digit",
+          minute: "2-digit",
+          second: undefined,
+          hour12: true, // Enables AM/PM format
+        }).format(new Date());
+
+        if (!result) throw new Error("Could not fetch time");
+
+        const timeData = { city: locArray.split("/")[1], time: result };
+        setTimeData(timeData);
+
+        localStorage.setItem("lastTimeData", JSON.stringify(timeData));
+        localStorage.setItem("lastFetchTime", new Date().getTime().toString());
+      } catch (e) {
+        setError(e.message || "An unknown error occurred");
       }
     };
 
-    // Fetch time on initial render
-    fetchTime();
+    const lastFetchTime = localStorage.getItem("lastFetchTime");
+    const lastTimeData = localStorage.getItem("lastTimeData");
+    const currentTime = new Date().getTime();
 
-    // Set interval to fetch time every 60 seconds
+    if (lastFetchTime && currentTime - lastFetchTime <= 30000 && lastTimeData) {
+      setTimeData(JSON.parse(lastTimeData));
+    } else {
+      fetchTime();
+    }
+
     const interval = setInterval(fetchTime, 30000);
 
-    // Cleanup interval on component unmount
     return () => clearInterval(interval);
   }, []);
 
@@ -83,11 +57,16 @@ function TimeUpdater() {
           <span className="blink">:</span>
           {timeData.time.split(":")[1]}
           {"        "}
+          {timeData.time[9]}
+          {timeData.time[10]}
+          {"        "}
           in {"        "}
           {timeData.city}
         </p>
       ) : (
-        <p>Fetching time...</p>
+        <p>
+          Fetching time<span className="blink">...</span>
+        </p>
       )}
     </div>
   );

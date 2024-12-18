@@ -7,9 +7,11 @@ export default function ToggleButton() {
   // Check if localStorage is available and retrieve the dark mode state from localStorage
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedDarkMode = localStorage.getItem("isDark");
-      if (storedDarkMode === "true") {
+      const storedDarkMode = localStorage.getItem("theme");
+      if (storedDarkMode === "dark") {
         setIsDark(true);
+      } else {
+        setIsDark(false);
       }
     }
   }, []); // This runs once on component mount
@@ -31,16 +33,16 @@ export default function ToggleButton() {
         darkmode(); // Trigger the dark mode function
       }}
       className={`w-16 h-8 flex items-center rounded-full p-1 transition-all duration-500 ${
-        isDark ? "bg-black" : "bg-white"
+        isDark ? "bg-white" : "bg-black"
       }`}
     >
       <div
         className={`w-6 h-6 flex items-center justify-center rounded-full shadow-md 
           transform transition-transform duration-500 ${
-            isDark ? "translate-x-0 text-white" : "translate-x-8 text-black"
+            isDark ? "translate-x-0" : "translate-x-8"
           }`}
       >
-        {isDark ? "☀️" : "🌙"}
+        {isDark ? "🌙" : "☀️"}
       </div>
     </button>
   );

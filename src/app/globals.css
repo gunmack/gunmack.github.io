@@ -211,8 +211,8 @@ header {
 }
 
 .nbar_items.active {
-  color: rgb(70, 130, 180);
-  background-color: white;
+  color: white;
+  background-color: rgb(70, 130, 180);
   border-radius: 5px;
   padding-left: 16px; /* Adds more padding on the left to make it pop */
   padding-right: 16px;

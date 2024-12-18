@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 function TimeUpdater() {
   const [timeData, setTimeData] = useState(null);
   const [error, setError] = useState(null);
+  const [city, setCity] = useState("");
 
   useEffect(() => {
     const location = "America/Vancouver";
@@ -52,6 +53,12 @@ function TimeUpdater() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if (window.innerWidth > 768 && timeData) {
+      setCity(`in ${timeData.city}`);
+    }
+  }, [timeData]);
+
   return (
     <div>
       {error ? (
@@ -65,8 +72,7 @@ function TimeUpdater() {
           {timeData.time[9]}
           {timeData.time[10]}
           {"        "}
-          in {"        "}
-          {timeData.city}
+          {city}
         </p>
       ) : (
         <p>

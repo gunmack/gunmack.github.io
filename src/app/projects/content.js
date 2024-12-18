@@ -16,6 +16,7 @@ function project4() {
           alt="project_1"
           width={150}
           height={0}
+          priority
         />
         <br />
         <div className="text">
@@ -51,6 +52,7 @@ function project3() {
           alt="project_2"
           width={150}
           height={0}
+          priority
         />
         <br />
         <div className="text">
@@ -83,6 +85,7 @@ function project2() {
           alt="project_3"
           width={150}
           height={0}
+          priority
         />
         <br />
         <div className="text">
@@ -92,10 +95,9 @@ function project2() {
           </p>
           <p>Components:</p>
           <ul>
-            <li>👉 Plain python</li>
             <li>👉 Regular Expressions</li>
-            <li>👉 HTML embedded into Flask for client side view</li>
-            <li>👉 Flask development server</li>
+            <li>👉 HTML embedded into python for client side view</li>
+            <li>👉 Flask framework</li>
           </ul>
         </div>
       </a>
@@ -117,6 +119,7 @@ function project1() {
           alt="project_3"
           width={150}
           height={0}
+          priority
         />
         <br />
         <div className="text">

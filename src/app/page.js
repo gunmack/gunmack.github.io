@@ -71,6 +71,7 @@ function Text() {
           height={250}
           width={250}
           className="portrait"
+          priority
         />
       </div>
     </div>

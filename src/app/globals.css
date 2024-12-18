@@ -448,8 +448,8 @@ header {
 
   .footer {
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+    flex-direction: row;
+    justify-content: center;
     padding: 1%;
     position: sticky;
     bottom: 0;
@@ -459,7 +459,7 @@ header {
   .f_items {
     gap: 1%;
     padding: 1%;
-    font-size: 0.75rem;
+    font-size: small;
   }
 
   .f_items:hover {

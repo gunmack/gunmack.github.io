@@ -132,7 +132,7 @@ function project1() {
             <li>👉 Google Cloud APIs</li>
             <li>👉 Google Cloud Firebase for Authentication</li>
             <li>
-              👉 Google Cloud Firebas Realtime Database for storing user
+              👉 Google Cloud Firebase Realtime Database for storing user
               progress
             </li>
             <li>👉 Deployed on Vercel</li>

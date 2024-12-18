@@ -59,12 +59,16 @@ export default function Footer() {
           >
             Emojis from Emojipedia
           </a>
+          <div className="">
+            © 2024 Julkar Reedoy (jreed). All rights reserved.
+          </div>
+          <div className="">Last updated: 2024/12/18</div>
         </div>
         {/* Copyright Section */}
-        <div className="pl-2 pb-1 right-0">
+        {/* <div className="pl-2 pb-1 right-0">
           © 2024 Julkar Reedoy (jreed). All rights reserved. <br />
           Last updated: 2024/12/18
-        </div>
+        </div> */}
       </footer>
     </div>
   );

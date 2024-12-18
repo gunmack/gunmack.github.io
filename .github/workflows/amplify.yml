@@ -1,15 +1,17 @@
-name: Deploy Amplify Frontend
+name: Deploy App to Amplify Frontend
 
 on:
   push:
     branches:
-      - main # Replace with the branch you want to deploy from
+      - main
 
 jobs:
-  # Build job
-  build:
+  # Test job
+  test:
     runs-on: ubuntu-latest
-    needs: test
+    strategy:
+      matrix:
+        node-version: [20.x]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,63 +31,6 @@ jobs:
           else
             echo "Unable to determine package manager"
             exit 1
-          fi
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            .next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-      - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
-  test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Detect package manager
-        id: detect-package-manager
-        run: |
-          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
-          echo "manager=yarn" >> $GITHUB_OUTPUT
-          echo "command=install" >> $GITHUB_OUTPUT
-          echo "runner=yarn" >> $GITHUB OUTPUT
-          exit 0
-          elif [ -f "${{ github.workspace }}/package.json" ]; then
-          echo "manager=npm" >> $GITHUB_OUTPUT
-          echo "command=ci" >> $GITHUB_OUTPUT
-          echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-          exit 0
-          else
-          echo "Unable to determine package manager"
-          exit 1
           fi
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -113,36 +58,36 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-
+    needs: test
     steps:
-      # Checkout the repository
+      # Step 1: Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Set up AWS credentials
+      # Step 2: Configure AWS credentials
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: us-east-2 # Replace with your AWS region
 
-      # Install dependencies
-      - name: Install dependencies
-        run: npm install
+      # Step 3: Start an Amplify build job
+      - name: Trigger Amplify deployment
+        id: deploy
+        run: |
+          aws amplify start-job \
+            --app-id ${{ secrets.AMPLIFY_APP_ID }} \
+            --branch-name main \
+            --job-type RELEASE
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-      # Build the frontend
-      - name: Build frontend
-        run: npm run build
-
-      # Install Amplify CLI
-      - name: Install Amplify CLI
-        run: npm install -g @aws-amplify/cli
-
-      # Initialize Amplify
-      - name: Initialize Amplify
-        run: amplify init --app
-
-      # Deploy the app to Amplify
-      - name: Deploy Amplify App
-        run: amplify publish --yes
+      # Step 4: (Optional) Wait for deployment to complete
+      - name: Wait for Amplify deployment
+        run: |
+          aws amplify list-jobs --app-id ${{ secrets.AMPLIFY_APP_ID }} --branch-name main
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

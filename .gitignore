@@ -46,9 +46,7 @@ next-env.d.ts
 
 .env.local
 
-
-# End of https://www.toptal.com/developers/gitignore/api/nextjs
-
+.github/workflows/deploy.yml
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs
 

@@ -135,6 +135,10 @@ jobs:
       - name: Build frontend
         run: npm run build
 
+      # Install Amplify CLI
+      - name: Install Amplify CLI
+        run: npm install -g @aws-amplify/cli
+
       # Deploy the app to Amplify
       - name: Deploy Amplify App
         run: amplify publish --yes

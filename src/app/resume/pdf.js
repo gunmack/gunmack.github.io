@@ -1,9 +1,38 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import "@/app/globals.css";
 
 function Resume_PDF() {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  const handleScroll = () => {
+    const totalHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const progress = (scrollPosition / totalHeight) * 100;
+    setScrollProgress(progress);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div>
+      <div className="left-nav">
+        <ul>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#work-experience">Work Experience</a>
+          </li>
+        </ul>
+      </div>
       <div data-testid="pdf" className="pdf">
         <pdf_title>Julkar Naine Reedoy</pdf_title>
         <div>
@@ -21,6 +50,7 @@ function Resume_PDF() {
             </a>{" "}
             <br /> GitHub:{""}
             <a
+              id="skills"
               className="link"
               href="https://github.com/gunmack"
               target="_blank"
@@ -42,25 +72,83 @@ function Resume_PDF() {
             <br />
             <br />
           </p>
+          <div className="progress-bar-container">
+            <div
+              className="progress-bar"
+              style={{ height: `${scrollProgress}%` }}
+            />
+          </div>
         </div>
 
         <pdf_header>Skills</pdf_header>
-        <div>
+        <pdf_div>
           <pdf_text>
             <p>
-              <strong>Languages:</strong> Python, C, HTML, CSS, Java,
-              JavaScript, SQL
+              Languages:
+              <strong> Python, Java, JavaScript, SQL, HTML, CSS </strong>
+            </p>
+            <p id="projects">
+              Frameworks:
+              <strong> React, Tailwind, Flask, Bootstrap, Spring boot</strong>
             </p>
             <p>
-              <strong>Frameworks:</strong> React, Tailwind, Flask, Bootstrap
-            </p>
-            <p>
-              <strong>Tools:</strong> Git, Linux, Microsoft Office
+              Tools:<strong> Git, Linux, JIRA, Microsoft Office </strong>
             </p>
           </pdf_text>
-        </div>
+        </pdf_div>
 
         <pdf_header>Projects</pdf_header>
+        <pdf_div>
+          <pdf_text>
+            <h3>
+              <a
+                className="link hover:text-blue-400"
+                href="https://github.com/gunmack/calculator"
+                target="_blank"
+                rel="noreferrer"
+              >
+                QuizLing
+              </a>
+              <p className="text-right"> November 2024</p>
+            </h3>
+
+            <ul>
+              <li>
+                👉{" "}
+                <strong>
+                  <i>Optimized application development workflows</i>
+                </strong>{" "}
+                to meet deadlines and ensure quality control by enhancing the
+                developme nt environment and streamlining the CI/CD pipeline.
+              </li>
+              <li>
+                👉{" "}
+                <strong>
+                  <i>Designed and implemented a Translate feature</i>
+                </strong>{" "}
+                enabling users to translate text to their desired language by
+                utilizing the Google Cloud Translation API.
+              </li>
+              <li>
+                👉{" "}
+                <strong>
+                  <i>Integrated Google Account authentication</i>
+                </strong>{" "}
+                to provide seamless user login through Google Firebase
+                Authentication.
+              </li>
+              <li>
+                👉{" "}
+                <strong>
+                  <i>Developed an Achievements feature</i>
+                </strong>{" "}
+                allowing users to monitor their in-app progress with real-time
+                updates powered by Google Firebase Realtime Database.
+              </li>
+            </ul>
+          </pdf_text>
+        </pdf_div>
+
         <pdf_div>
           <pdf_text>
             <h3>
@@ -77,20 +165,36 @@ function Resume_PDF() {
 
             <ul>
               <li>
-                👉 Built a fully functional calculator web application using the
-                Flask framework.
+                👉{" "}
+                <strong>
+                  <i>Built a calculator web application</i>
+                </strong>{" "}
+                for performing basic mathematical operations using the Flask
+                framework.
               </li>
               <li>
-                👉 Developed a dynamic user interface with HTML embedded within
-                Flask components for seamless interaction.
+                👉{" "}
+                <strong>
+                  <i>Designed an intuitive user interface</i>
+                </strong>{" "}
+                to enable seamless user interaction with HTM, CSS, and
+                JavaScript.
               </li>
               <li>
-                👉 Used regex functions to tokenize user input for efficient
-                parsing and processing of mathematical expressions.
+                👉{" "}
+                <strong>
+                  <i>Optimized input parsing and tokenization</i>
+                </strong>{" "}
+                for efficient processing of mathematical expressions using
+                regular expressions (regex).
               </li>
               <li>
-                👉 Implemented calculator functionalities like clearing inputs
-                and deleting recent characters.
+                👉{" "}
+                <strong>
+                  <i>Implemented key features</i>
+                </strong>{" "}
+                such as input clearing to enhance user control and experience
+                through JavaScript functions.
               </li>
             </ul>
           </pdf_text>
@@ -112,62 +216,43 @@ function Resume_PDF() {
 
             <ul>
               <li>
-                👉 Designed a landing page with Next.js and Tailwind to present
-                background information about the SFU campuses.
+                👉{" "}
+                <strong>
+                  <i>Designed and developed a landing page</i>
+                </strong>{" "}
+                showcasing background information about the SFU campuses using
+                Next.js and Tailwind CSS.
               </li>
               <li>
-                👉 Developed a comprehensive directory of HTML pages using
-                Bootstrap CSS framework to categorize buildings with their
-                respective campuses and opening dates.
+                👉{" "}
+                <strong>
+                  <i>Built a structured directory of HTML pages</i>
+                </strong>{" "}
+                to organize buildings by campuses and opening dates, leveraging
+                the Bootstrap CSS framework.
               </li>
               <li>
-                👉 Integrated the Leaflet interactive map library to display
-                approximate building locations on a pop-up map.
+                👉{" "}
+                <strong>
+                  <i>Integrated interactive maps</i>
+                </strong>{" "}
+                to display approximate building locations using the Leaflet Maps
+                Library.
               </li>
               <li>
-                👉 Used Bootstrap elements to create interactive slideshows that
-                let users view images of the buildings.
+                👉{" "}
+                <strong>
+                  <i>Created dynamic slideshows</i>
+                </strong>{" "}
+                to showcase campus building images utilizing Bootstrap
+                components.
               </li>
               <li>
-                👉 Implemented a sticky navigation bar to let users navigate the
-                website.
-              </li>
-            </ul>
-          </pdf_text>
-        </pdf_div>
-
-        <pdf_div>
-          <pdf_text>
-            <h3>
-              <a
-                className="link hover:text-blue-400"
-                href="https://github.com/gunmack/Python-Image-Processor"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Python Image Processor
-              </a>
-              <p className="text-right">November 2021</p>
-            </h3>
-
-            <ul>
-              <li>
-                👉 Utilized Numpy and Pygame libraries to develop a
-                user-friendly interface that allows users to perform advanced
-                image processing.
-              </li>
-              <li>
-                👉 Created and integrated image filters like sepia, warm, cold,
-                etc. that use pixel manipulation to let users process images as
-                required.
-              </li>
-              <li>
-                👉 Used pixel manipulation to Implement image resizing
-                capabilities for user uploaded images.
-              </li>
-              <li>
-                👉 Enabled functionality to let users save processed images to
-                local storage using Pygame’s built-in features.
+                👉{" "}
+                <strong>
+                  <i>Implemented a sticky navigation bar</i>
+                </strong>{" "}
+                to enhance usability and streamline site navigation.
               </li>
             </ul>
           </pdf_text>
@@ -190,19 +275,17 @@ function Resume_PDF() {
 
             <ul>
               <li>
-                👉 Became proficient with the existing React frontend
-                architecture, gaining a deep understanding of its file structure
-                and components.
+                👉 Developed a dedicated page for the CSSS common rooms to
+                showcase images and relevant information using React.js.
               </li>
               <li>
-                👉 Developed a dedicated page for the CSSS common rooms,
-                embedding images, SVG maps along with clear and organized tables
-                for various refreshments available.
+                👉 Created an interactive page to display detailed information
+                about all CSSS committees using React.js.
               </li>
               <li>
-                👉 Integrated the page into the existing directory of pages to
-                ensure seamless navigation and functionality of the broader
-                website.
+                👉 Seamlessly integrated the new pages into the existing website
+                directory to ensure smooth navigation and consistent
+                functionality.
               </li>
             </ul>
           </pdf_text>
@@ -222,57 +305,63 @@ function Resume_PDF() {
             </h3>
 
             <ul>
-              <li>
-                👉 Familiarized with the existing backend API codebase, learning
-                about its complex architecture and functionalities
+              <li id="work-experience">
+                👉 Integrated new database tables into existing database for
+                storing Blog entries and associated poster information using
+                SQLAlchemy.
               </li>
               <li>
-                👉 Implemented a new database table using SQLAlchemy, ensuring a
-                seamless integration of the table into the existing database
-                schema.
-              </li>
-              <li>
-                👉 Performed database migration with new revisions using Alembic
-                as well as modifying Alembic scripts to reflect changes.
+                👉 Executed database migrations to seamlessly incorporate the
+                new tables into the existing schema with Alembic scripts.
               </li>
             </ul>
           </pdf_text>
         </pdf_div>
 
         <pdf_header>Work Experience</pdf_header>
-        <div>
+        <pdf_div>
           <pdf_text>
             <h3>Concession Attendant (May 2023 - Present)</h3>
             <h3>Playland at PNE, Vancouver, British Columbia</h3>
 
             <ul>
               <li>
-                👉 Operated POS system with precision and accuracy while taking
-                orders to facilitate seamless customer transaction experiences.
+                👉{" "}
+                <strong>
+                  <i>Managed POS systems</i>
+                </strong>{" "}
+                with precision to ensure accurate and efficient customer
+                transactions.
               </li>
               <li>
-                👉 Maintained open lines of communication with kitchen staff to
-                relay customer orders promptly and accurately, ensured timely
-                preparation and delivery.
+                👉{" "}
+                <strong>
+                  <i>Coordinated with kitchen staff</i>
+                </strong>{" "}
+                to relay customer orders, ensuring prompt preparation and
+                delivery.
               </li>
               <li>
-                👉 Utilized effective multitasking skills to seamlessly
-                transition between front-end customer service and back-end
-                kitchen operations as necessary to fulfill orders.
+                👉{" "}
+                <strong>
+                  <i>Balanced front-end and back-end responsibilities</i>
+                </strong>
+                , effectively multitasking to provide exceptional service and
+                fulfill orders.
               </li>
             </ul>
           </pdf_text>
-        </div>
+        </pdf_div>
 
         <pdf_header>Education</pdf_header>
-        <div>
+        <pdf_div>
           <pdf_text>
             <h3>Simon Fraser University (September 2021 - Present)</h3>
             <ul>
               <li>👉 Bachelor of Science in Computing Science</li>
             </ul>
           </pdf_text>
-        </div>
+        </pdf_div>
       </div>
     </div>
   );

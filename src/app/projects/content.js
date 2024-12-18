@@ -2,7 +2,7 @@ import React from "react";
 import "@/app/globals.css";
 import Image from "next/image";
 
-function project1() {
+function project4() {
   return (
     <div className="click_div">
       <a
@@ -37,7 +37,7 @@ function project1() {
   );
 }
 
-function project2() {
+function project3() {
   return (
     <div className="click_div">
       <a
@@ -69,7 +69,7 @@ function project2() {
   );
 }
 
-function project3() {
+function project2() {
   return (
     <div className="click_div">
       <a
@@ -103,6 +103,43 @@ function project3() {
   );
 }
 
+function project1() {
+  return (
+    <div className="click_div">
+      <a
+        href="https://github.com/gunmack/276_Project"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Image
+          className="rounded-lg"
+          src={"/images/quizLing.jpg"}
+          alt="project_3"
+          width={150}
+          height={0}
+        />
+        <br />
+        <div className="text">
+          <h3>QuizLing</h3>
+          <p>
+            <em>Language Learning App built with Next.js</em>
+          </p>
+          <p>Utilizes:</p>
+          <ul>
+            <li>👉 Google Cloud APIs</li>
+            <li>👉 Google Cloud Firebase for Authentication</li>
+            <li>
+              👉 Google Cloud Firebas Realtime Database for storing user
+              progress
+            </li>
+            <li>👉 Deployed on Vercel</li>
+          </ul>
+        </div>
+      </a>
+    </div>
+  );
+}
+
 export default function Content() {
   return (
     <div data-testid="content">
@@ -111,7 +148,10 @@ export default function Content() {
         {project1()}
         {project2()}
       </div>
-      <div className="row_col"> {project3()}</div>
+      <div className="row_col">
+        {" "}
+        {project3()} {project4()}
+      </div>
     </div>
   );
 }

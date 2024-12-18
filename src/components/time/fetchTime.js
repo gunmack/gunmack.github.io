@@ -55,7 +55,7 @@ function TimeUpdater() {
   return (
     <div>
       {error ? (
-        <p>Error: {error}</p>
+        <p>Could not fetch time</p>
       ) : timeData ? (
         <p>
           {timeData.time.split(":")[0]}

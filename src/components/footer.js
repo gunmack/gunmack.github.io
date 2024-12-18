@@ -20,7 +20,6 @@ export default function Footer() {
               width={20}
               height={20}
             />
-            LinkedIn
           </a>
           <a
             className="f_items "
@@ -35,7 +34,6 @@ export default function Footer() {
               width={20}
               height={20}
             />
-            GitHub
           </a>
           <a
             className="f_items"
@@ -64,7 +62,8 @@ export default function Footer() {
         </div>
         {/* Copyright Section */}
         <div className="pl-2 pb-1 right-0">
-          © 2024 Julkar Reedoy (jreed). All rights reserved.
+          © 2024 Julkar Reedoy (jreed). All rights reserved. <br />
+          Last updated: {new Date().toLocaleDateString()}
         </div>
       </footer>
     </div>

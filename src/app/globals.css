@@ -72,11 +72,17 @@ body {
   }
 }
 
+.dark-mode-toggle {
+  font-size: 1.25rem;
+  margin-left: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 .light-mode {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
-
   .nbar_items:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -85,6 +91,8 @@ body {
   .nbar_items.active {
     background-color: rgb(70, 130, 180);
     color: white;
+    border-radius: 5px;
+    border-color: black;
   }
 
   pdf {
@@ -164,28 +172,40 @@ header {
 }
 
 .nbar_items {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: bold;
   margin-left: 20px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  display: inline-block; /* Makes the element behave like a button */
+
+  border: 2px solid transparent; /* Initially no border, becomes visible on hover */
+  border-color: var(--foreground-rgb);
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Centers text inside the button */
+  cursor: pointer; /* Makes it clickable */
+  transition: all 0.3s ease;
 }
 
 .nbar_items:hover {
   font-weight: bolder;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  border-radius: 8%;
-  padding-left: 4px;
-  padding-right: 4px;
+  border-radius: 5px;
+  padding-left: 16px; /* Adds more padding on the left to make it pop */
+  padding-right: 16px;
+  transform: scale(1.05);
 }
 
 .nbar_items.active {
   color: rgb(70, 130, 180);
   background-color: white;
-  border-radius: 8%;
-  padding-left: 4px;
-  padding-right: 4px;
+  border-radius: 5px;
+  padding-left: 16px; /* Adds more padding on the left to make it pop */
+  padding-right: 16px;
   font-weight: bolder;
+  cursor: not-allowed;
 }
 
 /* Footer styles */
@@ -232,7 +252,7 @@ header {
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
-  padding: 8%;
+  padding: 4%;
   background-color: white;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
   color: black;
@@ -283,6 +303,63 @@ header {
     padding-bottom: 2%;
   }
 }
+
+/* Container for the progress bar */
+.progress-bar-container {
+  position: fixed; /* Fix the progress bar on the left side */
+  top: 0;
+  left: 0;
+  width: 5px; /* Set the width of the progress bar */
+  height: 100%; /* Full height of the screen */
+  background-color: rgb(
+    var(--background-start-rgb)
+  ); /* Light background for the container */
+  z-index: 1000; /* Ensure the progress bar appears on top */
+}
+
+/* Progress bar itself */
+.progress-bar {
+  width: 100%; /* Full width of the container */
+  height: 0%; /* Initially set the height to 0% */
+  background-color: #4caf50; /* Green color for the progress bar */
+  transition: height 0.1s ease-out; /* Smooth transition for the height */
+}
+
+/* Left navigation bar */
+.left-nav {
+  position: fixed; /* Fix the nav on the left side */
+  top: 50%; /* Start at the center of the screen */
+  left: 0;
+  width: 20%;
+  transform: translateY(-50%); /* Adjust the nav to truly center it */
+  background-color: white;
+}
+
+.left-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-nav li {
+  margin: 15px 0;
+}
+
+.left-nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.left-nav a:hover {
+  color: white;
+  background-color: black;
+}
+
 /* Dropdown styles */
 .dropdown_list {
   display: block;
@@ -298,11 +375,11 @@ header {
   color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px rgb(0, 0, 0);
   justify-content: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .click_div:hover {
   transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
 }
 
 .portrait {
@@ -312,6 +389,10 @@ header {
 
 /* Mobile styles */
 @media (max-width: 768px) {
+  .left-nav {
+    display: none; /* Hide the navigation bar on smaller screens */
+  }
+
   .navbar {
     display: flex;
     flex-direction: column;
@@ -383,7 +464,6 @@ header {
 
   .pdf {
     max-width: 100%;
-
     font-size: 0.7rem;
   }
 

@@ -16,10 +16,9 @@ export function LightDark() {
   if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
     document.body.classList.remove("light-mode");
-  }
-  if (savedTheme === "light") {
+    localStorage.setItem("theme", "dark");
+  } else {
     document.body.classList.add("light-mode");
-    document.body.classList.remove("dark-mode"); // Default to light mode
     localStorage.setItem("theme", "light");
   }
   document.body.classList.add("show");

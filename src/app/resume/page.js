@@ -25,7 +25,7 @@ export default function Resume() {
   return (
     <div>
       {/* <Header /> */}
-      {Resume_PDF()}
+      <Resume_PDF />
       {linkToCopy()}
     </div>
   );

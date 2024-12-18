@@ -63,7 +63,7 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className="pl-2 pb-1 right-0">
           © 2024 Julkar Reedoy (jreed). All rights reserved. <br />
-          Last updated: {new Date().toLocaleDateString()}
+          Last updated: 2024/12/17
         </div>
       </footer>
     </div>

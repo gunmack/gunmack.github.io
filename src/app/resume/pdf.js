@@ -305,12 +305,14 @@ function Resume_PDF() {
             </h3>
 
             <ul>
-              <li id="work-experience">
+              <li>
+
                 👉 Integrated new database tables into existing database for
                 storing Blog entries and associated poster information using
                 SQLAlchemy.
               </li>
-              <li>
+
+              <li id="work-experience">
                 👉 Executed database migrations to seamlessly incorporate the
                 new tables into the existing schema with Alembic scripts.
               </li>

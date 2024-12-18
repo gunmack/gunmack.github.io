@@ -40,7 +40,7 @@ export default function Navbar() {
   useEffect(() => {
     // Function to handle window resize
     const handleResize = () => {
-      if (window.innerWidth >= 640) {
+      if (window.innerWidth >= 768) {
         setIsMenuOpen(false); // Close menu on larger screens
       }
     };
@@ -84,6 +84,7 @@ export default function Navbar() {
         {/* Hamburger menu for small screens */}
 
         <nbar_items className="sm:hidden flex flex-row items-center">
+          <TimeUpdater />
           <a
             onClick={() => setIsMenuOpen(isMenuOpen ? false : true)}
             className="px-4"
@@ -95,7 +96,7 @@ export default function Navbar() {
               <div
                 className={`w-8 h-1 bg-blue-500 transition-all duration-300 ease-in-out ${
                   isMenuOpen
-                    ? "transform rotate-45 translate-y-3.5 "
+                    ? "w-6 transform rotate-45 translate-y-3.5 "
                     : "rotate-0 translate-y-0"
                 }`}
               ></div>
@@ -107,14 +108,15 @@ export default function Navbar() {
               <div
                 className={`w-8 h-1 bg-blue-500 transition-all duration-300 ease-in-out ${
                   isMenuOpen
-                    ? "transform -rotate-45 translate-y-[-14px] translate-x-[-2px]"
+                    ? "w-6 transform -rotate-45 translate-y-[-14px] translate-x-[-2px]"
                     : "rotate-0 translate-y-0"
                 }`}
               ></div>
             </div>
           </a>
-
-          <ToggleButton />
+          <div className="dark-mode-toggle">
+            <ToggleButton />
+          </div>
         </nbar_items>
 
         {/* Dropdown visible only when `isMenuOpen` is true on small screens */}

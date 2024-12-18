@@ -13,24 +13,23 @@ export default function ToggleButton() {
       } else {
         setIsDark(false);
       }
+      LightDark();
     }
   }, []); // This runs once on component mount
 
-  const handleToggle = () => setIsDark(!isDark);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Save the dark mode state to localStorage
-      localStorage.setItem("isDark", isDark);
-      LightDark();
+  const handleToggle = () => {
+    if (isDark) {
+      setIsDark(false);
+    } else {
+      setIsDark(true);
     }
-  }, [isDark]); // Runs every time the `isDark` state changes
+    darkmode(); // Trigger the dark mode function
+  };
 
   return (
     <button
       onClick={() => {
         handleToggle(); // Toggle the state
-        darkmode(); // Trigger the dark mode function
       }}
       className={`w-16 h-8 flex items-center rounded-full p-1 transition-all duration-500 ${
         isDark ? "bg-white" : "bg-black"

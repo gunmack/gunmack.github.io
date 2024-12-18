@@ -40,6 +40,10 @@ from https://fonts.google.com/selection/embed
   }
 }
 
+html {
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -100,6 +104,14 @@ body {
     color: black;
     border: 10px solid black;
     border-radius: 10px;
+  }
+  .left-nav {
+    background-color: black;
+    color: white;
+  }
+  .left-nav a:hover {
+    color: black;
+    background-color: white;
   }
 }
 
@@ -333,6 +345,7 @@ header {
   width: 20%;
   transform: translateY(-50%); /* Adjust the nav to truly center it */
   background-color: white;
+  color: black;
 }
 
 .left-nav ul {
@@ -345,7 +358,6 @@ header {
 }
 
 .left-nav a {
-  color: black;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;

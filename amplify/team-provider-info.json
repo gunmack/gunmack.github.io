@@ -10,6 +10,16 @@
       "StackName": "amplify-gunmackdotdev-dev-9fd4e",
       "StackId": "arn:aws:cloudformation:us-east-2:767397836775:stack/amplify-gunmackdotdev-dev-9fd4e/2d508920-bd2f-11ef-93bb-0607d5b94505",
       "AmplifyAppId": "d1ui9t7quxd2l8"
+
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1ui9t7quxd2l8",
+          "type": "cicd"
+        }
+      }
+
     }
   }
 }

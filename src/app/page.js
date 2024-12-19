@@ -15,7 +15,6 @@ function Header() {
 }
 
 function Text() {
-  // const link = "https://www.sfu.ca/outlines.html?2024/fall/cmpt/276/d200";
   const old_site = "https://gunmack.github.io/archived/";
   return (
     <div className="row_col">

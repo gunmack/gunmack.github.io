@@ -25,7 +25,7 @@ function TimeUpdater() {
         if (!result) throw new Error("Could not fetch time");
 
         const timeData = {
-          city: locArray.split("/")[1].replace("_", " "),
+          zone: locArray.split("/")[1].replace("_", " "),
           time: result,
         };
         setTimeData(timeData);
@@ -53,9 +53,17 @@ function TimeUpdater() {
   }, []);
 
   useEffect(() => {
-    if (window.innerWidth > 768 && timeData) {
-      setCity(`in ${timeData.city}`);
-    }
+    const cityData = () => {
+      if (window.innerWidth > 1000 && timeData) {
+        setCity(`in ${timeData.zone}`);
+      } else {
+        setCity("");
+      }
+    };
+    window.addEventListener("resize", cityData);
+    return () => {
+      window.removeEventListener("resize", cityData);
+    };
   }, [timeData]);
 
   return (

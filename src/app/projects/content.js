@@ -114,7 +114,7 @@ function project1() {
         rel="noreferrer"
       >
         <Image
-          className="rounded-lg"
+          className="rounded-lg bg-white"
           src={"/images/quizLing.jpg"}
           alt="project_3"
           width={150}

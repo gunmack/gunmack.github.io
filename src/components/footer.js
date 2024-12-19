@@ -62,13 +62,8 @@ export default function Footer() {
           <div className="">
             © 2024 Julkar Reedoy (jreed). All rights reserved.
           </div>
-          <div className="">Last updated: 2024/12/18</div>
+          <div className="">Last updated: 2024/12/19</div>
         </div>
-        {/* Copyright Section */}
-        {/* <div className="pl-2 pb-1 right-0">
-          © 2024 Julkar Reedoy (jreed). All rights reserved. <br />
-          Last updated: 2024/12/18
-        </div> */}
       </footer>
     </div>
   );

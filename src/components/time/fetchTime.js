@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// React Component Example
 function TimeUpdater() {
   const [timeData, setTimeData] = useState(null);
   const [error, setError] = useState(null);

@@ -54,9 +54,10 @@ function TimeUpdater() {
 
   useEffect(() => {
     const cityData = () => {
-      if (window.innerWidth > 1000 && timeData) {
+      if (window.innerWidth > 1100 && timeData) {
         setCity(`in ${timeData.zone}`);
-      } else {
+      }
+      if (window.innerWidth <= 1100 && timeData) {
         setCity("");
       }
     };
@@ -65,6 +66,14 @@ function TimeUpdater() {
       window.removeEventListener("resize", cityData);
     };
   }, [timeData]);
+
+  useEffect(() => {
+    if (window.innerWidth > 1100 && timeData) {
+      setCity(`in ${timeData.zone}`);
+    } else {
+      setCity("");
+    }
+  });
 
   return (
     <div>

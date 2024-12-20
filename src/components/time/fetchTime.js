@@ -65,12 +65,6 @@ function TimeUpdater() {
     return () => {
       window.removeEventListener("resize", cityData);
     };
-
-    // if (window.innerWidth > 1100 && timeData) {
-    //   setCity(`in ${timeData.zone}`);
-    // } else {
-    //   setCity("");
-    // }
   }, [timeData]);
 
   useEffect(() => {

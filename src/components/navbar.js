@@ -108,7 +108,7 @@ export default function Navbar() {
               <div
                 className={`w-8 h-1 bg-blue-500 transition-all duration-300 ease-in-out ${
                   isMenuOpen
-                    ? "w-6 transform -rotate-45 translate-y-[-14px] translate-x-[-2px]"
+                    ? "w-6 transform -rotate-45 translate-y-[-14.25px] translate-x-[-1.5px]"
                     : "rotate-0 translate-y-0"
                 }`}
               ></div>

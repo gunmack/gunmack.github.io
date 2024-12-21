@@ -11,9 +11,9 @@ function project4() {
         rel="noreferrer"
       >
         <Image
-          className="div rounded-lg"
+          className="rounded-lg"
           src={"/images/project_1.png"}
-          alt="project_1"
+          alt="project_4"
           width={150}
           height={0}
           priority
@@ -49,7 +49,7 @@ function project3() {
         <Image
           className="rounded-lg"
           src={"/images/sfu.png"}
-          alt="project_2"
+          alt="project_3"
           width={150}
           height={0}
           priority
@@ -82,7 +82,7 @@ function project2() {
         <Image
           className="rounded-lg"
           src={"/images/flask.png"}
-          alt="project_3"
+          alt="project_2"
           width={150}
           height={0}
           priority
@@ -116,7 +116,7 @@ function project1() {
         <Image
           className="rounded-lg bg-white"
           src={"/images/quizLing.jpg"}
-          alt="project_3"
+          alt="project_1"
           width={150}
           height={0}
           priority
@@ -147,12 +147,10 @@ export default function Content() {
   return (
     <div data-testid="content">
       <div className="row_col">
-        {" "}
         {project1()}
         {project2()}
       </div>
       <div className="row_col">
-        {" "}
         {project3()} {project4()}
       </div>
     </div>

@@ -62,7 +62,7 @@ export default function Footer() {
           <div className="">
             © 2024 Julkar Reedoy (jreed). All rights reserved.
           </div>
-          <div className="">Last updated: 2024/12/19</div>
+          <div className="">Last updated: 2024/12/21</div>
         </div>
       </footer>
     </div>

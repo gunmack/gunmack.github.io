@@ -119,7 +119,7 @@ function Resume_PDF() {
                   <i>Optimized application development workflows</i>
                 </strong>{" "}
                 to meet deadlines and ensure quality control by enhancing the
-                developme nt environment and streamlining the CI/CD pipeline.
+                development environment and streamlining the CI/CD pipeline.
               </li>
               <li>
                 👉{" "}
@@ -306,7 +306,6 @@ function Resume_PDF() {
 
             <ul>
               <li>
-
                 👉 Integrated new database tables into existing database for
                 storing Blog entries and associated poster information using
                 SQLAlchemy.

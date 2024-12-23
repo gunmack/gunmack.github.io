@@ -149,8 +149,8 @@ header {
 .row_col {
   display: flex;
   flex-direction: row;
-  gap: 8%; /* Space between items */
-  align-items: center; /* Vertically align the items */
+  gap: 8%;
+  align-items: center;
   justify-content: center;
 }
 
@@ -189,23 +189,20 @@ header {
   margin-left: 20px;
   padding-left: 8px;
   padding-right: 8px;
-
-  display: inline-block; /* Makes the element behave like a button */
-
-  border: 2px solid transparent; /* Initially no border, becomes visible on hover */
+  display: inline-block;
+  border: 2px;
   border-color: var(--foreground-rgb);
-  border-radius: 5px; /* Rounded corners */
-  text-align: center; /* Centers text inside the button */
-  cursor: pointer; /* Makes it clickable */
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .nbar_items:hover {
-  font-weight: bolder;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border-radius: 5px;
-  padding-left: 16px; /* Adds more padding on the left to make it pop */
+  padding-left: 16px;
   padding-right: 16px;
   transform: scale(1.05);
 }
@@ -214,10 +211,8 @@ header {
   color: white;
   background-color: rgb(70, 130, 180);
   border-radius: 5px;
-  padding-left: 16px; /* Adds more padding on the left to make it pop */
+  padding-left: 16px;
   padding-right: 16px;
-  font-weight: bolder;
-  cursor: not-allowed;
 }
 
 /* Footer styles */
@@ -316,34 +311,13 @@ header {
   }
 }
 
-/* Container for the progress bar */
-.progress-bar-container {
-  position: fixed; /* Fix the progress bar on the left side */
-  top: 0;
-  left: 0;
-  width: 5px; /* Set the width of the progress bar */
-  height: 100%; /* Full height of the screen */
-  background-color: rgb(
-    var(--background-start-rgb)
-  ); /* Light background for the container */
-  z-index: 1000; /* Ensure the progress bar appears on top */
-}
-
-/* Progress bar itself */
-.progress-bar {
-  width: 100%; /* Full width of the container */
-  height: 0%; /* Initially set the height to 0% */
-  background-color: #4caf50; /* Green color for the progress bar */
-  transition: height 0.1s ease-out; /* Smooth transition for the height */
-}
-
 /* Left navigation bar */
 .left-nav {
-  position: fixed; /* Fix the nav on the left side */
-  top: 50%; /* Start at the center of the screen */
+  position: fixed;
+  top: 50%;
   left: 0;
   width: 20%;
-  transform: translateY(-50%); /* Adjust the nav to truly center it */
+  transform: translateY(-50%);
   background-color: white;
   color: black;
 }
@@ -402,7 +376,7 @@ header {
 /* Mobile styles */
 @media (max-width: 768px) {
   .left-nav {
-    display: none; /* Hide the navigation bar on smaller screens */
+    display: none;
   }
 
   .navbar {

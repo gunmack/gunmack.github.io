@@ -41,7 +41,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            Give Feedback
+            Feedback
           </a>
           <a
             className="f_items"
@@ -57,12 +57,12 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            Emojis from Emojipedia
+            Emojis
           </a>
           <div className="">
             © 2024 Julkar Reedoy (jreed). All rights reserved.
           </div>
-          <div className="">Last updated: 2024/12/21</div>
+          <div className="">Last updated: 2024/12/23</div>
         </div>
       </footer>
     </div>

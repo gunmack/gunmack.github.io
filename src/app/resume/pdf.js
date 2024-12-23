@@ -1,23 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "@/app/globals.css";
 
 function Resume_PDF() {
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  const handleScroll = () => {
-    const totalHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPosition = window.scrollY;
-    const progress = (scrollPosition / totalHeight) * 100;
-    setScrollProgress(progress);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div>
       <div className="left-nav">
@@ -72,12 +57,6 @@ function Resume_PDF() {
             <br />
             <br />
           </p>
-          <div className="progress-bar-container">
-            <div
-              className="progress-bar"
-              style={{ height: `${scrollProgress}%` }}
-            />
-          </div>
         </div>
 
         <pdf_header>Skills</pdf_header>

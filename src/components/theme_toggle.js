@@ -41,7 +41,7 @@ export default function ToggleButton() {
             isDark ? "translate-x-0" : "translate-x-8"
           }`}
       >
-        {isDark ? "🌙" : "☀️"}
+        {isDark ? "☀️" : "🌙"}
       </div>
     </button>
   );

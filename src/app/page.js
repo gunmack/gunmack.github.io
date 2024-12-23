@@ -35,31 +35,31 @@ function Text() {
           <ul>
             <li>
               {" "}
-              <Link className="link" href="about">
+              <Link className="button" href="about">
                 🧑🏾 About me
               </Link>
             </li>
+            <br />
             <li>
               {" "}
-              <Link className="link" href="projects">
+              <Link className="button" href="projects">
                 🖥️ Projects
               </Link>
             </li>
+            <br />
             <li>
               {" "}
-              <Link className="link" href="resume">
+              <Link className="button" href="resume">
                 📃 Resume
               </Link>
             </li>
-          </ul>
-          <p>
-            <br /> If you would like to see my other work:
             <br />
-            Click here 👉
-            <Link className="link" href={old_site} target="_blank">
-              📁Other work
-            </Link>
-          </p>
+            <li>
+              <Link className="button" href={old_site} target="_blank">
+                📁Other work
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
       <br />

@@ -72,7 +72,7 @@ body {
   }
 
   .portrait {
-    border: 4px solid white;
+    border: 0.5px solid white;
   }
 }
 
@@ -112,6 +112,14 @@ body {
   .left-nav a:hover {
     color: black;
     background-color: white;
+  }
+  .button {
+    background-color: black;
+    color: white;
+  }
+  .button:hover {
+    background-color: white;
+    color: black;
   }
 }
 
@@ -156,6 +164,18 @@ header {
 
 .text {
   text-align: left;
+}
+.button {
+  padding: 1%;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background-color: black;
+  color: white;
 }
 
 .link {
@@ -320,6 +340,7 @@ header {
   transform: translateY(-50%);
   background-color: white;
   color: black;
+  border-radius: 4px;
 }
 
 .left-nav ul {
@@ -369,7 +390,7 @@ header {
 }
 
 .portrait {
-  border: 4px solid black;
+  border: 0.5px solid black;
   border-radius: 2%;
 }
 

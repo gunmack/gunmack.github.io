@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+
 import "@/app/globals.css";
 
 function Header() {
@@ -29,15 +29,12 @@ function Text() {
 
           <p>
             I mostly work on front-end applications with React and Python.
-            <br></br>I have experience working with abstract data structures in
-            C and C++.<br></br>
-            Currently, I am learning Object Oriented Programming with Java.
             <br></br>
-            <br></br>Take a look at my resume by clicking on this little icon 👉
-            {""}
-            <Link href="resume" className="link">
-              📃
-            </Link>
+            I also have experience in working with backend APIs using Java.
+            <br />
+            <br />
+            Currently, I am learning to develop full stack applications.
+            <br></br>
           </p>
         </div>
       </div>

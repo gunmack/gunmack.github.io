@@ -1,8 +1,28 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "@/app/globals.css";
 import Image from "next/image";
 
 export default function Footer() {
+  const [lastUpdated, setLastUpdated] = useState("");
+
+  useEffect(() => {
+    const fetchLastUpdated = async () => {
+      try {
+        const response = await fetch("/last-updated.json");
+        if (!response.ok) {
+          console.log(`HTTP log! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setLastUpdated(data.lastUpdated);
+      } catch (error) {
+        console.log("Error fetching the last updated timestamp:", error);
+      }
+    };
+
+    fetchLastUpdated();
+  }, []);
+
   return (
     <div className="footer_section">
       <footer>
@@ -37,19 +57,11 @@ export default function Footer() {
           </a>
           <a
             className="f_items"
-            href="mailto:julkar_reedoy@sfu.ca?subject=Feedback on your GitHub page"
+            href="mailto:julkar_reedoy@sfu.ca?subject=Feedback on your personal website"
             target="_blank"
             rel="noreferrer"
           >
             Feedback
-          </a>
-          <a
-            className="f_items"
-            href="https://icons8.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Icons by Icons8
           </a>
           <a
             className="f_items"
@@ -59,10 +71,15 @@ export default function Footer() {
           >
             Emojis
           </a>
-          <div className="">
-            © 2024 Julkar Reedoy (jreed). All rights reserved.
+          <div>© 2024 Julkar Reedoy (jreed). All rights reserved.</div>
+          <div>
+            Last updated:{" "}
+            {lastUpdated || (
+              <span>
+                Loading <span className="blink">...</span>
+              </span>
+            )}
           </div>
-          <div className="">Last updated: 2024/12/23</div>
         </div>
       </footer>
     </div>

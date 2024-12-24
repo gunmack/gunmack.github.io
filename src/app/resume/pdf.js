@@ -184,7 +184,7 @@ function Resume_PDF() {
             <h3>
               <a
                 className="link hover:text-blue-400"
-                href="https://www.gunmack.dev/SFU"
+                href="https://github.com/gunmack/SFU1"
                 target="_blank"
                 rel="noreferrer"
               >

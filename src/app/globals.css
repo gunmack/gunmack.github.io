@@ -117,10 +117,6 @@ body {
     background-color: black;
     color: white;
   }
-  .button:hover {
-    background-color: white;
-    color: black;
-  }
 }
 
 body {
@@ -174,8 +170,8 @@ header {
   transition: all 0.3s ease;
 }
 .button:hover {
-  background-color: black;
-  color: white;
+  background-color: green;
+  color: yellow;
 }
 
 .link {

@@ -40,21 +40,19 @@ export default function Navbar() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
 
   useEffect(() => {
-    // Function to handle mouse movement
-    const handleMouseMove = (e) => {
-      if (e.clientY <= 50) {
-        setIsNavbarVisible(true); // Show navbar if mouse is near the top
+    // Function to handle scroll event
+    const handleScrollnMouse = (e) => {
+      if (window.scrollY > 50 || e.clientY <= 50) {
+        setIsNavbarVisible(true);
       } else {
-        setIsNavbarVisible(false); // Hide navbar otherwise
+        setIsNavbarVisible(false);
       }
     };
-
-    // Add event listener for mouse movement
-    window.addEventListener("mousemove", handleMouseMove);
-
-    // Cleanup event listener on component unmount
+    window.addEventListener("scroll", handleScrollnMouse);
+    window.addEventListener("mousemove", handleScrollnMouse);
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScrollnMouse);
+      window.removeEventListener("mousemove", handleScrollnMouse);
     };
   }, []);
 
@@ -62,14 +60,10 @@ export default function Navbar() {
     // Function to handle window resize
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setIsMenuOpen(false); // Close menu on larger screens
+        setIsMenuOpen(false);
       }
     };
-
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };

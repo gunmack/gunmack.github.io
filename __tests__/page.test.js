@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "@jest/globals";
-import Home from "@/app/page";
+import Home from "@/app/home/page";
 import About from "@/app/about/page";
 import Projects from "@/app/projects/page";
 import Resume from "@/app/resume/page";

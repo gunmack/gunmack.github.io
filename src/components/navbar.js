@@ -8,13 +8,13 @@ import TimeUpdater from "./time/fetchTime";
 
 export const links = [
   {
-    name: "🏠Home ",
+    name: "🏡Home ",
     href: "/",
     key: "home",
   },
   { name: "🧑🏾About me ", href: "about", key: "about" },
   { name: "🖥️Projects ", href: "projects", key: "projects" },
-  { name: "📃Resume ", href: "resume", key: "resume" },
+  { name: "📃Resume  ", href: "resume", key: "resume" },
   {
     name: "📁Other work ",
     href: "https://gunmack.github.io/archived/",

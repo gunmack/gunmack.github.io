@@ -37,18 +37,33 @@ function PagePath() {
 export default function Navbar() {
   const page = PagePath();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+
+  useEffect(() => {
+    // Function to handle scroll event
+    const handleScrollnMouse = (e) => {
+      if (window.scrollY > 50 || e.clientY <= 50) {
+        setIsNavbarVisible(true);
+      } else {
+        setIsNavbarVisible(false);
+      }
+    };
+    window.addEventListener("scroll", handleScrollnMouse);
+    window.addEventListener("mousemove", handleScrollnMouse);
+    return () => {
+      window.removeEventListener("scroll", handleScrollnMouse);
+      window.removeEventListener("mousemove", handleScrollnMouse);
+    };
+  }, []);
+
   useEffect(() => {
     // Function to handle window resize
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setIsMenuOpen(false); // Close menu on larger screens
+        setIsMenuOpen(false);
       }
     };
-
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -56,7 +71,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <div className="navbar">
+      <div className={`navbar ${isNavbarVisible ? "visible" : ""}`}>
         <div className="fixed left-10  hidden lg:flex">
           <TimeUpdater />
         </div>

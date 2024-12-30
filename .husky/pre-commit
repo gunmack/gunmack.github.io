@@ -1,5 +1,5 @@
 node lib/timeStamp.js
-git add public/last-updated.json
+# git add public/last-updated.json
 prettier $(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g') --write --ignore-unknown
 git update-index --again
 npm run build

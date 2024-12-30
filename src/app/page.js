@@ -56,7 +56,7 @@ function Text() {
             <br />
             <li>
               <Link className="button" href={old_site} target="_blank">
-                📁Other work
+                📁 Other work
               </Link>
             </li>
           </ul>

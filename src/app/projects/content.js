@@ -1,5 +1,6 @@
 import React from "react";
 import "@/app/globals.css";
+import "@/app/projects/project.css";
 import Image from "next/image";
 
 function project4() {

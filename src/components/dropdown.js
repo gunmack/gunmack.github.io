@@ -1,6 +1,6 @@
 import React from "react";
-import { darkmode } from "./light_dark";
-import { links } from "./navbar";
+import { darkmode } from "@/components/light_dark";
+import { links } from "@/components/navbar";
 
 // eslint-disable-next-line react/prop-types
 export default function Dropdown({ isOpen }) {

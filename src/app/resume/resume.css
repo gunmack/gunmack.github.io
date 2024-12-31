@@ -1,0 +1,145 @@
+.text {
+  text-align: left;
+}
+
+/* Left navigation bar */
+.left-nav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 20%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+}
+
+.left-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-nav li {
+  margin: 15px 0;
+}
+
+.left-nav a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.left-nav a:hover {
+  color: white;
+  background-color: black;
+}
+
+/* Resume page styles */
+.pdf {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4%;
+  background-color: white;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+  color: black;
+  border: 10px solid rgb(70, 130, 180);
+  border-radius: 10px;
+
+  pdf_title {
+    font-size: 2rem;
+    padding-bottom: 2%;
+    color: #2596be;
+  }
+
+  code {
+    color: black;
+    background-color: slategray;
+    padding: 0.5%;
+  }
+
+  pdf_header {
+    font-size: 1.5rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: #2596be;
+    text-align: start;
+    text-decoration: underline;
+  }
+
+  pdf_div {
+    padding-bottom: 4%;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: start;
+    padding-bottom: 2%;
+    font-weight: bold;
+  }
+  pdf_text {
+    text-align: left;
+    font-size: 0.85rem;
+    padding-bottom: 8%;
+  }
+  ul {
+    padding-left: 8%;
+  }
+  li {
+    padding-bottom: 2%;
+  }
+}
+
+.light-mode {
+  .pdf {
+    background-color: white;
+    color: black;
+    border: 10px solid black;
+    border-radius: 10px;
+  }
+  .left-nav {
+    background-color: black;
+    color: white;
+  }
+  .left-nav a:hover {
+    color: black;
+    background-color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-nav {
+    display: none;
+  }
+
+  .text {
+    font-size: 0.75rem;
+  }
+
+  .pdf {
+    max-width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .pdf_title {
+    font-size: 1rem;
+  }
+
+  .pdf_header {
+    font-size: 0.85rem;
+  }
+  ul {
+    padding-left: 4%;
+  }
+  li {
+    font-size: smaller;
+  }
+}

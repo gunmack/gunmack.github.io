@@ -1,0 +1,153 @@
+.dark-mode-toggle {
+  font-size: 1.25rem;
+  margin-left: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.light-mode {
+  .nbar_items:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+
+  .nbar_items.active {
+    background-color: rgb(70, 130, 180);
+    color: white;
+    border-radius: 5px;
+    border-color: black;
+  }
+}
+
+/* Navbar styles */
+.navbar_home {
+  justify-content: left;
+}
+
+.navbar {
+  display: flex;
+  background-color: rgb(var(--background-start-rgb));
+  padding: 1.5%;
+  gap: 1%;
+  width: 100%;
+  justify-content: right;
+  position: fixed;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+}
+.navbar.visible {
+  transform: translateY(0);
+}
+
+.nbar_items {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: inline-block;
+  border: 2px;
+  border-color: var(--foreground-rgb);
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nbar_items:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transform: scale(1.05);
+}
+
+.nbar_items.active {
+  color: white;
+  background-color: rgb(70, 130, 180);
+  border-radius: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.dropdown_list {
+  display: block;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+/* Footer styles */
+.footer_section {
+  background-color: rgb(var(--background-start-rgb));
+  font-size: small;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  justify-content: start;
+  padding: 1%;
+  gap: 2%;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.f_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2%;
+}
+.f_items:hover {
+  font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  .left-nav {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 5%;
+    width: 100%;
+    align-items: center;
+    z-index: 100;
+
+    .nbar_items {
+      font-size: 1rem;
+      margin: 10px;
+    }
+  }
+
+  .footer_section {
+    font-size: xx-small;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1%;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .f_items {
+    gap: 1%;
+    padding: 1%;
+    font-size: small;
+  }
+
+  .f_items:hover {
+    font-weight: bolder;
+  }
+}

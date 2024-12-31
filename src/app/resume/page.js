@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import "@/app/globals.css";
-import Resume_PDF from "./pdf";
+import "@/app/resume/resume.css";
+import Resume_PDF from "@/app/resume/pdf";
 
 function linkToCopy() {
   const resume = "/files/Julkar_Reedoy_resume.pdf";

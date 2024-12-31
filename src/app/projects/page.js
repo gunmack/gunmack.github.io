@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import "@/app/globals.css";
-import Content from "./content";
+import "@/app/projects/project.css";
+import Content from "@/app/projects/content";
 
 function Header() {
   return <header data-testid="header">My Projects</header>;

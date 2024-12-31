@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import "@/app/globals.css";
+import "@/app/resume/resume.css";
 
 function Resume_PDF() {
   return (

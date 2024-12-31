@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { darkmode, LightDark } from "./light_dark";
+import { darkmode, LightDark } from "@/components/light_dark";
 
 export default function ToggleButton() {
   const [isDark, setIsDark] = useState(false);

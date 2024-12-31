@@ -4,7 +4,8 @@ import { usePathname } from "next/navigation";
 import ToggleButton from "@/components/theme_toggle";
 import Dropdown from "@/components/dropdown";
 import "@/app/globals.css";
-import TimeUpdater from "./time/fetchTime";
+import "@/components/components.css";
+import TimeUpdater from "@/components/time/fetchTime";
 
 export const links = [
   {

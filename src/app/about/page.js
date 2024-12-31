@@ -1,6 +1,6 @@
 import React from "react";
-
 import "@/app/globals.css";
+import "@/app/about/about.css";
 
 function Header() {
   return <header data-testid="header">What I do</header>;

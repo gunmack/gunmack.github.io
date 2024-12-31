@@ -1,0 +1,46 @@
+.row_col {
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+  align-items: center;
+  justify-content: center;
+}
+
+.click_div {
+  padding: 4%;
+  margin: 2%;
+  border-radius: 2%;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.text {
+  text-align: left;
+}
+
+.click_div:hover {
+  transform: scale(1.05);
+}
+
+.dark-mode {
+  .click_div {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .row_col {
+    flex-direction: column;
+    gap: 8%;
+    justify-content: center;
+    padding-bottom: 2%;
+  }
+
+  .text {
+    font-size: 0.75rem;
+  }
+}

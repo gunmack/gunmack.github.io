@@ -1,0 +1,24 @@
+.row_col {
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .row_col {
+    flex-direction: column;
+    gap: 8%;
+    justify-content: center;
+    padding-bottom: 2%;
+  }
+
+  .text {
+    font-size: 0.75rem;
+  }
+}

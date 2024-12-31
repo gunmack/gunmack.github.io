@@ -1,6 +1,7 @@
 import React from "react";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export const metadata = {
   title: "Julkar Reedoy",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
             <main>{children}</main>
           </wrap>
         </div>
+        <Footer />
       </body>
     </html>
   );

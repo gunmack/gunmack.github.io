@@ -1,5 +1,5 @@
 import React from "react";
-import "../globals.css";
+import "@/app/globals.css";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -21,8 +21,6 @@ function Text() {
       <div>
         <div data-testid="text" className="text">
           <p>
-            Hi, I&apos;m Julkar and welcome to my page :)
-            <br />
             This website is currently a work in progress.
             <br />
             <br />

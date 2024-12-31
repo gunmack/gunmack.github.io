@@ -65,7 +65,7 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScrollnMouse);
       window.removeEventListener("mousemove", handleScrollnMouse);
     };
-  }, []);
+  }, [page]);
 
   useEffect(() => {
     // Function to handle window resize

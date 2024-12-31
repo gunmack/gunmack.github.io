@@ -181,13 +181,6 @@ header {
   text-align: left;
 }
 
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-
-  position: relative;
-}
-
 .scroll-cta {
   display: inline-flex;
   flex-direction: column;

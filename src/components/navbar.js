@@ -15,7 +15,7 @@ export const links = [
   // },
   {
     name: "🏡Home ",
-    href: "/home",
+    href: "/",
     key: "home",
   },
   { name: "🧑🏾About me ", href: "about", key: "about" },

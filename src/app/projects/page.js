@@ -27,7 +27,7 @@ function Text() {
 
 export default function Projects() {
   return (
-    <div>
+    <div className="animate-fadeIn">
       <Header />
       <Content />
       <br />

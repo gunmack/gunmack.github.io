@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function project4() {
   return (
-    <div className="click_div">
+    <div className="click_div group relative">
       <a
         href="https://github.com/gunmack/Python-Image-Processor"
         target="_blank"
@@ -20,7 +20,7 @@ function project4() {
           priority
         />
         <br />
-        <div className="text">
+        <div className="text max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
           <h3>Python Image Processor</h3>
           <p>
             <em>
@@ -41,7 +41,7 @@ function project4() {
 
 function project3() {
   return (
-    <div className="click_div">
+    <div className="click_div group relative">
       <a
         href="https://github.com/gunmack/SFU1"
         target="_blank"
@@ -56,7 +56,8 @@ function project3() {
           priority
         />
         <br />
-        <div className="text">
+
+        <div className="text max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
           <h3>SFU Campus Timeline</h3>
           <p>
             <em>Comprehensive HTML directory of SFU campus buildings</em>
@@ -74,7 +75,7 @@ function project3() {
 
 function project2() {
   return (
-    <div className="click_div">
+    <div className="click_div group relative">
       <a
         href="https://github.com/gunmack/Flask-Calculator"
         target="_blank"
@@ -89,7 +90,7 @@ function project2() {
           priority
         />
         <br />
-        <div className="text">
+        <div className="text max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
           <h3>Single Expression Calculator</h3>
           <p>
             <em>Calculator app built with Python 3.12 and Flask 3.0.3.</em>
@@ -108,7 +109,7 @@ function project2() {
 
 function project1() {
   return (
-    <div className="click_div">
+    <div className="click_div group relative">
       <a
         href="https://github.com/gunmack/276_Project"
         target="_blank"
@@ -123,7 +124,7 @@ function project1() {
           priority
         />
         <br />
-        <div className="text">
+        <div className="text max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
           <h3>QuizLing</h3>
           <p>
             <em>Language Learning App built with Next.js</em>

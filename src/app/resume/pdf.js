@@ -248,7 +248,10 @@ function Resume_PDF() {
         <pdf_header>Education</pdf_header>
         <pdf_div>
           <pdf_text>
-            <h3>Simon Fraser University (September 2021 - Present)</h3>
+            <h3>
+              Simon Fraser University{" "}
+              <p className="text-right">September 2021 - Present</p>
+            </h3>
             <ul>
               <li>👉 Bachelor of Science in Computing Science</li>
             </ul>

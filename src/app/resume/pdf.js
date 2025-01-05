@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import React from "react";
 import "@/app/globals.css";
 import "@/app/resume/resume.css";
@@ -6,7 +6,7 @@ import "@/app/resume/resume.css";
 function Resume_PDF() {
   return (
     <div>
-      <div className="left-nav">
+      {/* <div className="left-nav">
         <ul>
           <li>
             <a href="#skills">Skills</a>
@@ -18,7 +18,7 @@ function Resume_PDF() {
             <a href="#work-experience">Work Experience</a>
           </li>
         </ul>
-      </div>
+      </div> */}
       <div data-testid="pdf" className="pdf">
         <pdf_title>Julkar Naine Reedoy</pdf_title>
         <div>
@@ -65,14 +65,18 @@ function Resume_PDF() {
           <pdf_text>
             <p>
               Languages:
-              <strong> Python, Java, JavaScript, SQL, HTML, CSS </strong>
-            </p>
-            <p id="projects">
-              Frameworks:
-              <strong> React, Tailwind, Flask, Bootstrap, Spring boot</strong>
+              <strong>
+                {" "}
+                C, C++, Python, Java, JavaScript, SQL, HTML, CSS{" "}
+              </strong>
             </p>
             <p>
-              Tools:<strong> Git, Linux, JIRA, Microsoft Office </strong>
+              Tools:
+              <strong>
+                {" "}
+                React, Next.js, Flask, Spring Boot, PostgreSQL, Google Cloud
+                Platform, Docker
+              </strong>
             </p>
           </pdf_text>
         </pdf_div>
@@ -94,36 +98,23 @@ function Resume_PDF() {
 
             <ul>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Optimized application development workflows</i>
-                </strong>{" "}
-                to meet deadlines and ensure quality control by enhancing the
-                development environment and streamlining the CI/CD pipeline.
+                👉 Integrated Google Account authentication to provide seamless
+                user login through Google Firebase Authentication.
               </li>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Designed and implemented a Translate feature</i>
-                </strong>{" "}
-                enabling users to translate text to their desired language by
-                utilizing the Google Cloud Translation API.
+                👉 Developed an Achievements feature allowing users to monitor
+                their in-app progress with real-time updates powered by Google
+                Firebase Realtime Database.
               </li>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Integrated Google Account authentication</i>
-                </strong>{" "}
-                to provide seamless user login through Google Firebase
-                Authentication.
+                👉 Optimized application development workflows to meet deadlines
+                and ensure quality control by enhancing the development
+                environment and streamlining the CI/CD pipeline.
               </li>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Developed an Achievements feature</i>
-                </strong>{" "}
-                allowing users to monitor their in-app progress with real-time
-                updates powered by Google Firebase Realtime Database.
+                👉 Designed and implemented a Translate feature enabling users
+                to translate text to their desired language by utilizing the
+                Google Cloud Translation API.
               </li>
             </ul>
           </pdf_text>
@@ -145,36 +136,21 @@ function Resume_PDF() {
 
             <ul>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Built a calculator web application</i>
-                </strong>{" "}
-                for performing basic mathematical operations using the Flask
-                framework.
+                👉 Built a calculator web application for performing basic
+                mathematical operations using the Flask framework.
               </li>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Designed an intuitive user interface</i>
-                </strong>{" "}
-                to enable seamless user interaction with HTM, CSS, and
-                JavaScript.
+                👉 Designed an intuitive user interface to enable seamless user
+                interaction with HTML, CSS, and JavaScript.
               </li>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Optimized input parsing and tokenization</i>
-                </strong>{" "}
-                for efficient processing of mathematical expressions using
-                regular expressions (regex).
+                👉 Optimized input parsing and tokenization for efficient
+                processing of mathematical expressions using regular expressions
+                (regex).
               </li>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Implemented key features</i>
-                </strong>{" "}
-                such as input clearing to enhance user control and experience
-                through JavaScript functions.
+                👉 Implemented key features such as input clearing to enhance
+                user control through JavaScript functions.
               </li>
             </ul>
           </pdf_text>
@@ -196,59 +172,37 @@ function Resume_PDF() {
 
             <ul>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Designed and developed a landing page</i>
-                </strong>{" "}
-                showcasing background information about the SFU campuses using
-                Next.js and Tailwind CSS.
+                👉 Built a structured directory of HTML pages to organize
+                buildings by campuses and opening dates, leveraging the
+                Bootstrap CSS framework.
               </li>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Built a structured directory of HTML pages</i>
-                </strong>{" "}
-                to organize buildings by campuses and opening dates, leveraging
-                the Bootstrap CSS framework.
+                👉 Integrated interactive maps to display approximate building
+                locations using the Leaflet Maps Library.
               </li>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Integrated interactive maps</i>
-                </strong>{" "}
-                to display approximate building locations using the Leaflet Maps
-                Library.
+                👉 Created dynamic slideshows to showcase campus building images
+                utilizing Bootstrap components.
               </li>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Created dynamic slideshows</i>
-                </strong>{" "}
-                to showcase campus building images utilizing Bootstrap
-                components.
-              </li>
-              <li>
-                👉{" "}
-                <strong>
-                  <i>Implemented a sticky navigation bar</i>
-                </strong>{" "}
-                to enhance usability and streamline site navigation.
+                👉 Implemented a sticky navigation bar to enhance usability and
+                streamline site navigation.
               </li>
             </ul>
           </pdf_text>
         </pdf_div>
 
-        <pdf_header>Contributions</pdf_header>
+        <pdf_header>Open Source</pdf_header>
         <pdf_div>
           <pdf_text>
             <h3>
               <a
                 className="link hover:text-blue-400"
-                href="https://github.com/CSSS/csss-site-frontend"
+                href="https://new.sfucsss.org/#"
                 target="_blank"
                 rel="noreferrer"
               >
-                csss-site-frontend
+                CSSS-Site-New
               </a>
               <p className="text-right">August 2024</p>
             </h3>
@@ -256,44 +210,16 @@ function Resume_PDF() {
             <ul>
               <li>
                 👉 Developed a dedicated page for the CSSS common rooms to
-                showcase images and relevant information using React.js.
+                showcase images and other information using React.js.
               </li>
               <li>
                 👉 Created an interactive page to display detailed information
                 about all CSSS committees using React.js.
               </li>
               <li>
-                👉 Seamlessly integrated the new pages into the existing website
-                directory to ensure smooth navigation and consistent
-                functionality.
-              </li>
-            </ul>
-          </pdf_text>
-        </pdf_div>
-        <pdf_div>
-          <pdf_text>
-            <h3>
-              <a
-                className="link hover:text-blue-400"
-                href="https://github.com/CSSS/csss-site-backend"
-                target="_blank"
-                rel="noreferrer"
-              >
-                csss-site-backend
-              </a>
-              <p className="text-right">August 2024</p>
-            </h3>
-
-            <ul>
-              <li>
-                👉 Integrated new database tables into existing database for
-                storing Blog entries and associated poster information using
-                SQLAlchemy.
-              </li>
-
-              <li id="work-experience">
-                👉 Executed database migrations to seamlessly incorporate the
-                new tables into the existing schema with Alembic scripts.
+                👉 Integrated new database tables for storing blog entries and
+                poster information into the existing schema using SQLAlchemy, as
+                well as executing seamless migrations with Alembic scripts.
               </li>
             </ul>
           </pdf_text>
@@ -302,33 +228,18 @@ function Resume_PDF() {
         <pdf_header>Work Experience</pdf_header>
         <pdf_div>
           <pdf_text>
-            <h3>Concession Attendant (May 2023 - Present)</h3>
-            <h3>Playland at PNE, Vancouver, British Columbia</h3>
-
+            <h3>Concession @ PNE</h3>
             <ul>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Managed POS systems</i>
-                </strong>{" "}
-                with precision to ensure accurate and efficient customer
-                transactions.
+                👉 Managed POS systems, coordinated with kitchen staff to
+                expedite orders, ensuring exceptional service.
               </li>
+            </ul>
+            <h3>Produce Clerk @ Loblaws</h3>
+            <ul>
               <li>
-                👉{" "}
-                <strong>
-                  <i>Coordinated with kitchen staff</i>
-                </strong>{" "}
-                to relay customer orders, ensuring prompt preparation and
-                delivery.
-              </li>
-              <li>
-                👉{" "}
-                <strong>
-                  <i>Balanced front-end and back-end responsibilities</i>
-                </strong>
-                , effectively multitasking to provide exceptional service and
-                fulfill orders.
+                👉 Maintained produce department to standard, ensuring stock
+                freshness and providing exceptional customer assistance.
               </li>
             </ul>
           </pdf_text>

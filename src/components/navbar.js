@@ -8,6 +8,11 @@ import "@/components/components.css";
 import TimeUpdater from "@/components/time/fetchTime";
 
 export const links = [
+  // {
+  //   name: "🏡index ",
+  //   href: "/",
+  //   key: "index",
+  // },
   {
     name: "🏡index ",
     href: "/",

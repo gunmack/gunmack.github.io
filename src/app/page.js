@@ -19,7 +19,7 @@ export default function Landing() {
     const timer = setTimeout(() => {
       if (window.innerWidth < 768) {
         window.scrollTo({
-          top: 175,
+          top: 100,
           behavior: "smooth",
         });
       } else {
@@ -59,7 +59,7 @@ export default function Landing() {
   }, []);
 
   return (
-    <div className="landing-page">
+    <div>
       <div
         className="bg-fixed bg-cover bg-center bg-no-repeat rounded-lg md:p-16 md:m-16 p-2 m-4  "
         style={{

@@ -124,6 +124,10 @@
     font-size: 0.75rem;
   }
 
+  p {
+    font-size: 0.65rem;
+  }
+
   .pdf {
     max-width: 100%;
     font-size: 0.7rem;

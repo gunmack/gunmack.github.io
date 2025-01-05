@@ -24,7 +24,7 @@ function linkToCopy() {
 
 export default function Resume() {
   return (
-    <div>
+    <div className="animate-fadeIn">
       {/* <Header /> */}
       <Resume_PDF />
       {linkToCopy()}

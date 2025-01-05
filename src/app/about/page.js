@@ -44,7 +44,7 @@ function Text() {
 
 export default function About() {
   return (
-    <div>
+    <div className="animate-fadeIn">
       <Header />
       <Text />
     </div>

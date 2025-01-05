@@ -11,7 +11,7 @@ export const theme = {
       foreground: "var(--foreground)",
     },
     animation: {
-      fadeIn: "fadeIn 2s ease-in-out",
+      fadeIn: "fadeIn 1.5s ease-in-out",
     },
     keyframes: {
       fadeIn: {

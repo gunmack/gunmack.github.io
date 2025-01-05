@@ -77,7 +77,7 @@ function Text() {
 
 export default function Home() {
   return (
-    <div>
+    <div className="animate-fadeIn">
       <Header />
       <Text />
     </div>

@@ -172,9 +172,9 @@ function Resume_PDF() {
 
             <ul>
               <li>
-                👉 Built a structured directory of HTML pages to organize
-                buildings by campuses and opening dates, leveraging the
-                Bootstrap CSS framework.
+                👉 Leveraged the Bootstrap CSS framework to create a structured
+                directory of HTML pages to organize buildings by campuses and
+                opening dates.
               </li>
               <li>
                 👉 Integrated interactive maps to display approximate building

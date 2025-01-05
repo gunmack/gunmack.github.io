@@ -6,7 +6,7 @@ import "@/app/resume/resume.css";
 function Resume_PDF() {
   return (
     <div>
-      <div className="left-nav">
+      {/* <div className="left-nav">
         <ul>
           <li>
             <a href="#skills">Skills</a>
@@ -18,7 +18,7 @@ function Resume_PDF() {
             <a href="#work-experience">Work Experience</a>
           </li>
         </ul>
-      </div>
+      </div> */}
       <div data-testid="pdf" className="pdf">
         <pdf_title>Julkar Naine Reedoy</pdf_title>
         <div>

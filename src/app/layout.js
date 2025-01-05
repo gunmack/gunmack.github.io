@@ -17,10 +17,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar page={currentPage} />
-        <div className="min-h-screen">
-          <wrap>
-            <main>{children}</main>
-          </wrap>
+        <div className="wrap  min-h-screen">
+          <main>{children}</main>
         </div>
         <Footer />
       </body>

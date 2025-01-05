@@ -9,8 +9,13 @@ import TimeUpdater from "@/components/time/fetchTime";
 
 export const links = [
   {
-    name: "🏡Home ",
+    name: "🏡index ",
     href: "/",
+    key: "index",
+  },
+  {
+    name: "🏡Home ",
+    href: "/home",
     key: "home",
   },
   { name: "🧑🏾About me ", href: "about", key: "about" },
@@ -31,7 +36,8 @@ export const links = [
 
 function PagePath() {
   const pathname = usePathname();
-  const currentPage = pathname === "/" ? "home" : pathname.replace("/", "");
+  const currentPage = pathname === "/" ? "/" : pathname.replace("/", "");
+
   return currentPage;
 }
 
@@ -44,7 +50,11 @@ export default function Navbar() {
     // Function to handle scroll event
     const handleScrollnMouse = (e) => {
       if (window.scrollY > 50 || e.clientY <= 50) {
-        setIsNavbarVisible(true);
+        if (page === "/") {
+          return setIsNavbarVisible(false);
+        } else {
+          setIsNavbarVisible(true);
+        }
       } else {
         setIsNavbarVisible(false);
       }
@@ -55,7 +65,7 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScrollnMouse);
       window.removeEventListener("mousemove", handleScrollnMouse);
     };
-  }, []);
+  }, [page]);
 
   useEffect(() => {
     // Function to handle window resize

@@ -13,7 +13,7 @@ function Text() {
       <div>
         <div data-testid="text" className="text">
           <p>
-            I am a 2nd year Computing Science Student at Simon Fraser
+            I am a 3rd year Computing Science Student at Simon Fraser
             University. <br></br>
             My preferred languages are:<br></br>
             <br></br>
@@ -44,7 +44,7 @@ function Text() {
 
 export default function About() {
   return (
-    <div>
+    <div className="animate-fadeIn">
       <Header />
       <Text />
     </div>

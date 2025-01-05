@@ -57,6 +57,20 @@ export default function Footer() {
             />
           </a>
           <a
+            className="f_items "
+            href="https://steamcommunity.com/id/gunmack/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              className="bg-white rounded-full"
+              src={"/images/steam.png"}
+              alt="Steam logo"
+              width={20}
+              height={20}
+            />
+          </a>
+          <a
             className="f_items"
             href="mailto:julkar_reedoy@sfu.ca?subject=Feedback on your personal website"
             target="_blank"

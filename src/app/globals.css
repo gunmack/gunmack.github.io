@@ -110,7 +110,7 @@ body.show {
   display: block;
 }
 
-wrap {
+.wrap {
   display: grid;
   align-items: center;
   justify-items: center;
@@ -246,6 +246,19 @@ header {
   100% {
     transform: translateY(0); /* Return to original position */
   }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 /* Mobile styles */

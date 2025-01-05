@@ -14,11 +14,6 @@ export const links = [
   //   key: "index",
   // },
   {
-    name: "🏡index ",
-    href: "/",
-    key: "index",
-  },
-  {
     name: "🏡Home ",
     href: "/home",
     key: "home",

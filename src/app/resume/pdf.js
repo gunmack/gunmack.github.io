@@ -87,7 +87,7 @@ function Resume_PDF() {
             <h3>
               <a
                 className="link hover:text-blue-400"
-                href="https://github.com/gunmack/calculator"
+                href="https://github.com/gunmack/QuizLing"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -125,11 +125,11 @@ function Resume_PDF() {
             <h3>
               <a
                 className="link hover:text-blue-400"
-                href="https://github.com/gunmack/calculator"
+                href="https://github.com/gunmack/Calc-it"
                 target="_blank"
                 rel="noreferrer"
               >
-                Calculator Web Application
+                Calc-it
               </a>
               <p className="text-right"> August 2024</p>
             </h3>
@@ -161,7 +161,7 @@ function Resume_PDF() {
             <h3>
               <a
                 className="link hover:text-blue-400"
-                href="https://github.com/gunmack/SFU1"
+                href="https://github.com/gunmack/SFU-Campus-Timeline"
                 target="_blank"
                 rel="noreferrer"
               >

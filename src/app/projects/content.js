@@ -43,7 +43,7 @@ function project3() {
   return (
     <div className="click_div group relative">
       <a
-        href="https://github.com/gunmack/SFU1"
+        href="https://github.com/gunmack/SFU-Campus-Timeline"
         target="_blank"
         rel="noreferrer"
       >
@@ -77,7 +77,7 @@ function project2() {
   return (
     <div className="click_div group relative">
       <a
-        href="https://github.com/gunmack/Flask-Calculator"
+        href="https://github.com/gunmack/Calc-it"
         target="_blank"
         rel="noreferrer"
       >
@@ -91,9 +91,9 @@ function project2() {
         />
         <br />
         <div className="text max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
-          <h3>Single Expression Calculator</h3>
+          <h3>Calc-it</h3>
           <p>
-            <em>Calculator app built with Python 3.12 and Flask 3.0.3.</em>
+            <em>Web calculator built with Python 3.12 and Flask 3.0.3.</em>
           </p>
           <p>Components:</p>
           <ul>
@@ -111,7 +111,7 @@ function project1() {
   return (
     <div className="click_div group relative">
       <a
-        href="https://github.com/gunmack/276_Project"
+        href="https://github.com/gunmack/QuizLing"
         target="_blank"
         rel="noreferrer"
       >

@@ -1,5 +1,6 @@
 import React from "react";
 import "@/app/globals.css";
+import "@/app/animations.css";
 import "@/app/about/about.css";
 
 function Header() {
@@ -44,7 +45,7 @@ function Text() {
 
 export default function About() {
   return (
-    <div className="animate-fadeIn">
+    <div className="fadeIn">
       <Header />
       <Text />
     </div>

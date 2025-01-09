@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import "@/app/globals.css";
+import "@/app/animations.css";
 import "@/app/resume/resume.css";
 import Resume_PDF from "@/app/resume/pdf";
 
@@ -24,7 +25,7 @@ function linkToCopy() {
 
 export default function Resume() {
   return (
-    <div className="animate-fadeIn">
+    <div className="fadeIn">
       {/* <Header /> */}
       <Resume_PDF />
       {linkToCopy()}

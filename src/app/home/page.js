@@ -27,8 +27,7 @@ function Text() {
             <br />
           </p>
           <p className="fadeIn home2-1">
-            This website was created using Next.js and Tailwind CSS.
-            <br /> It currently contains:
+            Powered by Next.js and the magic of CSS, it currently contains:
           </p>
           <br />
           <ul>

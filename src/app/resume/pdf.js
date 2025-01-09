@@ -1,4 +1,3 @@
-// "use client";
 import React from "react";
 import "@/app/globals.css";
 import "@/app/resume/resume.css";
@@ -6,21 +5,8 @@ import "@/app/resume/resume.css";
 function Resume_PDF() {
   return (
     <div>
-      {/* <div className="left-nav">
-        <ul>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#work-experience">Work Experience</a>
-          </li>
-        </ul>
-      </div> */}
       <div data-testid="pdf" className="pdf">
-        <pdf_title>Julkar Naine Reedoy</pdf_title>
+        <div className="pdf_title">Julkar Naine Reedoy</div>
         <div>
           <p>
             Email:{""}
@@ -37,7 +23,7 @@ function Resume_PDF() {
             <br /> GitHub:{""}
             <a
               id="skills"
-              className="link"
+              className="link  hover:text-blue-400"
               href="https://github.com/gunmack"
               target="_blank"
               rel="noreferrer"
@@ -47,7 +33,7 @@ function Resume_PDF() {
             </a>{" "}
             <br /> LinkedIn:{""}
             <a
-              className="link"
+              className="link  hover:text-blue-400"
               href="https://www.linkedin.com/in/jreedoy/"
               target="_blank"
               rel="noreferrer"
@@ -60,9 +46,9 @@ function Resume_PDF() {
           </p>
         </div>
 
-        <pdf_header>Skills</pdf_header>
-        <pdf_div>
-          <pdf_text>
+        <div className="pdf_header">Skills</div>
+        <div className="pdf_div">
+          <div className="pdf_text">
             <p>
               Languages:
               <strong>
@@ -78,13 +64,13 @@ function Resume_PDF() {
                 Platform, Docker
               </strong>
             </p>
-          </pdf_text>
-        </pdf_div>
+          </div>
+        </div>
 
-        <pdf_header>Projects</pdf_header>
-        <pdf_div>
-          <pdf_text>
-            <h3>
+        <div className="pdf_header">Projects</div>
+        <div className="pdf_div">
+          <div className="pdf_text">
+            <h3 className="flex flex-row justify-between">
               <a
                 className="link hover:text-blue-400"
                 href="https://github.com/gunmack/QuizLing"
@@ -117,12 +103,12 @@ function Resume_PDF() {
                 Google Cloud Translation API.
               </li>
             </ul>
-          </pdf_text>
-        </pdf_div>
+          </div>
+        </div>
 
-        <pdf_div>
-          <pdf_text>
-            <h3>
+        <div className="pdf_div">
+          <div className="pdf_text">
+            <h3 className="flex flex-row justify-between">
               <a
                 className="link hover:text-blue-400"
                 href="https://github.com/gunmack/Calc-it"
@@ -153,12 +139,12 @@ function Resume_PDF() {
                 user control through JavaScript functions.
               </li>
             </ul>
-          </pdf_text>
-        </pdf_div>
+          </div>
+        </div>
 
-        <pdf_div>
-          <pdf_text>
-            <h3>
+        <div className="pdf_div">
+          <div className="pdf_text">
+            <h3 className="flex flex-row justify-between">
               <a
                 className="link hover:text-blue-400"
                 href="https://github.com/gunmack/SFU-Campus-Timeline"
@@ -189,13 +175,13 @@ function Resume_PDF() {
                 streamline site navigation.
               </li>
             </ul>
-          </pdf_text>
-        </pdf_div>
+          </div>
+        </div>
 
-        <pdf_header>Open Source</pdf_header>
-        <pdf_div>
-          <pdf_text>
-            <h3>
+        <div className="pdf_header">Open Source</div>
+        <div className="pdf_div">
+          <div className="pdf_text">
+            <h3 className="flex flex-row justify-between">
               <a
                 className="link hover:text-blue-400"
                 href="https://new.sfucsss.org/#"
@@ -222,12 +208,12 @@ function Resume_PDF() {
                 well as executing seamless migrations with Alembic scripts.
               </li>
             </ul>
-          </pdf_text>
-        </pdf_div>
+          </div>
+        </div>
 
-        <pdf_header>Work Experience</pdf_header>
-        <pdf_div>
-          <pdf_text>
+        <div className="pdf_header">Work Experience</div>
+        <div className="pdf_div">
+          <div className="pdf_text">
             <h3>Concession @ PNE</h3>
             <ul>
               <li>
@@ -242,21 +228,21 @@ function Resume_PDF() {
                 freshness and providing exceptional customer assistance.
               </li>
             </ul>
-          </pdf_text>
-        </pdf_div>
+          </div>
+        </div>
 
-        <pdf_header>Education</pdf_header>
-        <pdf_div>
-          <pdf_text>
-            <h3>
-              Simon Fraser University{" "}
-              <p className="text-right">September 2021 - Present</p>
+        <div className="pdf_header">Education</div>
+        <div className="pdf_div">
+          <div className="pdf_text">
+            <h3 className="flex flex-row justify-between">
+              Simon Fraser University
+              <p className="text-right">Since September 2021</p>
             </h3>
             <ul>
               <li>👉 Bachelor of Science in Computing Science</li>
             </ul>
-          </pdf_text>
-        </pdf_div>
+          </div>
+        </div>
       </div>
     </div>
   );

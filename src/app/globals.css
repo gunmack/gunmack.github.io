@@ -181,86 +181,6 @@ header {
   text-align: left;
 }
 
-.scroll-cta {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.scroll-cta:hover {
-  color: black;
-}
-
-.line {
-  width: 2px;
-  height: 96px; /* Height of the line */
-  transform: rotate(90deg);
-  border-width: 0 3px 3px 0;
-  border-style: solid;
-
-  animation: bounceLine 1.5s infinite;
-}
-
-.scroll-cta:hover .line {
-  border-color: black;
-}
-
-.scroll-cta .arrow {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid;
-  animation: bounceArrow 1.5s infinite;
-}
-
-.scroll-cta:hover .arrow {
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid;
-}
-
-@keyframes bounceLine {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* Bounce upwards */
-  }
-  100% {
-    transform: translateY(0); /* Return to original position */
-  }
-}
-
-@keyframes bounceArrow {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* Bounce upwards */
-  }
-  100% {
-    transform: translateY(0); /* Return to original position */
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
 /* Mobile styles */
 @media (max-width: 768px) {
   .wrap {
@@ -285,6 +205,7 @@ header {
 
   .text {
     font-size: 0.75rem;
+    text-align: left;
   }
 
   .link {
@@ -301,5 +222,12 @@ header {
   }
   li {
     font-size: smaller;
+  }
+  .portrait {
+    margin-top: 4%;
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
   }
 }

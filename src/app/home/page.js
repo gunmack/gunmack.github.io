@@ -1,11 +1,12 @@
 import React from "react";
 import "@/app/globals.css";
+import "@/app/animations.css";
 import Link from "next/link";
 import Image from "next/image";
 
 function Header() {
   return (
-    <header data-testid="header">
+    <header data-testid="header" className="fadeIn home1">
       Hello{" "}
       <span role="img" aria-label="wave">
         👋
@@ -20,12 +21,12 @@ function Text() {
     <div className="row_col">
       <div>
         <div data-testid="text" className="text">
-          <p>
+          <p className="fadeIn home2">
             This website is currently a work in progress.
             <br />
             <br />
           </p>
-          <p>
+          <p className="fadeIn home2-1">
             This website was created using Next.js and Tailwind CSS.
             <br /> It currently contains:
           </p>
@@ -33,27 +34,31 @@ function Text() {
           <ul>
             <li>
               {" "}
-              <Link className="button" href="about">
+              <Link className="button fadeIn home3" href="about">
                 🧑🏾 About me
               </Link>
             </li>
             <br />
             <li>
               {" "}
-              <Link className="button" href="projects">
+              <Link className="button fadeIn home4" href="projects">
                 🖥️ Projects
               </Link>
             </li>
             <br />
             <li>
               {" "}
-              <Link className="button" href="resume">
+              <Link className="button fadeIn home5" href="resume">
                 📃 Resume
               </Link>
             </li>
             <br />
             <li>
-              <Link className="button" href={old_site} target="_blank">
+              <Link
+                className="button fadeIn home6"
+                href={old_site}
+                target="_blank"
+              >
                 📁 Other work
               </Link>
             </li>
@@ -61,13 +66,12 @@ function Text() {
         </div>
       </div>
       <br />
-      <div>
+      <div className="portrait fadeIn pic">
         <Image
           src="/images/grad_pic.png"
           alt="Julkar"
           height={250}
           width={250}
-          className="portrait"
           priority
         />
       </div>
@@ -77,7 +81,7 @@ function Text() {
 
 export default function Home() {
   return (
-    <div className="animate-fadeIn">
+    <div>
       <Header />
       <Text />
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import "@/app/globals.css";
+import "@/app/animations.css";
 import "@/app/projects/project.css";
 import Content from "@/app/projects/content";
 
@@ -27,7 +28,7 @@ function Text() {
 
 export default function Projects() {
   return (
-    <div className="animate-fadeIn">
+    <div className="fadeIn">
       <Header />
       <Content />
       <br />

@@ -1,5 +1,5 @@
 import React from "react";
-import "./globals.css";
+import "@/app/globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar page={currentPage} />
-        <div className="wrap  min-h-screen">
+        <div className="wrap min-h-screen">
           <main>{children}</main>
         </div>
         <Footer />

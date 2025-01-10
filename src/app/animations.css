@@ -107,25 +107,65 @@
 }
 
 .fadeIn.home2-1 {
-  animation-delay: 2.5s;
+  animation-delay: 2s;
 }
 
 .fadeIn.home3 {
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 
 .fadeIn.home4 {
-  animation-delay: 5s;
+  animation-delay: 3.3s;
 }
 
 .fadeIn.home5 {
-  animation-delay: 6s;
+  animation-delay: 3.6s;
 }
 
 .fadeIn.home6 {
-  animation-delay: 7s;
+  animation-delay: 3.9s;
 }
 
 .fadeIn.pic {
-  animation-delay: 3s;
+  animation-delay: 2.8s;
+}
+
+/* About page */
+.fadeIn.about1 {
+  animation-delay: 0.5s;
+}
+.fadeIn.about2 {
+  animation-delay: 1.5s;
+}
+.fadeIn.about3 {
+  animation-delay: 2s;
+}
+.fadeIn.about4 {
+  animation-delay: 2.3s;
+}
+.fadeIn.about5 {
+  animation-delay: 2.6s;
+}
+.fadeIn.about6 {
+  animation-delay: 2.9s;
+}
+.fadeIn.about7 {
+  animation-delay: 4s;
+}
+.fadeIn.about8 {
+  animation-delay: 4.5s;
+}
+
+/* Projects page */
+.fadeIn.projects1 {
+  animation-delay: 0.3s;
+}
+.fadeIn.projects2 {
+  animation-delay: 0.6s;
+}
+.fadeIn.projects3 {
+  animation-delay: 0.9s;
+}
+.fadeIn.projects4 {
+  animation-delay: 1.2s;
 }

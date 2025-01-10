@@ -4,7 +4,11 @@ import "@/app/animations.css";
 import "@/app/about/about.css";
 
 function Header() {
-  return <header data-testid="header">What I do</header>;
+  return (
+    <header data-testid="header" className="fadeIn about1">
+      What I do
+    </header>
+  );
 }
 
 function Text() {
@@ -13,7 +17,7 @@ function Text() {
     <div className="row_col">
       <div>
         <div data-testid="text" className="text">
-          <p>
+          <p className="fadeIn about2">
             I am a 3rd year Computing Science Student at Simon Fraser
             University. <br></br>
             My preferred languages are:<br></br>
@@ -21,19 +25,21 @@ function Text() {
           </p>
 
           <ul>
-            <li>👉 Python</li>
-            <li>👉 Java</li>
-            <li>👉 JavaScript</li>
-            <li>👉 C</li>
+            <li className="fadeIn about3">👉 Python</li>
+            <li className="fadeIn about4">👉 Java</li>
+            <li className="fadeIn about5">👉 JavaScript</li>
+            <li className="fadeIn about6">👉 C</li>
           </ul>
           <br></br>
 
-          <p>
+          <p className="fadeIn about7">
             I mostly work on front-end applications with React and Python.
-            <br></br>
-            I also have experience in working with backend APIs using Java.
-            <br />
-            <br />
+            <br></br>I also have experience in working with backend APIs using
+            Java.
+          </p>
+          <br />
+          <br />
+          <p className="fadeIn about8">
             Currently, I am learning to develop full stack applications.
             <br></br>
           </p>
@@ -45,7 +51,7 @@ function Text() {
 
 export default function About() {
   return (
-    <div className="fadeIn">
+    <div>
       <Header />
       <Text />
     </div>

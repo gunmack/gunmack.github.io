@@ -39,8 +39,6 @@ export default function Landing() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setIsHomeVisible(true);
-      } else {
-        // setIsHomeVisible(false);
       }
     });
   };

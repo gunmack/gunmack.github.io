@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import ToggleButton from "@/components/theme_toggle";
+import Link from "next/link";
+import Image from "next/image";
 import Dropdown from "@/components/dropdown";
 import "@/app/globals.css";
 import "@/components/components.css";
@@ -9,15 +11,10 @@ import TimeUpdater from "@/components/time/fetchTime";
 
 export const links = [
   // {
-  //   name: "🏡index ",
+  //   name: "🏡Home ",
   //   href: "/",
-  //   key: "index",
+  //   key: "home",
   // },
-  {
-    name: "🏡Home ",
-    href: "/",
-    key: "home",
-  },
   { name: "🧑🏾About me ", href: "about", key: "about" },
   { name: "🖥️Projects ", href: "projects", key: "projects" },
   { name: "📃Resume  ", href: "resume", key: "resume" },
@@ -83,7 +80,17 @@ export default function Navbar() {
   return (
     <div>
       <div className={`navbar ${isNavbarVisible ? "visible" : ""}`}>
-        <div className="fixed left-10  hidden lg:flex">
+        <div className="fixed left-10 gap-10 hidden lg:flex">
+          <Link href="/">
+            <Image
+              src="/images/logo.png"
+              className="rounded-sm"
+              alt="Julkar"
+              height={30}
+              width={30}
+              priority
+            />
+          </Link>
           <TimeUpdater />
         </div>
         <div className="hidden sm:flex ">
@@ -110,10 +117,24 @@ export default function Navbar() {
         {/* Hamburger menu for small screens */}
 
         <nbar_items className="sm:hidden flex flex-row items-center">
+          <Link href="/" className="fixed left-10">
+            <Image
+              src="/images/logo.png"
+              className="rounded-sm"
+              alt="Julkar"
+              height={25}
+              width={25}
+              priority
+            />
+          </Link>
+
           <TimeUpdater />
+          <div className="dark-mode-toggle">
+            <ToggleButton />
+          </div>
           <a
             onClick={() => setIsMenuOpen(isMenuOpen ? false : true)}
-            className="px-4"
+            className="px-4 fixed right-10"
           >
             <div
               className={`w-8 h-8 flex flex-col justify-between items-center space-y-2 
@@ -140,9 +161,6 @@ export default function Navbar() {
               ></div>
             </div>
           </a>
-          <div className="dark-mode-toggle">
-            <ToggleButton />
-          </div>
         </nbar_items>
 
         {/* Dropdown visible only when `isMenuOpen` is true on small screens */}

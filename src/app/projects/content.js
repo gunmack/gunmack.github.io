@@ -1,11 +1,12 @@
 import React from "react";
 import "@/app/globals.css";
+import "@/app/animations.css";
 import "@/app/projects/project.css";
 import Image from "next/image";
 
 function project4() {
   return (
-    <div className="click_div group relative">
+    <div className="click_div group relative fadeIn projects4">
       <a
         href="https://github.com/gunmack/Python-Image-Processor"
         target="_blank"
@@ -20,7 +21,7 @@ function project4() {
           priority
         />
         <br />
-        <div className="text max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
+        <div className="text md:max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
           <h3>Python Image Processor</h3>
           <p>
             <em>
@@ -41,7 +42,7 @@ function project4() {
 
 function project3() {
   return (
-    <div className="click_div group relative">
+    <div className="click_div group relative fadeIn projects3">
       <a
         href="https://github.com/gunmack/SFU-Campus-Timeline"
         target="_blank"
@@ -57,7 +58,7 @@ function project3() {
         />
         <br />
 
-        <div className="text max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
+        <div className="text md:max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
           <h3>SFU Campus Timeline</h3>
           <p>
             <em>Comprehensive HTML directory of SFU campus buildings</em>
@@ -75,7 +76,7 @@ function project3() {
 
 function project2() {
   return (
-    <div className="click_div group relative">
+    <div className="click_div group relative fadeIn projects2">
       <a
         href="https://github.com/gunmack/Calc-it"
         target="_blank"
@@ -90,7 +91,7 @@ function project2() {
           priority
         />
         <br />
-        <div className="text max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
+        <div className="text md:max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
           <h3>Calc-it</h3>
           <p>
             <em>Web calculator built with Python 3.12 and Flask 3.0.3.</em>
@@ -109,7 +110,7 @@ function project2() {
 
 function project1() {
   return (
-    <div className="click_div group relative">
+    <div className="click_div group relative fadeIn projects1">
       <a
         href="https://github.com/gunmack/QuizLing"
         target="_blank"
@@ -124,7 +125,7 @@ function project1() {
           priority
         />
         <br />
-        <div className="text max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
+        <div className="text md:max-h-0 overflow-hidden group-hover:max-h-screen transition-all duration-1000">
           <h3>QuizLing</h3>
           <p>
             <em>Language Learning App built with Next.js</em>
@@ -148,7 +149,7 @@ function project1() {
 export default function Content() {
   return (
     <div data-testid="content">
-      <div className="row_col">
+      <div className="row_col ">
         {project1()}
         {project2()}
       </div>

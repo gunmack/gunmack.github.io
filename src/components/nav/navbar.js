@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import ToggleButton from "@/components/theme_toggle";
+import ToggleButton from "@/components/theme/theme_toggle";
 import Link from "next/link";
 import Image from "next/image";
-import Dropdown from "@/components/dropdown";
-import "@/app/globals.css";
-import "@/components/components.css";
+import Dropdown from "@/components/nav/dropdown";
+import "@/app/styles/globals.css";
+import "@/components/styles/components.css";
 import TimeUpdater from "@/components/time/fetchTime";
 
 export const links = [

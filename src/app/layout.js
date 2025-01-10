@@ -1,7 +1,7 @@
 import React from "react";
-import "@/app/globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import "@/app/styles/globals.css";
+import Navbar from "@/components/nav/navbar";
+import Footer from "@/components/nav/footer";
 
 export const metadata = {
   title: "Julkar Reedoy",

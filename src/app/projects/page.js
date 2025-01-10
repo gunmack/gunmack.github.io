@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import "@/app/globals.css";
-import "@/app/animations.css";
+import "@/app/styles/globals.css";
+import "@/app/styles/animations.css";
 import "@/app/projects/project.css";
 import Content from "@/app/projects/content";
 
@@ -12,7 +12,7 @@ function Header() {
 function Text() {
   const link = "https://github.com/gunmack";
   return (
-    <div data-testid="text">
+    <div data-testid="text" className="fadeIn projects5">
       <p>
         While I work on this page,<br></br>
         feel free to take a look at
@@ -28,7 +28,7 @@ function Text() {
 
 export default function Projects() {
   return (
-    <div className="fadeIn">
+    <div>
       <Header />
       <Content />
       <br />

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import "@/app/globals.css";
-import "@/app/animations.css";
+import "@/app/styles/globals.css";
+import "@/app/styles/animations.css";
 import "@/app/resume/resume.css";
 import Resume_PDF from "@/app/resume/pdf";
 

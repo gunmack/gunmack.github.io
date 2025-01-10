@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import "@/app/globals.css";
-import "@/app/animations.css";
+import "@/app/styles/globals.css";
+import "@/app/styles/animations.css";
 import Home from "@/app/home/page";
 
 export default function Landing() {

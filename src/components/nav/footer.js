@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import "@/components/components.css";
-import "@/app/globals.css";
+import "@/components/styles/components.css";
+import "@/app/styles/globals.css";
 import Image from "next/image";
 
 export default function Footer() {

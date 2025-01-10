@@ -1,6 +1,6 @@
 import React from "react";
-import "@/app/globals.css";
-import "@/app/animations.css";
+import "@/app/styles/globals.css";
+import "@/app/styles/animations.css";
 import Link from "next/link";
 import Image from "next/image";
 

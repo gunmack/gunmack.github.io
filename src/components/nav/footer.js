@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import "@/components/styles/components.css";
 import "@/app/styles/globals.css";
-import Image from "next/image";
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedin, FaSteam } from "react-icons/fa";
 
 export default function Footer() {
   const [lastUpdated, setLastUpdated] = useState("");
@@ -35,12 +36,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <Image
-              src={"/images/linkedIn.png"}
-              alt="LinkedIn logo"
-              width={20}
-              height={20}
-            />
+            <FaLinkedin className="text-xl" />
           </a>
           <a
             className="f_items "
@@ -48,27 +44,16 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            <Image
-              className="bg-white rounded-full"
-              src={"/images/gitHub.png"}
-              alt="GitHub logo"
-              width={20}
-              height={20}
-            />
+            <FaGithub className="text-xl" />
           </a>
+
           <a
             className="f_items "
             href="https://steamcommunity.com/id/gunmack/"
             target="_blank"
             rel="noreferrer"
           >
-            <Image
-              className="bg-white rounded-full"
-              src={"/images/steam.png"}
-              alt="Steam logo"
-              width={20}
-              height={20}
-            />
+            <FaSteam className="text-xl" />
           </a>
           <a
             className="f_items"
@@ -80,11 +65,11 @@ export default function Footer() {
           </a>
           <a
             className="f_items"
-            href="https://emojipedia.org/"
+            href="https://react-icons.github.io/react-icons/"
             target="_blank"
             rel="noreferrer"
           >
-            Emojis
+            Icons
           </a>
           <div>© 2024 Julkar Reedoy (jreed). All rights reserved.</div>
           <div>

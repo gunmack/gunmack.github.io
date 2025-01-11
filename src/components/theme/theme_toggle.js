@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { darkmode, LightDark } from "@/components/theme/light_dark";
+import { FaSun } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa6";
 
 export default function ToggleButton() {
   const [isDark, setIsDark] = useState(false);
@@ -36,12 +38,17 @@ export default function ToggleButton() {
       }`}
     >
       <div
-        className={`w-6 h-6 flex items-center justify-center rounded-full shadow-md 
+        className={`w-6 h-6 flex items-center justify-center rounded-full 
           transform transition-transform duration-500 ${
             isDark ? "translate-x-0" : "translate-x-8"
           }`}
       >
-        {isDark ? "☀️" : "🌙"}
+        {/* {isDark ? "☀️" : "🌙"} */}
+        {isDark ? (
+          <FaSun className="text-yellow-500" />
+        ) : (
+          <FaMoon className="text-yellow-500" />
+        )}
       </div>
     </button>
   );

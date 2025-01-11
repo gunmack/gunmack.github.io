@@ -4,25 +4,38 @@ import "@/app/styles/globals.css";
 import "@/app/styles/animations.css";
 import "@/app/projects/project.css";
 import Content from "@/app/projects/content";
+import { FaSquareGithub } from "react-icons/fa6";
 
 function Header() {
   return <header data-testid="header">My Projects</header>;
 }
 
 function Text() {
+  return (
+    <div
+      data-testid="text"
+      className="fadeIn projects5 flex justify-center items-center"
+    >
+      <div className="text-center">
+        <p>
+          While I work on this page,
+          <br /> feel free to look at my GitHub!!
+        </p>
+        <br />
+        <div className="inline-flex justify-center proj-button">
+          <GitHubButton />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function GitHubButton() {
   const link = "https://github.com/gunmack";
   return (
-    <div data-testid="text" className="fadeIn projects5">
-      <p>
-        While I work on this page,<br></br>
-        feel free to take a look at
-        <br />
-        <br />
-        <Link href={link} className="button" target="_blank">
-          my GitHub
-        </Link>
-      </p>
-    </div>
+    <Link href={link} target="_blank" rel="noopener noreferrer">
+      <FaSquareGithub />
+    </Link>
   );
 }
 
@@ -31,7 +44,7 @@ export default function Projects() {
     <div>
       <Header />
       <Content />
-      <br />
+
       <br />
       <Text />
     </div>

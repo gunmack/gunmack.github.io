@@ -3,13 +3,17 @@ import "@/app/styles/globals.css";
 import "@/app/styles/animations.css";
 import Link from "next/link";
 import Image from "next/image";
+import { FaFolderOpen } from "react-icons/fa";
+import { FaFaceGrin } from "react-icons/fa6";
+import { RiComputerLine } from "react-icons/ri";
+import { IoIosDocument } from "react-icons/io";
 
 function Header() {
   return (
     <header data-testid="header" className="fadeIn home1">
       Hello{" "}
       <span role="img" aria-label="wave">
-        👋
+        &#128075;
       </span>
     </header>
   );
@@ -33,32 +37,41 @@ function Text() {
           <ul>
             <li>
               {" "}
-              <Link className="button fadeIn home3" href="about">
-                🧑🏾 About me
+              <Link
+                className="button fadeIn home3 items-center inline-flex "
+                href="about"
+              >
+                <FaFaceGrin className="mr-1 md:mr-4" /> About me
               </Link>
             </li>
             <br />
             <li>
               {" "}
-              <Link className="button fadeIn home4" href="projects">
-                🖥️ Projects
+              <Link
+                className="button fadeIn home4 items-center inline-flex"
+                href="projects"
+              >
+                <RiComputerLine className="mr-1 md:mr-4" /> Projects
               </Link>
             </li>
             <br />
             <li>
               {" "}
-              <Link className="button fadeIn home5" href="resume">
-                📃 Resume
+              <Link
+                className="button fadeIn home5 items-center inline-flex"
+                href="resume"
+              >
+                <IoIosDocument className="mr-1 md:mr-4" /> Resume
               </Link>
             </li>
             <br />
             <li>
               <Link
-                className="button fadeIn home6"
+                className="button fadeIn home6 items-center inline-flex"
                 href={old_site}
                 target="_blank"
               >
-                📁 Other work
+                <FaFolderOpen className="mr-1 md:mr-4" /> Other work
               </Link>
             </li>
           </ul>

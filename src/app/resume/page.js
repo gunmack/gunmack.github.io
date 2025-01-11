@@ -4,6 +4,7 @@ import "@/app/styles/globals.css";
 import "@/app/styles/animations.css";
 import "@/app/resume/resume.css";
 import Resume_PDF from "@/app/resume/pdf";
+import { IoIosDocument } from "react-icons/io";
 
 function linkToCopy() {
   const resume = "/files/Julkar_Reedoy_resume.pdf";
@@ -12,12 +13,12 @@ function linkToCopy() {
       <br />
       <br />
       <div className="text">
-        <p>
-          Looking to download a copy? Click 👉{""}
+        <div className="flex items-center">
+          Looking to download a copy? Click
           <Link href={resume} className="link" target="_blank">
-            📃
+            <IoIosDocument className="hover:text-2xl transition-all duration-500 ease-in-out" />
           </Link>
-        </p>
+        </div>
       </div>
     </div>
   );

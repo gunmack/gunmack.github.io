@@ -8,6 +8,10 @@ import Dropdown from "@/components/nav/dropdown";
 import "@/app/styles/globals.css";
 import "@/components/styles/components.css";
 import TimeUpdater from "@/components/time/fetchTime";
+import { FaFolderOpen } from "react-icons/fa";
+import { FaFaceGrin } from "react-icons/fa6";
+import { RiComputerLine } from "react-icons/ri";
+import { IoIosDocument } from "react-icons/io";
 
 export const links = [
   // {
@@ -15,11 +19,39 @@ export const links = [
   //   href: "/",
   //   key: "home",
   // },
-  { name: "🧑🏾About me ", href: "about", key: "about" },
-  { name: "🖥️Projects ", href: "projects", key: "projects" },
-  { name: "📃Resume  ", href: "resume", key: "resume" },
   {
-    name: "📁Other work ",
+    name: (
+      <div className="items-center inline-flex">
+        <FaFaceGrin className="mr-2" /> About me
+      </div>
+    ),
+    href: "about",
+    key: "about",
+  },
+  {
+    name: (
+      <div className="items-center inline-flex">
+        <RiComputerLine className="mr-2" /> Projects
+      </div>
+    ),
+    href: "projects",
+    key: "projects",
+  },
+  {
+    name: (
+      <div className="items-center inline-flex">
+        <IoIosDocument className="mr-2" /> Resume
+      </div>
+    ),
+    href: "resume",
+    key: "resume",
+  },
+  {
+    name: (
+      <div className="items-center inline-flex">
+        <FaFolderOpen className="mr-2" /> Other work
+      </div>
+    ),
     href: "https://gunmack.github.io/archived/",
     key: "other_work",
   },

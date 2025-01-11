@@ -3,6 +3,7 @@ import "@/app/styles/globals.css";
 import "@/app/styles/animations.css";
 import "@/app/projects/project.css";
 import Image from "next/image";
+import { FaHandPointRight } from "react-icons/fa";
 
 function project4() {
   return (
@@ -30,9 +31,15 @@ function project4() {
           </p>
           <p>Built with:</p>
           <ul>
-            <li>👉 Numpy</li>
-            <li>👉 Pygame</li>
-            <li>👉 Tkinter</li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> numpy
+            </li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Pygame
+            </li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Tkinter
+            </li>
           </ul>
         </div>
       </a>
@@ -65,8 +72,12 @@ function project3() {
           </p>
           <p>Built with:</p>
           <ul>
-            <li>👉 HTML</li>
-            <li>👉 Bootstrap CSS</li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> HTML
+            </li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Bootstrap CSS
+            </li>
           </ul>
         </div>
       </a>
@@ -98,9 +109,20 @@ function project2() {
           </p>
           <p>Components:</p>
           <ul>
-            <li>👉 Regular Expressions</li>
-            <li>👉 HTML embedded into python for client side view</li>
-            <li>👉 Flask framework</li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Regular expressions
+            </li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> HTML embedded into python
+              for
+              <br /> client side view
+            </li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Flask framework
+            </li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Deployed on Vercel
+            </li>
           </ul>
         </div>
       </a>
@@ -132,13 +154,20 @@ function project1() {
           </p>
           <p>Utilizes:</p>
           <ul>
-            <li>👉 Google Cloud APIs</li>
-            <li>👉 Google Cloud Firebase for Authentication</li>
-            <li>
-              👉 Google Cloud Firebase Realtime Database for storing user
-              progress
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Google Cloud APIs
             </li>
-            <li>👉 Deployed on Vercel</li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Firebase for Authentication
+            </li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Firebase Realtime Database
+              for
+              <br /> user data
+            </li>
+            <li className=" flex items-center">
+              <FaHandPointRight className="mr-4" /> Deployed on Vercel
+            </li>
           </ul>
         </div>
       </a>

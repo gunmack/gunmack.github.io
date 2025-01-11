@@ -2,6 +2,7 @@ import React from "react";
 import "@/app/styles/globals.css";
 import "@/app/styles/animations.css";
 import "@/app/about/about.css";
+import { FaHandPointRight } from "react-icons/fa";
 
 function Header() {
   return (
@@ -25,10 +26,18 @@ function Text() {
           </p>
 
           <ul>
-            <li className="fadeIn about3">👉 Python</li>
-            <li className="fadeIn about4">👉 Java</li>
-            <li className="fadeIn about5">👉 JavaScript</li>
-            <li className="fadeIn about6">👉 C</li>
+            <li className="fadeIn about3 flex items-center">
+              <FaHandPointRight className="mr-2 md:mr-4" /> Python
+            </li>
+            <li className="fadeIn about4 flex items-center">
+              <FaHandPointRight className="mr-2 md:mr-4" /> Java
+            </li>
+            <li className="fadeIn about5 flex items-center">
+              <FaHandPointRight className="mr-2 md:mr-4" /> JavaScript
+            </li>
+            <li className="fadeIn about6 flex items-center">
+              <FaHandPointRight className="mr-2 md:mr-4" /> C
+            </li>
           </ul>
           <br></br>
 

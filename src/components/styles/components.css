@@ -77,7 +77,16 @@
   display: block;
   padding: 0.5rem 1rem;
   z-index: 100;
+  /* background-color: white;
+  color: black; */
 }
+
+/* .light-mode {
+  .dropdown_list {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+} */
 
 /* Footer styles */
 .footer_section {
@@ -108,10 +117,6 @@
 }
 
 @media (max-width: 768px) {
-  .left-nav {
-    display: none;
-  }
-
   .navbar {
     display: flex;
     flex-direction: column;

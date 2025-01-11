@@ -9,7 +9,7 @@ export default function Dropdown({ isOpen }) {
       className={` dropdown ${isOpen ? "block" : "hidden"} 
         sm:`}
     >
-      <div>
+      <div className="pt-4 ">
         {links.map(({ name, href, key }) => (
           <a
             key={key}

@@ -16,15 +16,14 @@ function Text() {
       data-testid="text"
       className="fadeIn projects5 flex justify-center items-center"
     >
-      <div className="text-center">
+      <div className="text-center pt-4">
         <p>
           While I work on this page,
-          <br /> feel free to look at my GitHub!!
+          <br /> have a look at my Projects!
         </p>
-        <br />
-        <div className="inline-flex justify-center proj-button">
+        <p className="inline-flex justify-center proj-button mt-8">
           <GitHubButton />
-        </div>
+        </p>
       </div>
     </div>
   );

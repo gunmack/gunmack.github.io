@@ -113,9 +113,7 @@ function project2() {
               <FaHandPointRight className="mr-4" /> Regular expressions
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> HTML embedded into python
-              for
-              <br /> client side view
+              <FaHandPointRight className="mr-4" /> HTML for client side view
             </li>
             <li className=" flex items-center">
               <FaHandPointRight className="mr-4" /> Flask framework
@@ -162,8 +160,6 @@ function project1() {
             </li>
             <li className=" flex items-center">
               <FaHandPointRight className="mr-4" /> Firebase Realtime Database
-              for
-              <br /> user data
             </li>
             <li className=" flex items-center">
               <FaHandPointRight className="mr-4" /> Deployed on Vercel

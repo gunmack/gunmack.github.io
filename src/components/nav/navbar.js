@@ -112,20 +112,24 @@ export default function Navbar() {
   return (
     <div>
       <div className={`navbar ${isNavbarVisible ? "visible" : ""}`}>
-        <div className="fixed left-10 gap-10 hidden lg:flex">
-          <Link href="/">
-            <Image
-              src="/images/logo.png"
-              className="rounded-sm"
-              alt="Julkar"
-              height={30}
-              width={30}
-              priority
-            />
-          </Link>
-          <TimeUpdater />
+        <div className="inline-flex items-center fixed left-10 gap-10">
+          <div className=" hidden md:flex">
+            <Link href="/">
+              <Image
+                src="/images/logo.png"
+                className="rounded-sm"
+                alt="Julkar"
+                height={30}
+                width={30}
+                priority
+              />
+            </Link>
+          </div>
+          <div className=" hidden lg:flex">
+            <TimeUpdater />
+          </div>
         </div>
-        <div className="hidden sm:flex ">
+        <div className="hidden md:flex ">
           {links.map(({ name, href, key }) =>
             key !== "dark-mode" ? (
               <a
@@ -148,7 +152,7 @@ export default function Navbar() {
 
         {/* Hamburger menu for small screens */}
 
-        <nbar_items className="sm:hidden flex flex-row items-center">
+        <nbar_items className="md:hidden flex flex-row items-center">
           <Link href="/" className="fixed left-10">
             <Image
               src="/images/logo.png"

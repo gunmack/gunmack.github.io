@@ -91,20 +91,6 @@ export default function Landing() {
           {isHomeVisible && <Home />}
         </section>
       </div>
-
-      {/* <div
-        className="bg-fixed bg-cover bg-center bg-no-repeat rounded-lg  md:p-16 md:m-16 p-2 m-4"
-        style={{
-          backgroundImage: `url(${bgImg})`,
-        }}
-      >
-        <section
-          ref={aboutRef}
-          className="min-h-screen flex justify-center items-center opacity-0 transition-opacity duration-1000 ease-in-out md:p-2 backdrop-filter backdrop-blur-[8px]"
-        >
-          <About />
-        </section>
-      </div> */}
     </div>
   );
 }

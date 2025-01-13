@@ -41,7 +41,7 @@ function Text() {
                 className="button fadeIn home3 items-center inline-flex "
                 href="about"
               >
-                <FaFaceGrin className="mr-1 md:mr-4" /> About me
+                <FaFaceGrin className="mr-1 md:mr-2" /> About me
               </Link>
             </li>
             <br />
@@ -51,7 +51,7 @@ function Text() {
                 className="button fadeIn home4 items-center inline-flex"
                 href="projects"
               >
-                <RiComputerLine className="mr-1 md:mr-4" /> Projects
+                <RiComputerLine className="mr-1 md:mr-2" /> Projects
               </Link>
             </li>
             <br />
@@ -61,7 +61,7 @@ function Text() {
                 className="button fadeIn home5 items-center inline-flex"
                 href="resume"
               >
-                <IoIosDocument className="mr-1 md:mr-4" /> Resume
+                <IoIosDocument className="mr-1 md:mr-2" /> Resume
               </Link>
             </li>
             <br />
@@ -71,7 +71,7 @@ function Text() {
                 href={old_site}
                 target="_blank"
               >
-                <FaFolderOpen className="mr-1 md:mr-4" /> Other work
+                <FaFolderOpen className="mr-1 md:mr-2" /> Other work
               </Link>
             </li>
           </ul>

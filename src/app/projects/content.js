@@ -29,16 +29,16 @@ function project4() {
               A variety of color filters and other features for image processing
             </em>
           </p>
-          <p>Built with:</p>
+          <br />
           <ul>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> numpy
+              <FaHandPointRight className="mr-2 md:mr-4" /> numpy
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Pygame
+              <FaHandPointRight className="mr-2 md:mr-4" /> Pygame
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Tkinter
+              <FaHandPointRight className="mr-2 md:mr-4" /> Tkinter
             </li>
           </ul>
         </div>
@@ -70,13 +70,13 @@ function project3() {
           <p>
             <em>Comprehensive HTML directory of SFU campus buildings</em>
           </p>
-          <p>Built with:</p>
+          <br />
           <ul>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> HTML
+              <FaHandPointRight className="mr-2 md:mr-4" /> HTML
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Bootstrap CSS
+              <FaHandPointRight className="mr-2 md:mr-4" /> Bootstrap CSS
             </li>
           </ul>
         </div>
@@ -107,19 +107,20 @@ function project2() {
           <p>
             <em>Web calculator built with Python 3.12 and Flask 3.0.3.</em>
           </p>
-          <p>Components:</p>
+          <br />
           <ul>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Regular expressions
+              <FaHandPointRight className="mr-2 md:mr-4" /> Regular expressions
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> HTML for client side view
+              <FaHandPointRight className="mr-2 md:mr-4" /> HTML for client side
+              view
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Flask framework
+              <FaHandPointRight className="mr-2 md:mr-4" /> Flask framework
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Deployed on Vercel
+              <FaHandPointRight className="mr-2 md:mr-4" /> Deployed on Vercel
             </li>
           </ul>
         </div>
@@ -150,19 +151,21 @@ function project1() {
           <p>
             <em>Language Learning App built with Next.js</em>
           </p>
-          <p>Utilizes:</p>
+          <br />
           <ul>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Google Cloud APIs
+              <FaHandPointRight className="mr-2 md:mr-4" /> Google Cloud APIs
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Firebase for Authentication
+              <FaHandPointRight className="mr-2 md:mr-4" /> Firebase for
+              Authentication
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Firebase Realtime Database
+              <FaHandPointRight className="mr-2 md:mr-4" /> Firebase Realtime
+              Database
             </li>
             <li className=" flex items-center">
-              <FaHandPointRight className="mr-4" /> Deployed on Vercel
+              <FaHandPointRight className="mr-2 md:mr-4" /> Deployed on Vercel
             </li>
           </ul>
         </div>

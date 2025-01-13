@@ -152,7 +152,7 @@ export default function Navbar() {
 
         {/* Hamburger menu for small screens */}
 
-        <nbar_items className="md:hidden flex flex-row items-center">
+        <div className="md:hidden flex flex-row items-center">
           <Link href="/" className="fixed left-10">
             <Image
               src="/images/logo.png"
@@ -197,7 +197,7 @@ export default function Navbar() {
               ></div>
             </div>
           </a>
-        </nbar_items>
+        </div>
 
         {/* Dropdown visible only when `isMenuOpen` is true on small screens */}
         <Dropdown isOpen={isMenuOpen} />

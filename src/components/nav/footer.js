@@ -71,7 +71,7 @@ export default function Footer() {
           >
             Icons
           </a>
-          <div>© 2024 Julkar Reedoy (jreed). All rights reserved.</div>
+          <div>© 2024 Julkar Reedoy (jreed)</div>
           <div>
             Last updated:{" "}
             {lastUpdated || (

@@ -30,22 +30,28 @@
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
   }
+  .proj-button {
+    background-color: rgb(0, 0, 0);
+  }
+  .proj-button:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+  }
 }
 
 .proj-button {
-  /* padding: 1%;
-  border-radius: 5px; */
-  /* background-color: white; */
   font-size: 3rem;
   cursor: pointer;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.5 ease;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
 }
 .proj-button:hover {
-  background-color: green;
-  color: yellow;
-  transition: all 0.3s ease;
-  font-size: 4rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  transition: all 0.5 ease;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
   border-radius: 10px;
 }
 

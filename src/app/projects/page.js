@@ -21,7 +21,7 @@ function Text() {
           While I work on this page,
           <br /> have a look at my Projects!
         </p>
-        <p className="inline-flex justify-center proj-button mt-8">
+        <p>
           <GitHubButton />
         </p>
       </div>
@@ -32,7 +32,12 @@ function Text() {
 function GitHubButton() {
   const link = "https://github.com/gunmack";
   return (
-    <Link href={link} target="_blank" rel="noopener noreferrer">
+    <Link
+      className="inline-flex justify-center proj-button mt-8"
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <FaSquareGithub />
     </Link>
   );

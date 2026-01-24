@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node lib/timeStamp.js && next build",
     "clean": "next build --clean",
     "start": "next start",
     "lint": "next lint",

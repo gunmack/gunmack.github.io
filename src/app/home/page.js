@@ -2,7 +2,7 @@ import React from "react";
 import "@/app/styles/globals.css";
 import "@/app/styles/animations.css";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import { FaFolderOpen } from "react-icons/fa";
 import { FaFaceGrin } from "react-icons/fa6";
 import { RiComputerLine } from "react-icons/ri";
@@ -26,12 +26,14 @@ function Text() {
       <div>
         <div data-testid="text" className="text">
           <p className="fadeIn home2">
-            This website is currently a work in progress.
+            This website is currently a work in progress and is powered by
+            Next.js and Tailwind CSS.
             <br />
             <br />
           </p>
           <p className="fadeIn home2-1">
-            Powered by Next.js and the magic of CSS, it currently contains:
+            While you are here, please feel free to check out my projects and
+            resume!
           </p>
           <br />
           <ul>
@@ -78,7 +80,7 @@ function Text() {
         </div>
       </div>
       <br />
-      <div className="portrait fadeIn pic">
+      {/* <div className="portrait fadeIn pic">
         <Image
           src="/images/grad_pic.png"
           alt="Julkar"
@@ -86,7 +88,7 @@ function Text() {
           width={250}
           priority
         />
-      </div>
+      </div> */}
     </div>
   );
 }
